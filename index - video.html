@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>[Service Headline] | [Company Name]</title>
+    <meta name="description"
+        content="[Company Meta Description goes here. Keep it under 160 characters for SEO best practices.]" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="[Website URL]" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="[Website URL]" />
+    <meta property="og:title" content="[Service Headline] | [Company Name]" />
+    <meta property="og:description"
+        content="[Company Meta Description goes here. Keep it under 160 characters for SEO best practices.]" />
+    <meta property="og:image" content="[Open Graph Image URL]" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="[Locale e.g., en_GB]" />
+    <meta property="og:site_name" content="[Company Name]" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[Service Headline] | [Company Name]" />
+    <meta name="twitter:description"
+        content="[Company Meta Description goes here. Keep it under 160 characters for SEO best practices.]" />
+    <meta name="twitter:image" content="[Twitter Image URL]" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand-dark: #1A2E24;
+            --color-brand-green: #2C4C3B;
+            --color-brand-beige: #F4F1EA;
+            --color-brand-text: #111827;
+            --color-brand-accent: #0fdb62;   
+            --color-brand-gold: #edc237;   
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        
+        body { 
+            font-family: var(--font-body); 
+            background-color: var(--color-brand-beige); 
+            color: var(--color-brand-text); 
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: var(--font-heading); 
+        }
+
+        img {
+            filter: saturate(1.15);
+        }
+
+        .custom-tick {
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .custom-tick:checked {
+            background-color: #D4AF37 !important;
+            border-color: #D4AF37 !important;
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #site-header nav a {
+            @apply transition-all duration-150 inline-flex items-center;
+        }
+        #site-header nav a:hover {
+            @apply text-brand-accent;
+            transform: scale(1.10);
+        }
+
+        #site-header.scrolled nav a:hover {
+            @apply text-brand-gold;
+            transform: scale(1.10);
+        }
+
+        #site-header.scrolled #menuBtn {
+            @apply hover:text-brand-gold;
+        }
+
+        /* --- LOGO SWAP LOGIC --- */
+        .logo-white { display: block; }
+        .logo-dark { display: none; }
+
+        #site-header.gallery-dark-nav .logo-white { display: none; }
+        #site-header.gallery-dark-nav .logo-dark { display: block; }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
+
+    <div id="header-placeholder"></div>
+    <main>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "[Company Name]",
+      "image": "[Company Logo URL]",
+      "@id": "[Website URL]",
+      "url": "[Website URL]",
+      "telephone": "[Company Phone]",
+      "email": "[Company Email]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Street Address]",
+        "addressLocality": "[City]",
+        "addressRegion": "[Region]",
+        "addressCountry": "[Country]"
+      },
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa",
+      "areaServed": {
+        "@type": "State",
+        "name": "[Service Area]"
+      },
+      "description": "[Company Description for Schema]",
+      "priceRange": "££"
+    }
+    </script>
+
+       <section class="relative min-h-[100svh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-dark">
+
+    <video autoplay loop muted playsinline aria-hidden="true" preload="auto"
+        class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="assets/video/hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="absolute inset-0 bg-black/40 sm:bg-black/50 z-10"></div>
+
+    <div
+        class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mt-12 lg:mt-0">
+
+        <div
+            class="w-full lg:w-[55%] flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up">
+
+            <div class="flex items-center justify-center lg:justify-start gap-1 mb-6">
+                <svg class="w-5 h-5 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-5 h-5 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-5 h-5 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-5 h-5 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-5 h-5 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span class="font-body text-white/80 text-sm ml-2 font-medium">5-Star Rated on Google</span>
+            </div>
+
+            <h1
+                class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 leading-[1.1] text-white drop-shadow-2xl">
+                Expert Landscaping & Garden Maintenance Across the UK
+            </h1>
+
+            <p
+                class="font-body text-base md:text-base lg:text-lg mb-8 text-white/95 font-medium leading-relaxed max-w-2xl drop-shadow-md">
+                From custom patios and secure fencing to precision hedge trimming and full garden clearances; Thomas and the team at Browne's Landscaping deliver reliable, high-quality results you can count on.
+            </p>
+
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 sm:gap-6 w-full sm:w-auto">
+
+                <a href="#quote-form"
+                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#0fdb62] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                    <span
+                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0dae4d] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+                    <span class="relative z-10 text-brand-dark transition-colors duration-500 group-hover:text-white">
+                        Get Your Free Quote
+                    </span>
+
+                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="hidden sm:block w-[2px] h-8 bg-white/20 rounded-full mx-2"></div>
+
+                <div class="flex items-center gap-3 text-white font-body font-bold text-lg">
+                    <a href="tel:+447449325154"
+                        class="tracking-wide underline underline-offset-[6px] decoration-2 decoration-white hover:text-[#D4AF37] hover:decoration-[#D4AF37] transition-all duration-300">
+                        or call Thomas
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w-full lg:w-[45%] max-w-lg lg:max-w-[32rem] reveal reveal-up" style="transition-delay: 150ms;">
+            <div id="quote-form" class="bg-white p-8 rounded-2xl shadow-2xl border border-white/20">
+
+                <h2 class="font-heading text-2xl font-bold text-brand-dark mb-1">Get a Free Quote</h2>
+                <p class="font-body text-sm text-brand-text/60 mb-6">We'll get back to you within a few hours.</p>
+
+                <form action="#" method="POST" class="space-y-4 font-body text-left">
+
+                    <div style="opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1;">
+                        <label for="website_url">Leave this field empty</label>
+                        <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="hero-name" class="block text-sm font-bold text-brand-dark mb-1">Your Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="hero-name" name="name" required placeholder="John Smith"
+                                class="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50">
+                        </div>
+                        <div>
+                            <label for="hero-phone" class="block text-sm font-bold text-brand-dark mb-1">Phone Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="hero-phone" name="phone" required placeholder="07700 900000"
+                                class="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="hero-email" class="block text-sm font-bold text-brand-dark mb-1">Email Address</label>
+                        <input type="email" id="hero-email" name="email" placeholder="john@example.com"
+                            class="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50">
+                    </div>
+
+                    <div>
+                        <label for="hero-message" class="block text-sm font-bold text-brand-dark mb-1">Tell Us About Your Project <span class="text-red-500">*</span></label>
+                        <textarea id="hero-message" name="message" required rows="3"
+                            placeholder="e.g. New patio installation, garden fencing, hedge trimming, full garden clearance..."
+                            class="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50 resize-none"></textarea>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" id="hero-gdpr" name="gdpr" required
+                            class="custom-tick w-4 h-4 mt-0.5 focus:ring-[#D4AF37] focus:ring-2 shrink-0">
+                        <label for="hero-gdpr" class="text-xs text-gray-500 cursor-pointer leading-relaxed">
+                            I agree to be contacted by Browne's Landscaping & Maintenance regarding my enquiry. We never share your details.
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full flex items-center justify-center py-3.5 bg-[#0fdb62] text-brand-dark font-body font-bold text-base rounded-full transition-all duration-300 hover:bg-[#D4AF37] hover:text-white hover:shadow-lg">
+                        Get My Free Quote
+                    </button>
+
+                    <p class="text-center text-xs text-gray-400 font-body">
+                        Or call us directly: <a href="tel:+447449325154" class="font-bold text-brand-dark hover:text-[#0fdb62] transition-colors">+44 7449 325154</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+        <style>
+            .scrolling-wrapper {
+                overflow: hidden;
+                white-space: nowrap;
+                display: flex;
+                width: 100%;
+                cursor: default;
+            }
+
+            .scrolling-track {
+                display: flex;
+                width: max-content;
+                animation: scrollBanner 25s linear infinite;
+            }
+
+            .scrolling-wrapper:hover .scrolling-track,
+            .scrolling-track:hover {
+                animation-play-state: running !important;
+            }
+
+            @keyframes scrollBanner {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .hover-item {
+                transition: opacity 0.3s ease;
+            }
+
+            .scrolling-wrapper:hover .hover-item {
+                opacity: 0.5;
+            }
+
+            .scrolling-wrapper .hover-item:hover {
+                opacity: 1;
+            }
+        </style>
+
+        <div class="bg-brand-green text-brand-beige py-5 border-y border-brand-dark/20 shadow-inner">
+            <div class="scrolling-wrapper">
+                <div class="scrolling-track flex items-center font-body font-medium tracking-wide text-sm md:text-base">
+
+                    <div class="flex items-center gap-12 md:gap-20 px-6 md:px-10">
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 14l-4-4 1.41-1.41L10 12.17l6.59-6.58L18 7l-8 8z" />
+                            </svg>
+                            [Banner Item 1]
+                        </div>
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            [Banner Item 2]
+                        </div>
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            [Banner Item 3]
+                        </div>
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z" />
+                            </svg>
+                            [Banner Item 4]
+                        </div>
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-4 8H7v-2h2v2zm6 0h-4v-2h4v2zm0-4H7v-2h8v2z" />
+                            </svg>
+                            [Banner Item 5]
+                        </div>
+
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                            [Banner Item 6]
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-12 md:gap-20 px-6 md:px-10">
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 14l-4-4 1.41-1.41L10 12.17l6.59-6.58L18 7l-8 8z" />
+                            </svg>
+                            [Banner Item 1]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            [Banner Item 2]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            [Banner Item 3]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z" />
+                            </svg>
+                            [Banner Item 4]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-4 8H7v-2h2v2zm6 0h-4v-2h4v2zm0-4H7v-2h8v2z" />
+                            </svg>
+                            [Banner Item 5]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                            [Banner Item 6]
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-12 md:gap-20 px-6 md:px-10">
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 14l-4-4 1.41-1.41L10 12.17l6.59-6.58L18 7l-8 8z" />
+                            </svg>
+                            [Banner Item 1]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            [Banner Item 2]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            [Banner Item 3]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z" />
+                            </svg>
+                            [Banner Item 4]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-4 8H7v-2h2v2zm6 0h-4v-2h4v2zm0-4H7v-2h8v2z" />
+                            </svg>
+                            [Banner Item 5]
+                        </div>
+                        <div class="flex items-center gap-3 hover-item">
+                            <svg class="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                            [Banner Item 6]
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="relative py-20 lg:py-32 flex items-center justify-center bg-[#F5F0E8] overflow-hidden">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                    <!-- Left: Text Content -->
+                    <div class="w-full lg:w-1/2 flex flex-col items-start text-left reveal reveal-up">
+
+                        <span
+                            class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
+                            [Philosophy]
+                        </span>
+
+                        <h2
+                            class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-[#111827] mb-6 leading-tight flex flex-col items-start cursor-default">
+                            [Section Headline Text]
+                            <span
+                                class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#0fdb62]/80"></span>
+                        </h2>
+
+                        <div
+                            class="font-body text-base sm:text-lg text-[#111827]/70 leading-relaxed space-y-5 mb-10 w-full">
+                            <p>
+                                [Company Philosophy or descriptive text goes here. Explain what sets the service apart
+                                and builds trust with the customer.]
+                            </p>
+                            <p>
+                                [Second paragraph of descriptive text. Continue building trust and explaining the
+                                company's story or values here.]
+                            </p>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-[#111827]/20 pt-8 mt-2 mb-12 w-full max-w-lg">
+                            <div class="group flex flex-col items-start cursor-default">
+                                <p
+                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#111827] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                                    <span class="auto-counter" data-target="10">0</span>+
+                                </p>
+                                <p
+                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#111827]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                                    [Stat Text 1]
+                                </p>
+                            </div>
+
+                            <div class="group flex flex-col items-start cursor-default">
+                                <p
+                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#111827] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                                    <span class="auto-counter" data-target="5">0</span>★
+                                </p>
+                                <p
+                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#111827]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                                    [Stat Text 2]
+                                </p>
+                            </div>
+
+                            <div class="group flex flex-col items-start cursor-default">
+                                <p
+                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#111827] transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#D4AF37] whitespace-nowrap">
+                                    <span class="auto-counter" data-target="100">0</span>%
+                                </p>
+                                <p
+                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#111827]/60 transition-colors duration-500 group-hover:text-[#D4AF37] group-hover:opacity-100">
+                                    [Stat Text 3]
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="about.html"
+                            class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                            <span
+                                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
+
+                            <span
+                                class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                                [Learn More About Us]
+                            </span>
+
+                            <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <!-- Right: Slideshow Image -->
+                    <div class="w-full lg:w-1/2 relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-[1.5rem] overflow-hidden reveal reveal-up"
+                        style="transition-delay: 200ms;" id="trust-slideshow">
+
+                        <img src="assets/imgs/tree-work.jpg" alt="[Slideshow Image 1 Alt]" loading="lazy"
+                            decoding="async"
+                            class="slide absolute inset-0 w-full h-full object-cover opacity-100">
+
+                        <img src="assets/imgs/hedge-trimming.jpg" alt="[Slideshow Image 2 Alt]" loading="lazy"
+                            decoding="async"
+                            class="slide absolute inset-0 w-full h-full object-cover opacity-0">
+
+                        <img src="assets/imgs/cta.jpg" alt="[Slideshow Image 3 Alt]" loading="lazy" decoding="async"
+                            class="slide absolute inset-0 w-full h-full object-cover opacity-0">
+
+                        <style>
+                            #trust-slideshow .slide {
+                                transition: opacity 1000ms ease-in-out, transform 700ms ease-in-out;
+                                transform: scale(1);
+                            }
+                            #trust-slideshow:hover .slide {
+                                transform: scale(1.07);
+                            }
+                        </style>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const slides = document.querySelectorAll('#trust-slideshow .slide');
+                                if (slides.length > 0) {
+                                    let currentSlide = 0;
+                                    setInterval(() => {
+                                        slides[currentSlide].classList.remove('opacity-100');
+                                        slides[currentSlide].classList.add('opacity-0');
+                                        currentSlide = (currentSlide + 1) % slides.length;
+                                        slides[currentSlide].classList.remove('opacity-0');
+                                        slides[currentSlide].classList.add('opacity-100');
+                                    }, 3500);
+                                }
+                            });
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const duration = 2000;
+                const frameRate = 1000 / 60;
+                const totalFrames = Math.round(duration / frameRate);
+
+                const easeOutQuad = t => t * (2 - t);
+
+                const animateCounter = (counter) => {
+                    let frame = 0;
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+
+                    const counterInterval = setInterval(() => {
+                        frame++;
+                        const progress = easeOutQuad(frame / totalFrames);
+                        const currentCount = Math.round(target * progress);
+
+                        if (parseInt(counter.innerText, 10) !== currentCount) {
+                            counter.innerText = currentCount;
+                        }
+
+                        if (frame === totalFrames) {
+                            clearInterval(counterInterval);
+                            counter.innerText = target;
+                        }
+                    }, frameRate);
+                };
+
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const countersToAnimate = entry.target.querySelectorAll('.auto-counter');
+                            countersToAnimate.forEach(animateCounter);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                const statsSection = document.querySelector('.auto-counter').closest('section');
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
+            });
+        </script>
+
+        <section
+            class="relative min-h-[100svh] py-20 lg:py-32 flex items-center justify-center bg-[#FCFBF8] overflow-hidden">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+
+                <div class="flex flex-col items-center text-center mb-16 lg:mb-20 reveal reveal-up">
+                    <span
+                        class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
+                        [Services]
+                    </span>
+
+                    <h2
+                        class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-brand-dark mb-6 leading-tight flex flex-col items-center text-center relative pb-6 cursor-default">
+                        [Services Headline]
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 md:w-16 h-0.5 md:h-1 bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:h-1.5"></span>
+                    </h2>
+
+                    <p class="font-body text-lg md:text-xl text-brand-text/70 max-w-2xl mx-auto leading-relaxed mt-4">
+                        [Services Sub-headline Description]
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 w-full">
+
+                    <a href="services.html#service-1"
+                        class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2 bg-[#EBE9E0]">
+
+                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                            <img src="assets/imgs/hedge-trimming.jpg" alt="[Service 1 Alt Text]" loading="lazy"
+                                decoding="async"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+
+                        <div
+                            class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 group-hover:bg-[#1A2E24] transition-colors duration-500 text-left">
+                            <div>
+                                <h3
+                                    class="font-heading text-2xl lg:text-3xl font-bold text-brand-dark group-hover:text-white mb-4 transition-colors duration-500">
+                                    [Service 1 Title]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-text/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                    [Service 1 description text goes here. Keep it short and engaging.]
+                                </p>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-brand-dark/10 group-hover:border-white/20 transition-colors duration-500 w-full">
+                                <p
+                                    class="font-heading font-bold text-brand-dark group-hover:text-white text-sm md:text-base mb-1 transition-colors duration-500">
+                                    Perfect for
+                                </p>
+                                <p
+                                    class="font-body text-sm text-brand-text/70 group-hover:text-white/80 transition-colors duration-500">
+                                    [Service 1 tags or ideal use cases]
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="services.html#service-2"
+                        class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2 bg-[#EBE9E0]"
+                        style="transition-delay: 100ms;">
+
+                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                            <img src="assets/imgs/slider3.jpg" alt="[Service 2 Alt Text]" loading="lazy"
+                                decoding="async"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+
+                        <div
+                            class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 group-hover:bg-[#1A2E24] transition-colors duration-500 text-left">
+                            <div>
+                                <h3
+                                    class="font-heading text-2xl lg:text-3xl font-bold text-brand-dark group-hover:text-white mb-4 transition-colors duration-500">
+                                    [Service 2 Title]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-text/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                    [Service 2 description text goes here. Keep it short and engaging.]
+                                </p>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-brand-dark/10 group-hover:border-white/20 transition-colors duration-500 w-full">
+                                <p
+                                    class="font-heading font-bold text-brand-dark group-hover:text-white text-sm md:text-base mb-1 transition-colors duration-500">
+                                    Perfect for
+                                </p>
+                                <p
+                                    class="font-body text-sm text-brand-text/70 group-hover:text-white/80 transition-colors duration-500">
+                                    [Service 2 tags or ideal use cases]
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="services.html#service-3"
+                        class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2 bg-[#EBE9E0]"
+                        style="transition-delay: 200ms;">
+
+                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                            <img src="assets/imgs/garden-clearance.jpg" alt="[Service 3 Alt Text]" loading="lazy"
+                                decoding="async"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+
+                        <div
+                            class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 group-hover:bg-[#1A2E24] transition-colors duration-500 text-left">
+                            <div>
+                                <h3
+                                    class="font-heading text-2xl lg:text-3xl font-bold text-brand-dark group-hover:text-white mb-4 transition-colors duration-500">
+                                    [Service 3 Title]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-text/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                    [Service 3 description text goes here. Keep it short and engaging.]
+                                </p>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-brand-dark/10 group-hover:border-white/20 transition-colors duration-500 w-full">
+                                <p
+                                    class="font-heading font-bold text-brand-dark group-hover:text-white text-sm md:text-base mb-1 transition-colors duration-500">
+                                    Perfect for
+                                </p>
+                                <p
+                                    class="font-body text-sm text-brand-text/70 group-hover:text-white/80 transition-colors duration-500">
+                                    [Service 3 tags or ideal use cases]
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="services.html#service-4"
+                        class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2 bg-[#EBE9E0]"
+                        style="transition-delay: 300ms;">
+
+                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                            <img src="assets/imgs/tree-work.jpg" alt="[Service 4 Alt Text]" loading="lazy"
+                                decoding="async"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+
+                        <div
+                            class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 group-hover:bg-[#1A2E24] transition-colors duration-500 text-left">
+                            <div>
+                                <h3
+                                    class="font-heading text-2xl lg:text-3xl font-bold text-brand-dark group-hover:text-white mb-4 transition-colors duration-500">
+                                    [Service 4 Title]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-text/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                    [Service 4 description text goes here. Keep it short and engaging.]
+                                </p>
+                            </div>
+                            <div
+                                class="mt-auto pt-4 border-t border-brand-dark/10 group-hover:border-white/20 transition-colors duration-500 w-full">
+                                <p
+                                    class="font-heading font-bold text-brand-dark group-hover:text-white text-sm md:text-base mb-1 transition-colors duration-500">
+                                    Perfect for
+                                </p>
+                                <p
+                                    class="font-body text-sm text-brand-text/70 group-hover:text-white/80 transition-colors duration-500">
+                                    [Service 4 tags or ideal use cases]
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="mt-16 lg:mt-20 flex justify-center reveal reveal-up w-full">
+                    <a href="services.html"
+                        class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                        <span
+                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
+
+                        <span
+                            class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                            [View All Services CTA]
+                        </span>
+
+                        <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 12h14m-6-6l6 6-6 6"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section
+            class="relative min-h-[100svh] py-20 flex items-center justify-center bg-brand-dark text-brand-beige overflow-hidden">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+
+                    <div
+                        class="w-full lg:w-5/12 flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up mt-8 lg:mt-0">
+
+                        <span
+                            class="inline-block px-5 py-2 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent text-sm font-bold tracking-widest uppercase rounded-full mb-6 cursor-default">
+                            [Gallery]
+                        </span>
+
+                        <h2
+                            class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-white leading-tight relative pb-6 mb-8 flex flex-col items-center lg:items-start cursor-default">
+                            [Gallery Headline]
+                            <span
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40"></span>
+                        </h2>
+
+                        <p
+                            class="font-body text-base sm:text-lg md:text-xl text-brand-beige/80 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
+                            [Gallery Description. E.g., Drag the slider to see how we transformed this property.]
+                        </p>
+
+                        <a href="gallery.html"
+                            class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-white text-[#164a2a] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 z-10">
+
+                            <span
+                                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+                            <span class="relative z-10 transition-colors duration-500 group-hover:text-white">[Gallery
+                                CTA Link]</span>
+
+                            <span
+                                class="relative z-10 w-10 h-10 bg-[#164a2a] rounded-full flex items-center justify-center transition-colors duration-500 group-hover:bg-white/20">
+                                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="w-full lg:w-7/12 reveal reveal-up" style="transition-delay: 100ms;">
+                        <div
+                            class="ba-slider touch-pan-y relative w-full aspect-[4/3] md:aspect-[16/9] rounded-[2.5rem] overflow-hidden cursor-ew-resize shadow-2xl border-4 border-white/5 group">
+                            <img src="assets/imgs/after.jpg" alt="[After Image Alt]" loading="lazy" decoding="async"
+                                class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                            <img src="assets/imgs/before.jpg" alt="[Before Image Alt]" loading="lazy" decoding="async"
+                                class="ba-before absolute inset-0 w-full h-full object-cover pointer-events-none shadow-[2px_0_10px_rgba(0,0,0,0.5)]"
+                                style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+
+                            <div
+                                class="ba-handle absolute top-0 bottom-0 left-[50%] w-1.5 bg-white shadow-[0_0_15px_rgba(0,0,0,0.8)] pointer-events-none -ml-[3px] flex items-center justify-center">
+                                <div
+                                    class="w-14 h-14 bg-white rounded-full shadow-2xl border border-gray-100 flex items-center justify-center text-brand-dark transition-transform group-hover:scale-110">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 9l-3 3m0 0l3 3m-3-3h14m0 0l-3-3m3 3l-3 3"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div
+                                class="absolute bottom-6 left-6 bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded text-xs font-bold tracking-widest font-body uppercase pointer-events-none">
+                                Before</div>
+                            <div
+                                class="absolute bottom-6 right-6 bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded text-xs font-bold tracking-widest font-body uppercase pointer-events-none">
+                                After</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="relative min-h-[100svh] py-20 flex items-center justify-center bg-white border-t border-brand-dark/5 overflow-hidden">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+
+                <div class="flex flex-col items-center text-center mb-12 md:mb-16 reveal reveal-up">
+
+                    <span
+                        class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
+                        [Simple & Reliable]
+                    </span>
+
+                    <h2
+                        class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-brand-dark leading-tight flex flex-col items-center text-center relative pb-6 mb-6 cursor-default">
+                        [Process Headline]
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-48"></span>
+                    </h2>
+
+                    <p
+                        class="font-body text-base sm:text-lg md:text-xl text-brand-dark/70 max-w-2xl mx-auto leading-relaxed mt-2">
+                        [Process Description goes here.]
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+
+                    <div class="w-full lg:w-[55%] order-2 lg:order-1 flex flex-col gap-4 sm:gap-6">
+
+                        <div
+                            class="group flex flex-col sm:flex-row items-center text-center sm:text-left gap-5 p-6 sm:p-8 rounded-[1.5rem] bg-[#F5F4F0] hover:bg-[#1A2E24] transition-all duration-500 border border-black/5 hover:border-transparent hover:shadow-xl reveal reveal-up cursor-default">
+
+                            <div
+                                class="flex-shrink-0 w-12 sm:w-16 flex items-center justify-center text-brand-dark/20 group-hover:text-white font-heading text-5xl font-bold transition-colors duration-500">
+                                1
+                            </div>
+
+                            <div class="flex-grow">
+                                <h3
+                                    class="font-heading text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-white mb-2 transition-colors duration-500">
+                                    [Step 1 Headline]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-dark/70 group-hover:text-white/90 text-sm sm:text-base leading-relaxed transition-colors duration-500">
+                                    [Step 1 Description text]
+                                </p>
+                            </div>
+
+                            <div
+                                class="flex-shrink-0 mt-2 sm:mt-0 transition-transform duration-500 group-hover:translate-y-2 sm:group-hover:translate-y-0 sm:group-hover:translate-x-2">
+                                <svg class="w-6 h-6 text-brand-dark/30 group-hover:text-white rotate-90 sm:rotate-0 transition-all duration-500"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col sm:flex-row items-center text-center sm:text-left gap-5 p-6 sm:p-8 rounded-[1.5rem] bg-[#F5F4F0] hover:bg-[#1A2E24] transition-all duration-500 border border-black/5 hover:border-transparent hover:shadow-xl reveal reveal-up cursor-default"
+                            style="transition-delay: 100ms;">
+
+                            <div
+                                class="flex-shrink-0 w-12 sm:w-16 flex items-center justify-center text-brand-dark/20 group-hover:text-white font-heading text-5xl font-bold transition-colors duration-500">
+                                2
+                            </div>
+
+                            <div class="flex-grow">
+                                <h3
+                                    class="font-heading text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-white mb-2 transition-colors duration-500">
+                                    [Step 2 Headline]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-dark/70 group-hover:text-white/90 text-sm sm:text-base leading-relaxed transition-colors duration-500">
+                                    [Step 2 Description text]
+                                </p>
+                            </div>
+
+                            <div
+                                class="flex-shrink-0 mt-2 sm:mt-0 transition-transform duration-500 group-hover:translate-y-2 sm:group-hover:translate-y-0 sm:group-hover:translate-x-2">
+                                <svg class="w-6 h-6 text-brand-dark/30 group-hover:text-white rotate-90 sm:rotate-0 transition-all duration-500"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="group flex flex-col sm:flex-row items-center text-center sm:text-left gap-5 p-6 sm:p-8 rounded-[1.5rem] bg-[#F5F4F0] hover:bg-[#1A2E24] transition-all duration-500 border border-black/5 hover:border-transparent hover:shadow-xl reveal reveal-up cursor-default"
+                            style="transition-delay: 200ms;">
+
+                            <div
+                                class="flex-shrink-0 w-12 sm:w-16 flex items-center justify-center text-brand-dark/20 group-hover:text-white font-heading text-5xl font-bold transition-colors duration-500">
+                                3
+                            </div>
+
+                            <div class="flex-grow">
+                                <h3
+                                    class="font-heading text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-white mb-2 transition-colors duration-500">
+                                    [Step 3 Headline]
+                                </h3>
+                                <p
+                                    class="font-body text-brand-dark/70 group-hover:text-white/90 text-sm sm:text-base leading-relaxed transition-colors duration-500">
+                                    [Step 3 Description text]
+                                </p>
+                            </div>
+
+                            <div
+                                class="flex-shrink-0 mt-2 sm:mt-0 transition-transform duration-500 group-hover:translate-y-2 sm:group-hover:translate-y-0 sm:group-hover:translate-x-2">
+                                <svg class="w-6 h-6 text-brand-dark/30 group-hover:text-white rotate-90 sm:rotate-0 transition-all duration-500"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full lg:w-[45%] order-1 lg:order-2 reveal reveal-up">
+                        <div
+                            class="relative w-full h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px] rounded-3xl overflow-hidden group">
+                            <img src="assets/imgs/working.jpg" alt="[Process Image Alt]" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-16 lg:mt-20 flex justify-center reveal reveal-up w-full">
+                    <a href="contact.html"
+                        class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                        <span
+                            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+                        <span
+                            class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                            [Process CTA Link]
+                        </span>
+
+                        <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M5 12h14m-6-6l6 6-6 6"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="relative py-16 md:py-24 bg-brand-beige overflow-hidden">
+
+            <style>
+                .rv-scroll-outer {
+                    overflow: hidden;
+                    display: flex;
+                    width: 100%;
+                }
+
+                .rv-scroll-track {
+                    display: flex;
+                    width: max-content;
+                    animation: scrollReviews 28s linear infinite;
+                    gap: 1.5rem;
+                    padding: 0 1.5rem;
+                }
+
+                .rv-scroll-outer:hover .rv-scroll-track {
+                    animation-play-state: running !important;
+                }
+
+                @keyframes scrollReviews {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+            </style>
+
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+                <div class="flex flex-col items-center text-center mb-12 lg:mb-16 reveal reveal-up w-full">
+                    <span
+                        class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm font-bold tracking-widest uppercase mb-6 cursor-default">
+                        [Reviews Tagline]
+                    </span>
+                    <h2
+                        class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal text-brand-dark leading-tight relative flex flex-col items-center pb-6 mb-6 cursor-default">
+                        [Reviews Headline]
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-44"></span>
+                    </h2>
+                    <p
+                        class="font-body text-base sm:text-lg md:text-xl text-brand-dark/80 max-w-2xl mx-auto leading-relaxed mt-2">
+                        [Reviews Description Text]
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="relative reveal reveal-up -mx-4 sm:-mx-8 lg:-mx-12 px-4 sm:px-8 lg:px-12 w-[calc(100%+2rem)] sm:w-[calc(100%+4rem)] lg:w-[calc(100%+6rem)] mb-16 md:mb-24">
+                <div class="rv-scroll-outer pb-8 pt-4">
+                    <div class="rv-scroll-track">
+
+                        <div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max">
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 1 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 1 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 2 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 2 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 3 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 3 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 4 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 4 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 5 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 5 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max" aria-hidden="true">
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 1 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 1 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 2 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 2 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 3 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 3 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 4 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 4 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div
+                                    class="group bg-[#1A2E24] border border-[#1A2E24]/5 p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-[#D4AF37] shadow-lg hover:shadow-xl">
+                                    <div>
+                                        <div class="flex text-yellow-500 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest"
+                                            aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p
+                                            class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                            "[Review 5 Text Goes Here]"
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p
+                                            class="font-body font-bold text-white group-hover:text-white text-sm lg:text-base transition-colors duration-500">
+                                            [Reviewer 5 Name], [Location]</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                            <path
+                                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                            <path
+                                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                            <path
+                                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track = document.getElementById('review-track');
+                    if (track) {
+                        // When hovering the outer area, slow down the animation speed
+                        track.parentElement.addEventListener('mouseenter', () => {
+                            track.style.animationPlaybackRate = "0.3";
+                        });
+                        // When leaving, return to full speed
+                        track.parentElement.addEventListener('mouseleave', () => {
+                            track.style.animationPlaybackRate = "1";
+                        });
+                    }
+                });
+            </script>
+
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
+                <hr class="border-brand-dark/10 mb-16 md:mb-20">
+            </div>
+
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-28 items-center reveal reveal-up">
+
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left order-1 lg:order-2">
+                        <span
+                            class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-7 font-semibold cursor-default shadow-sm">
+                            [Review Request Tagline]
+                        </span>
+
+                        <h2
+                            class="group font-heading text-4xl sm:text-5xl md:text-6xl font-normal text-brand-dark mb-7 leading-tight relative pb-7 flex flex-col items-center lg:items-start cursor-default">
+                            [Review Request Headline]
+                            <span
+                                class="absolute bottom-0 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-44"></span>
+                        </h2>
+
+                        <p
+                            class="font-body text-lg sm:text-xl lg:text-2xl text-brand-dark/70 leading-relaxed mb-10 font-light max-w-lg">
+                            [Review Request Description Text]
+                        </p>
+
+                        <a href="[Google Review Link]" target="_blank" rel="noopener noreferrer"
+                            class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                            <span
+                                class="absolute right-2.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
+
+                            <span
+                                class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                                [Write a Review CTA]
+                            </span>
+
+                            <span
+                                class="relative z-10 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-700">
+                                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center lg:justify-end order-2 lg:order-1">
+                        <div class="w-full max-w-xl flex flex-col items-center text-center gap-4 p-6 md:p-10">
+                            <div class="flex flex-col items-center justify-center gap-4">
+                                <svg class="w-[67px] h-[67px]" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                <div>
+                                    <p
+                                        class="font-body text-[22px] md:text-[24px] text-black uppercase tracking-widest leading-relaxed">
+                                        [Scan to Review Text]
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex-shrink-0 w-[250px] h-[250px] md:w-[307px] md:h-[307px] rounded-2xl overflow-hidden">
+                                <img src="assets/imgs/qrcode.png" alt="[QR Code Image Alt]"
+                                    class="w-full h-full object-contain mix-blend-multiply">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="faq" class="relative min-h-[100svh] py-20 flex items-center justify-center bg-[#EBE9E0]">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 relative w-full">
+
+                    <div class="w-full lg:w-1/3 relative">
+
+                        <div
+                            class="lg:sticky lg:top-48 flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up mt-8 lg:mt-0">
+
+                            <span
+                                class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm font-bold tracking-widest uppercase mb-6 cursor-default">
+                                [FAQ Tagline]
+                            </span>
+
+                            <h2
+                                class="group font-heading text-4xl sm:text-5xl md:text-6xl font-normal text-brand-dark leading-tight relative flex flex-col items-center lg:items-start pb-6 mb-8 cursor-default">
+                                [FAQ Headline]
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-44"></span>
+                            </h2>
+
+                            <p
+                                class="font-body text-base sm:text-lg md:text-xl text-brand-dark/70 mb-10 max-w-sm leading-relaxed">
+                                [FAQ Sub-headline / description]
+                            </p>
+
+                            <a href="contact.html"
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                                <span
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+                                <span
+                                    class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                                    [FAQ CTA Text]
+                                </span>
+
+                                <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-2/3 reveal reveal-up" style="transition-delay: 150ms;" itemscope
+                        itemtype="https://schema.org/FAQPage">
+
+                        <div class="space-y-0 font-body border-t border-brand-dark/10">
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 1]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 1 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 2]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 2 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 3]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 3 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 4]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 4 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 5]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 5 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 6]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 6 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 7]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 7 goes here.]</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
+                                itemtype="https://schema.org/Question">
+                                <summary
+                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
+                                    itemprop="name">
+                                    <span
+                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
+                                        Question 8]</span>
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
+                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg></span>
+                                </summary>
+                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
+                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">[FAQ Answer 8 goes here.]</span>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <style>
+            details>div {
+                animation-name: slideDown;
+                animation-duration: 350ms;
+                animation-timing-function: ease-out;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Hides the default browser triangle arrow */
+            details>summary::-webkit-details-marker {
+                display: none;
+            }
+        </style>
+
+        <section class="relative py-20 flex items-center justify-center bg-[#164a2a] text-white overflow-hidden">
+            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 w-full">
+
+                    <div
+                        class="w-full lg:w-3/12 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
+                        <div
+                            class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden shadow-2xl">
+                            <img src="assets/imgs/footer1.png" alt="[Footer Image 1 Alt]" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full lg:w-6/12 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
+
+                        <span
+                            class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm font-bold tracking-widest uppercase mb-6 cursor-default shadow-sm">
+                            [Bottom CTA Tagline]
+                        </span>
+
+                        <h2
+                            class="font-heading text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight mb-4">
+                            [Bottom CTA Headline Text]
+                            <span
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-48"></span>
+                        </h2>
+
+                        <p
+                            class="font-body text-base sm:text-lg md:text-xl text-white/85 mb-10 max-w-md mx-auto leading-relaxed mt-2">
+                            [Bottom CTA Description]
+                        </p>
+
+                        <a href="contact.html"
+                            class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#0fdb62] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
+
+                            <span
+                                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+
+                            <span
+                                class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
+                                [Bottom CTA Button Text]
+                            </span>
+
+                            <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="w-full lg:w-3/12 reveal reveal-up order-3 flex justify-center lg:justify-end mt-0 lg:mt-16"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden shadow-2xl">
+                            <img src="assets/imgs/footer2.png" alt="[Footer Image 2 Alt]" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Before/After Slider Logic
+            const sliders = document.querySelectorAll('.ba-slider');
+            sliders.forEach(slider => {
+                const beforeImage = slider.querySelector('.ba-before');
+                const handle = slider.querySelector('.ba-handle');
+                let isDragging = false;
+
+                const updateSlider = (e) => {
+                    if (!isDragging) return;
+                    const rect = slider.getBoundingClientRect();
+                    let clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                    let xPos = clientX - rect.left;
+                    if (xPos < 0) xPos = 0;
+                    if (xPos > rect.width) xPos = rect.width;
+                    const percentage = (xPos / rect.width) * 100;
+                    beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+                    handle.style.left = `${percentage}%`;
+                };
+
+                slider.addEventListener('mousedown', () => isDragging = true);
+                window.addEventListener('mouseup', () => isDragging = false);
+                window.addEventListener('mousemove', updateSlider);
+                slider.addEventListener('touchstart', () => isDragging = true, { passive: true });
+                window.addEventListener('touchend', () => isDragging = false);
+                window.addEventListener('touchmove', updateSlider, { passive: true });
+            });
+
+            // 2. Review Slider
+            const reviewTrack = document.getElementById('review-track');
+            const prevBtn = document.getElementById('prev-review');
+            const nextBtn = document.getElementById('next-review');
+            let autoPlayTimer;
+
+            const getScrollAmount = () => {
+                const card = reviewTrack.querySelector('div');
+                return card.offsetWidth + 24;
+            };
+
+            const startAutoPlay = () => {
+                autoPlayTimer = setInterval(() => {
+                    if (reviewTrack.scrollLeft + reviewTrack.clientWidth >= reviewTrack.scrollWidth - 10) {
+                        reviewTrack.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        reviewTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                    }
+                }, 4000);
+            };
+
+            const resetAutoPlay = () => {
+                clearInterval(autoPlayTimer);
+                startAutoPlay();
+            };
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    if (reviewTrack.scrollLeft + reviewTrack.clientWidth >= reviewTrack.scrollWidth - 10) {
+                        reviewTrack.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        reviewTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                    }
+                    resetAutoPlay();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    if (reviewTrack.scrollLeft <= 0) {
+                        reviewTrack.scrollTo({ left: reviewTrack.scrollWidth, behavior: 'smooth' });
+                    } else {
+                        reviewTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                    }
+                    resetAutoPlay();
+                });
+            }
+
+            if (reviewTrack) {
+                reviewTrack.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+                reviewTrack.addEventListener('mouseleave', startAutoPlay);
+                reviewTrack.addEventListener('touchstart', () => clearInterval(autoPlayTimer), { passive: true });
+                reviewTrack.addEventListener('touchend', startAutoPlay);
+                startAutoPlay();
+            }
+        });
+    </script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Google Sheets form submission
+        (function () {
+            const WEBHOOK = '[YOUR_WEBHOOK_URL_HERE]';
+
+            // Rate limiting: max 3 submissions per session
+            let submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
+
+            function handleFormSubmit(form, successCallback) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Honeypot check
+                    const honey = form.querySelector('[name="website_url"], [name="botcheck"]');
+                    if (honey && honey.value) return;
+
+                    // Rate limit check
+                    submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
+                    if (submissionCount >= 3) {
+                        alert('Too many submissions. Please try again later.');
+                        return;
+                    }
+
+                    // GDPR check
+                    const gdpr = form.querySelector('[name="gdpr"]');
+                    if (gdpr && !gdpr.checked) {
+                        alert('Please agree to be contacted before submitting.');
+                        return;
+                    }
+
+                    const btn = form.querySelector('button[type="submit"]');
+                    const originalText = btn ? btn.innerHTML : '';
+                    if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
+
+                    const data = {
+                        name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value : '',
+                        email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
+                        phone: form.querySelector('[name="phone"]') ? form.querySelector('[name="phone"]').value : '',
+                        message: form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : '',
+                        source: window.location.pathname
+                    };
+
+                    fetch(WEBHOOK, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    })
+                        .then(() => {
+                            submissionCount++;
+                            sessionStorage.setItem('formSubmitCount', submissionCount);
+                            if (successCallback) successCallback();
+                            else { form.reset(); alert('Thank you! [Company/Owner Name] will be in touch shortly.'); }
+                        })
+                        .catch(() => {
+                            alert('Something went wrong. Please call [Owner Name] on [Company Phone Number].');
+                        })
+                        .finally(() => {
+                            if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
+                        });
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Handle all forms on the page
+                document.querySelectorAll('form').forEach(function (form) {
+                    handleFormSubmit(form, function () {
+                        window.location.href = 'thank-you.html';
+                    });
+                });
+            });
+        })();
+    </script>
+    <script src="global.js"></script>
+</body>
+
+</html>
