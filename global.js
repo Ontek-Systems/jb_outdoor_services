@@ -54,11 +54,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadComponents() {
+    const isServiceDir = window.location.pathname.includes('/services/');
+    const basePath = isServiceDir ? '../' : '';
+
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         try {
-            const resp = await fetch('components/header.html');
-            const html = await resp.text();
+            const resp = await fetch(basePath + 'components/header.html');
+            let html = await resp.text();
+            if (isServiceDir) {
+                html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
+                    if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
+                    return `${p1}="../${p2}"`;
+                });
+            }
             headerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading header:', e);
@@ -68,8 +77,14 @@ async function loadComponents() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         try {
-            const resp = await fetch('components/footer.html');
-            const html = await resp.text();
+            const resp = await fetch(basePath + 'components/footer.html');
+            let html = await resp.text();
+            if (isServiceDir) {
+                html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
+                    if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
+                    return `${p1}="../${p2}"`;
+                });
+            }
             footerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading footer:', e);

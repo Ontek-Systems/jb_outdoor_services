@@ -1,10 +1,214 @@
-/* Scroll Animations Only */
+/* ============================================================
+   JB Outdoor Services Ltd — Global Stylesheet
+   Brand Palette:
+     --midnight:  #141229  (Midnight Violet)
+     --ocean:     #1C60AC  (Ocean Deep)
+     --bronze:    #D5A53E  (Golden Bronze)
+     --alice:     #F2F7FF  (Alice Blue)
+
+   PURPOSE: This file only defines custom classes and CSS
+   variables. It does NOT touch body, h1-h6, p, or any
+   base elements — those are handled entirely by Tailwind.
+   ============================================================ */
+
+/* ── CSS Custom Properties (available globally) ───────────── */
+:root {
+  --midnight:     #141229;
+  --ocean:        #1C60AC;
+  --ocean-light:  #2a75cc;
+  --ocean-dark:   #154d8a;
+  --bronze:       #D5A53E;
+  --bronze-light: #e8bc5c;
+  --bronze-dark:  #b88a2e;
+  --alice:        #F2F7FF;
+}
+
+/* ── Scroll Reveal Animations ─────────────────────────────── */
 .reveal {
     opacity: 0;
     transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.reveal-up { transform: translateY(40px); }
+.reveal-up    { transform: translateY(40px); }
+.reveal-left  { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.92); }
+
 .reveal.active {
     opacity: 1;
     transform: translate(0) scale(1);
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* ── Scrolling Banner ─────────────────────────────────────── */
+.scrolling-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+    cursor: default;
+}
+.scrolling-track {
+    display: flex;
+    width: max-content;
+    animation: scrollBanner 25s linear infinite;
+}
+.scrolling-wrapper:hover .scrolling-track,
+.scrolling-track:hover {
+    animation-play-state: running !important;
+}
+@keyframes scrollBanner {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.hover-item { transition: opacity 0.3s ease; }
+.scrolling-wrapper:hover .hover-item { opacity: 0.5; }
+.scrolling-wrapper .hover-item:hover  { opacity: 1; }
+
+/* ── Review Marquee ───────────────────────────────────────── */
+.rv-scroll-outer {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+.rv-scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scrollReviews 28s linear infinite;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+.rv-scroll-outer:hover .rv-scroll-track {
+    animation-play-state: running !important;
+}
+@keyframes scrollReviews {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ── Before / After Slider ────────────────────────────────── */
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+/* ── FAQ Accordion Animation ──────────────────────────────── */
+details > div {
+    animation-name: slideDown;
+    animation-duration: 350ms;
+    animation-timing-function: ease-out;
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+details > summary::-webkit-details-marker { display: none; }
+
+/* ── Custom Checkbox (form tick) ──────────────────────────── */
+.custom-tick {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.custom-tick:checked {
+    background-color: #D5A53E !important;
+    border-color: #D5A53E !important;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ── Heading Underline Smooth Expansion ───────────────────── */
+/*
+   Targets the decorative underline <span> inside h1 or h2.
+   Covers both Tailwind group-hover:w-* and inline-style spans.
+   Applies to h1 too (hero headings) not just h2.
+*/
+h1 > span[style*="background"],
+h2 > span[style*="background"],
+h1.group > span,
+h2.group > span,
+h1 span[class*="absolute"],
+h2 span[class*="absolute"] {
+    transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                background-color 0.3s ease;
+}
+
+/* ── Tagline / Section Label Pills ───────────────────────── */
+/*
+   Scoped to <span> elements ONLY — not <div> or <a> —
+   so carousel cards and buttons are never affected.
+
+   Bronze pill  →  hover to Ocean Deep
+   Ocean pill   →  hover to Golden Bronze
+*/
+span[style*="background:#D5A53E"] {
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+span[style*="background:#D5A53E"]:hover {
+    background: #1C60AC !important;
+    color: #F2F7FF !important;
+    box-shadow: 0 4px 16px rgba(28, 96, 172, 0.30);
+}
+
+span[style*="background:#1C60AC"] {
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+span[style*="background:#1C60AC"]:hover {
+    background: #D5A53E !important;
+    color: #141229 !important;
+    box-shadow: 0 4px 16px rgba(213, 165, 62, 0.30);
+}
+
+/* ── Carousel card background transition ─────────────────── */
+/*
+   Smooths the onmouseenter background swap on commitment
+   cards (about.html). Scoped to div only, never affects pills.
+*/
+div[onmouseenter][style*="background:#141229"] {
+    transition: background 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ── Hide scrollbar utility ───────────────────────────────── */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Light-background navbar (service pages & gallery) ─────── */
+/* When the header is at the top on a light page, all inherited  */
+/* link text becomes dark. Once .scrolled is added (via JS) the  */
+/* dark background makes white text correct again.               */
+body.light-nav-page #site-header:not(.scrolled) {
+    color: #141229;
+}
+body.light-nav-page #site-header:not(.scrolled) #menuBtn {
+    color: #141229 !important;
+}
+body.light-nav-page #site-header:not(.scrolled) .logo-white {
+    display: none !important;
+}
+body.light-nav-page #site-header:not(.scrolled) .logo-dark {
+    display: block !important;
+}
+/* Restore white logo once scrolled (dark background is active) */
+body.light-nav-page #site-header.scrolled .logo-white {
+    display: block !important;
+}
+body.light-nav-page #site-header.scrolled .logo-dark {
+    display: none !important;
 }

@@ -5,347 +5,379 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>[Page Title] | [Company Name]</title>
-    <meta name="description" content="[Meta Description goes here. Keep it under 160 characters.]" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="[Page URL]" />
+    <title>Contact Us | JB Outdoor Services Ltd | Free Quote | Wincanton, Somerset</title>
+    <meta name="description" content="Contact Jack at JB Outdoor Services Ltd for a free, no-obligation quote on landscaping, groundworks, patios, fencing, and digger hire in Wincanton and a 10-mile radius." />
+    <link rel="canonical" href="https://www.jboutdoorservices.co.uk/contact.html" />
 
+    <meta property="og:title" content="Contact Us | JB Outdoor Services Ltd | Free Quote | Wincanton, Somerset" />
+    <meta property="og:description" content="Contact Jack at JB Outdoor Services Ltd for a free, no-obligation quote on landscaping, groundworks, patios, fencing, and digger hire in Wincanton and a 10-mile radius." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="[Page URL]" />
-    <meta property="og:title" content="[Page Title] | [Company Name]" />
-    <meta property="og:description" content="[Meta Description goes here. Keep it under 160 characters.]" />
-    <meta property="og:image" content="[Open Graph Image URL]" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="[Locale e.g., en_GB]" />
-    <meta property="og:site_name" content="[Company Name]" />
+    <meta property="og:url" content="https://www.jboutdoorservices.co.uk/contact.html" />
+    <meta property="og:image" content="https://www.jboutdoorservices.co.uk/assets/imgs/og-image.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="[Page Title] | [Company Name]" />
-    <meta name="twitter:description" content="[Meta Description goes here. Keep it under 160 characters.]" />
-    <meta name="twitter:image" content="[Twitter Image URL]" />
+    <meta name="twitter:title" content="Contact Us | JB Outdoor Services Ltd | Free Quote | Wincanton, Somerset" />
+    <meta name="twitter:description" content="Contact Jack at JB Outdoor Services Ltd for a free, no-obligation quote on landscaping, groundworks, patios, fencing, and digger hire in Wincanton and a 10-mile radius." />
+    <meta name="twitter:image" content="https://www.jboutdoorservices.co.uk/assets/imgs/og-image.jpg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&display=swap">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
         @theme {
-            --color-brand-dark: #1A2E24;
-            --color-brand-green: #2C4C3B;
-            --color-brand-beige: #F4F1EA;
-            --color-brand-text: #111827;
-            --color-brand-accent: #0fdb62;   
-            --color-brand-gold: #edc237;   
-            
+            --color-brand-dark:   #141229;
+            --color-brand-ocean:  #1C60AC;
+            --color-brand-bronze: #D5A53E;
+            --color-brand-alice:  #F2F7FF;
+            --color-brand-text:   #141229;
+            --color-brand-beige:  #F2F7FF;
+
             --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            --font-body:    'DM Sans', sans-serif;
         }
-        
-        body { 
-            font-family: var(--font-body); 
-            background-color: var(--color-brand-beige); 
-            color: var(--color-brand-text); 
-        }
-        h1, h2, h3, h4, h5, h6 { 
-            font-family: var(--font-heading); 
-        }
-
-        img {
-            filter: saturate(1.15);
-        }
-
-        .custom-tick {
-            -webkit-appearance: none;
-            appearance: none;
-            background-color: #f3f4f6;
-            border: 1px solid #d1d5db;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-        .custom-tick:checked {
-            background-color: #D4AF37 !important;
-            border-color: #D4AF37 !important;
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        #site-header nav a {
-            @apply transition-all duration-150 inline-flex items-center;
-        }
-        #site-header nav a:hover {
-            @apply text-brand-accent;
-            transform: scale(1.10);
-        }
-
-        #site-header.scrolled nav a:hover {
-            @apply text-brand-gold;
-            transform: scale(1.10);
-        }
-
-        #site-header.scrolled #menuBtn {
-            @apply hover:text-brand-gold;
-        }
-
-        /* --- LOGO SWAP LOGIC --- */
-        .logo-white { display: block; }
-        .logo-dark { display: none; }
-
-        #site-header.gallery-dark-nav .logo-white { display: none; }
-        #site-header.gallery-dark-nav .logo-dark { display: block; }
+        body  { font-family: var(--font-body); background-color: #F2F7FF; color: #141229; }
+        h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+        img   { filter: saturate(1.1); }
     </style>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
+<body class="flex flex-col min-h-screen antialiased">
 
     <div id="header-placeholder"></div>
 
-    <main class="bg-brand-beige min-h-screen">
+    <main class="min-h-screen" style="background:#F2F7FF;">
+
         <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "[Company Name]",
-      "image": "[Company Logo URL]",
-      "telephone": "[Company Phone]",
-      "email": "[Company Email]",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "[Street Address]",
-        "addressLocality": "[City]",
-        "addressRegion": "[Region]",
-        "addressCountry": "[Country]"
-      },
-      "url": "[Page URL]",
-      "openingHours": "[Opening Hours e.g., Mo-Sa 08:00-18:00]",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "[Company Phone]",
-        "contactType": "customer service",
-        "areaServed": "[Area Served]",
-        "availableLanguage": "[Language]"
-      }
-    }
-    </script>
+        {
+          "@context": "https://schema.org",
+          "@type": "HomeAndConstructionBusiness",
+          "name": "JB Outdoor Services Ltd",
+          "image": "https://www.jboutdoorservices.co.uk/assets/imgs/logo.png",
+          "telephone": "+447445064666",
+          "email": "jboutdoorservicesltd@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Wincanton",
+            "addressRegion": "Somerset",
+            "addressCountry": "GB"
+          },
+          "url": "https://www.jboutdoorservices.co.uk/contact.html",
+          "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-13:00"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+447445064666",
+            "contactType": "customer service",
+            "areaServed": "Wincanton and 10-mile radius, Somerset",
+            "availableLanguage": "English"
+          }
+        }
+        </script>
 
-        <section
-            class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden bg-brand-dark">
-            <div
-                class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 text-center text-white reveal reveal-up flex flex-col items-center">
+        <!-- ═══════════════════════════════════════════════════
+             HERO
+        ═══════════════════════════════════════════════════ -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden" style="background:#141229;">
+            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 text-center text-white reveal reveal-up flex flex-col items-center">
 
-                <span
-                    class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default shadow-sm">
-                    [Hero Tagline]
+                <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
+                    style="background:#D5A53E; color:#141229;">
+                    Get In Touch
                 </span>
 
-                <h1
-                    class="group font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight relative pb-6 flex flex-col items-center cursor-default">
-                    [Hero Headline]
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-48"></span>
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight relative pb-6 group flex flex-col items-center">
+                    Let's Discuss Your Outdoor Project
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-[3px] rounded-full transition-all duration-400 group-hover:w-32 md:group-hover:w-40"
+                        style="background:#D5A53E;"></span>
                 </h1>
 
             </div>
         </section>
 
-        <section class="py-16 md:py-24">
+        <!-- ═══════════════════════════════════════════════════
+             CONTACT FORM + INFO
+        ═══════════════════════════════════════════════════ -->
+        <section id="contact-form" class="py-16 md:py-24">
             <div class="container mx-auto px-6 max-w-[85rem]">
-                <div
-                    class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100 reveal reveal-up">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100 reveal reveal-up">
 
-                    <div class="lg:w-3/5 p-8 md:p-12 lg:p-20">
-                        <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-dark mb-4">
-                            [Form Headline]
-                        </h2>
-                        <p class="font-body text-xl text-brand-text/70 mb-12">
-                            [Form Sub-headline Description]
-                        </p>
+                    <!-- LEFT: Form -->
+                    <div class="lg:w-3/5 p-8 md:p-12 lg:p-16">
+                        <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4" style="color:#141229;">Request a Free Quote</h2>
+                        <p class="font-body text-xl mb-12" style="color:rgba(20,18,41,0.65);">Fill out the details below and Jack will get back to you promptly to discuss your project and arrange a site visit.</p>
 
-                        <form action="#" method="POST" class="space-y-8 font-body">
-
-                            <div style="display: none;" aria-hidden="true">
-                                <input type="text" name="botcheck" tabindex="-1" autocomplete="off">
+                        <form id="contact-form" class="space-y-8 font-body">
+                            <!-- Honeypot -->
+                            <div style="display:none;">
+                                <label for="botcheck">Leave this field empty</label>
+                                <input type="text" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off">
                             </div>
-
-
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div>
-                                    <label for="name" class="block text-base font-bold text-brand-dark mb-3">[Name
-                                        Label]
-                                        *</label>
-                                    <input type="text" id="name" name="name" required maxlength="100"
-                                        placeholder="[Name Placeholder]"
-                                        class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50/50 text-lg">
+                                    <label for="name" class="block text-base font-bold mb-3" style="color:#141229;">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="e.g. John Smith"
+                                        class="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none transition-all bg-gray-50/50 text-lg"
+                                        style="color:#141229;"
+                                        onfocus="this.style.borderColor='#1C60AC';this.style.boxShadow='0 0 0 4px rgba(28,96,172,0.10)';"
+                                        onblur="this.style.borderColor='';this.style.boxShadow='';">
                                 </div>
                                 <div>
-                                    <label for="phone" class="block text-base font-bold text-brand-dark mb-3">[Phone
-                                        Label]
-                                        *</label>
-                                    <input type="tel" id="phone" name="phone" required maxlength="20"
-                                        pattern="[0-9\s\-\+\(\)]*" placeholder="[Phone Placeholder]"
-                                        class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50/50 text-lg">
+                                    <label for="phone" class="block text-base font-bold mb-3" style="color:#141229;">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 07445 064666"
+                                        class="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none transition-all bg-gray-50/50 text-lg"
+                                        style="color:#141229;"
+                                        onfocus="this.style.borderColor='#1C60AC';this.style.boxShadow='0 0 0 4px rgba(28,96,172,0.10)';"
+                                        onblur="this.style.borderColor='';this.style.boxShadow='';">
                                 </div>
                             </div>
 
                             <div>
-                                <label for="email" class="block text-base font-bold text-brand-dark mb-3">[Email
-                                    Label]</label>
-                                <input type="email" id="email" name="email" maxlength="150"
-                                    placeholder="[Email Placeholder]"
-                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50/50 text-lg">
+                                <label for="email" class="block text-base font-bold mb-3" style="color:#141229;">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com"
+                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none transition-all bg-gray-50/50 text-lg"
+                                    style="color:#141229;"
+                                    onfocus="this.style.borderColor='#1C60AC';this.style.boxShadow='0 0 0 4px rgba(28,96,172,0.10)';"
+                                    onblur="this.style.borderColor='';this.style.boxShadow='';">
                             </div>
 
                             <div>
-                                <label for="message" class="block text-base font-bold text-brand-dark mb-3">[Message
-                                    Label]
-                                    *</label>
-                                <textarea id="message" name="message" required rows="5" maxlength="1500"
-                                    placeholder="[Message Placeholder]"
-                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#0fdb62] focus:ring-4 focus:ring-[#0fdb62]/20 outline-none transition-all bg-gray-50/50 resize-none text-lg"></textarea>
+                                <label for="service" class="block text-base font-bold mb-3" style="color:#141229;">Service Required</label>
+                                <select id="service" name="service"
+                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none transition-all bg-gray-50/50 text-lg"
+                                    style="color:#141229;"
+                                    onfocus="this.style.borderColor='#1C60AC';this.style.boxShadow='0 0 0 4px rgba(28,96,172,0.10)';"
+                                    onblur="this.style.borderColor='';this.style.boxShadow='';">
+                                    <option value="">Select a service...</option>
+                                    <option>Full Garden Transformation</option>
+                                    <option>General Landscaping</option>
+                                    <option>Turfing</option>
+                                    <option>Hedge Removal</option>
+                                    <option>Decking</option>
+                                    <option>Fencing</option>
+                                    <option>Patio</option>
+                                    <option>Gravel Driveway</option>
+                                    <option>Retaining Wall</option>
+                                    <option>Digger Hire with Operator</option>
+                                    <option>Groundworks &amp; Footings</option>
+                                    <option>Ground Levelling</option>
+                                    <option>Drainage Solutions</option>
+                                    <option>Concrete Pad</option>
+                                    <option>Waste &amp; Site Clearance</option>
+                                    <option>Firewood Supply</option>
+                                    <option>Other / Not Sure</option>
+                                </select>
                             </div>
 
-                            <div class="flex items-center gap-3 mt-4 mb-4">
-                                <input type="checkbox" id="contact-gdpr" name="gdpr" required
-                                    class="custom-tick w-5 h-5 focus:ring-[#D4AF37] focus:ring-2">
-                                <label for="contact-gdpr" class="text-sm font-bold text-brand-dark cursor-pointer">
-                                    [GDPR Agreement Text]
+                            <div>
+                                <label for="message" class="block text-base font-bold mb-3" style="color:#141229;">Project Details *</label>
+                                <textarea id="message" name="message" required rows="5"
+                                    placeholder="Tell us about the work you need, the size of the area, any access considerations, and your preferred timescale..."
+                                    class="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none transition-all bg-gray-50/50 resize-none text-lg"
+                                    style="color:#141229;"
+                                    onfocus="this.style.borderColor='#1C60AC';this.style.boxShadow='0 0 0 4px rgba(28,96,172,0.10)';"
+                                    onblur="this.style.borderColor='';this.style.boxShadow='';"></textarea>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="consent" name="consent" required
+                                    class="w-5 h-5 rounded border-gray-300 cursor-pointer shrink-0 custom-tick">
+                                <label for="consent" class="text-base cursor-pointer" style="color:rgba(20,18,41,0.70);">
+                                    I agree to be contacted by JB Outdoor Services Ltd regarding my enquiry.
                                 </label>
                             </div>
 
-                            <div class="flex justify-center w-full">
-                                <button type="submit"
-                                    class="group relative inline-flex items-center justify-between gap-3 sm:gap-4 pl-4 sm:pl-6 pr-1.5 sm:pr-2 py-1.5 sm:py-2 bg-[#0fdb62] font-body font-bold text-base sm:text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 sm:w-auto border-none cursor-pointer">
+                            <button id="submit-btn" type="submit"
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 border-none cursor-pointer"
+                                style="background:#D5A53E; color:#141229;">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                                    style="background:#141229;"></span>
+                                <span id="submit-text" class="relative z-10 transition-colors duration-500 group-hover:text-white">Submit Request</span>
+                                <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                                    </svg>
+                                </span>
+                            </button>
 
-                                    <span
-                                        class="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#0dae4d] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
-
-                                    <span
-                                        class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
-                                        [Submit Button Text]
-                                    </span>
-
-                                    <span
-                                        class="relative z-10 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M5 12h14m-6-6l6 6-6 6"></path>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
+                            <p id="form-error" class="hidden font-bold mt-4" style="color:#DC2626;"></p>
                         </form>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const form      = document.getElementById('contact-form');
+                                const submitBtn = document.getElementById('submit-btn');
+                                const submitText = document.getElementById('submit-text');
+                                const formError = document.getElementById('form-error');
+
+                                if (form && submitBtn) {
+                                    form.addEventListener('submit', (e) => {
+                                        e.preventDefault();
+
+                                        // Honeypot check
+                                        if (document.getElementById('botcheck').value !== '') {
+                                            window.location.href = 'thank-you.html';
+                                            return;
+                                        }
+
+                                        submitBtn.disabled = true;
+                                        submitText.innerHTML = 'Sending...';
+                                        submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+                                        formError.classList.add('hidden');
+
+                                        const formData = new FormData(form);
+                                        const webhookUrl = '[YOUR_WEBHOOK_URL_HERE]';
+
+                                        fetch(webhookUrl, {
+                                            method: 'POST',
+                                            body: formData,
+                                            mode: 'no-cors'
+                                        })
+                                        .then(() => {
+                                            window.location.href = 'thank-you.html';
+                                        })
+                                        .catch((error) => {
+                                            console.error('Submission Error:', error);
+                                            submitBtn.disabled = false;
+                                            submitText.innerHTML = 'Error. Try Again.';
+                                            submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                                            formError.textContent = 'Something went wrong. Please call Jack directly on +44 7445 064666.';
+                                            formError.classList.remove('hidden');
+                                        });
+                                    });
+                                }
+                            });
+                        </script>
                     </div>
 
-                    <div
-                        class="lg:w-2/5 bg-brand-dark text-white p-8 md:p-12 lg:p-20 flex flex-col justify-between relative overflow-hidden">
+                    <!-- RIGHT: Contact Info -->
+                    <div class="lg:w-2/5 text-white p-8 md:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden"
+                        style="background:#141229;">
+
                         <div class="relative z-10">
-                            <h3 class="font-heading text-3xl font-bold mb-12 text-brand-beige">[Contact Block Title]
-                            </h3>
+                            <h3 class="font-heading text-3xl font-bold mb-10" style="color:#F2F7FF;">Direct Contact</h3>
 
-                            <div class="space-y-10 font-body">
+                            <div class="space-y-8 font-body">
 
-                                <div class="flex items-start gap-5 group">
-                                    <div
-                                        class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/5 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:scale-110 group-hover:border-[#D4AF37]">
-                                        <svg aria-hidden="true"
-                                            class="w-6 h-6 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                            </path>
+                                <!-- Phone -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 transition-all duration-300 group-hover:scale-110"
+                                        style="background:rgba(255,255,255,0.08);"
+                                        onmouseenter="this.style.background='#D5A53E';this.style.borderColor='#D5A53E';"
+                                        onmouseleave="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.10)';">
+                                        <svg class="w-5 h-5" style="color:#D5A53E;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <p class="text-brand-beige/60 text-sm uppercase tracking-widest font-bold mb-2">
-                                            [Call CTA Title]</p>
-                                        <a href="tel:[Phone Number]"
-                                            class="text-2xl font-bold hover:text-[#D4AF37] transition-colors">[Phone
-                                            Number]</a>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:rgba(242,247,255,0.55);">Call Jack</p>
+                                        <a href="tel:+447445064666"
+                                            class="text-lg font-bold transition-colors duration-150"
+                                            style="color:#F2F7FF;"
+                                            onmouseenter="this.style.color='#D5A53E'" onmouseleave="this.style.color='#F2F7FF'">
+                                            +44 7445 064666
+                                        </a>
                                     </div>
                                 </div>
 
-                                <div class="flex items-start gap-5 group">
-                                    <div
-                                        class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/5 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:scale-110 group-hover:border-[#D4AF37]">
-                                        <svg aria-hidden="true"
-                                            class="w-6 h-6 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                            </path>
+                                <!-- Email -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 transition-all duration-300 group-hover:scale-110"
+                                        style="background:rgba(255,255,255,0.08);"
+                                        onmouseenter="this.style.background='#D5A53E';this.style.borderColor='#D5A53E';"
+                                        onmouseleave="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.10)';">
+                                        <svg class="w-5 h-5" style="color:#D5A53E;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <p class="text-brand-beige/60 text-sm uppercase tracking-widest font-bold mb-2">
-                                            [Email CTA Title]</p>
-                                        <a href="mailto:[Email Address]"
-                                            class="text-xl font-medium hover:text-[#D4AF37] transition-colors break-all">[Email
-                                            Address]</a>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:rgba(242,247,255,0.55);">Email</p>
+                                        <a href="mailto:jboutdoorservicesltd@gmail.com"
+                                            class="text-lg font-medium transition-colors duration-150 break-all"
+                                            style="color:#F2F7FF;"
+                                            onmouseenter="this.style.color='#D5A53E'" onmouseleave="this.style.color='#F2F7FF'">
+                                            jboutdoorservicesltd@gmail.com
+                                        </a>
                                     </div>
                                 </div>
 
-                                <div class="flex items-start gap-5 group">
-                                    <div
-                                        class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/5 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:scale-110 group-hover:border-[#D4AF37]">
-                                        <svg aria-hidden="true"
-                                            class="w-6 h-6 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <!-- Hours -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 transition-all duration-300 group-hover:scale-110"
+                                        style="background:rgba(255,255,255,0.08);"
+                                        onmouseenter="this.style.background='#D5A53E';this.style.borderColor='#D5A53E';"
+                                        onmouseleave="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.10)';">
+                                        <svg class="w-5 h-5" style="color:#D5A53E;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <p class="text-brand-beige/60 text-sm uppercase tracking-widest font-bold mb-2">
-                                            [Availability Title]</p>
-                                        <p class="text-xl font-semibold text-white">[Availability Times]</p>
-                                        <p class="text-lg text-brand-beige/60 mt-1 italic">[Availability Area Subtext]
-                                        </p>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:rgba(242,247,255,0.55);">Working Hours</p>
+                                        <p class="text-lg font-semibold" style="color:#F2F7FF;">Mon &ndash; Fri: 8:00 AM &ndash; 6:00 PM</p>
+                                        <p class="text-base mt-1 italic" style="color:rgba(242,247,255,0.60);">Saturday: 8:00 AM &ndash; 1:00 PM</p>
+                                        <p class="text-base mt-0.5 italic" style="color:rgba(242,247,255,0.60);">Sunday: Closed</p>
                                     </div>
                                 </div>
 
-                                <div class="flex items-start gap-5 group">
-                                    <div
-                                        class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 border border-white/5 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:scale-110 group-hover:border-[#D4AF37]">
-                                        <svg aria-hidden="true"
-                                            class="w-6 h-6 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                            </path>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <!-- Location -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 transition-all duration-300 group-hover:scale-110"
+                                        style="background:rgba(255,255,255,0.08);"
+                                        onmouseenter="this.style.background='#D5A53E';this.style.borderColor='#D5A53E';"
+                                        onmouseleave="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.10)';">
+                                        <svg class="w-5 h-5" style="color:#D5A53E;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <p class="text-brand-beige/60 text-sm uppercase tracking-widest font-bold mb-2">
-                                            [Location Title]</p>
-                                        <address class="not-italic text-xl font-medium text-white mb-0 leading-snug">
-                                            [Full Address]
-                                        </address>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:rgba(242,247,255,0.55);">Service Area</p>
+                                        <p class="text-lg font-medium leading-relaxed" style="color:#F2F7FF;">Wincanton &amp; 10-Mile Radius</p>
+                                        <p class="text-base mt-0.5" style="color:rgba(242,247,255,0.60);">Somerset, United Kingdom</p>
+                                    </div>
+                                </div>
+
+                                <!-- Facebook -->
+                                <div class="flex items-start gap-4 group">
+                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 transition-all duration-300 group-hover:scale-110"
+                                        style="background:rgba(255,255,255,0.08);"
+                                        onmouseenter="this.style.background='#D5A53E';this.style.borderColor='#D5A53E';"
+                                        onmouseleave="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.10)';">
+                                        <svg class="w-5 h-5" style="color:#D5A53E;" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:rgba(242,247,255,0.55);">Follow Us</p>
+                                        <a href="https://www.facebook.com/jbw1999/" target="_blank" rel="noopener noreferrer"
+                                            class="text-lg font-medium transition-colors duration-150"
+                                            style="color:#F2F7FF;"
+                                            onmouseenter="this.style.color='#D5A53E'" onmouseleave="this.style.color='#F2F7FF'">
+                                            facebook.com/jbw1999
+                                        </a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="relative z-10 mt-16 pt-10 border-t border-white/10">
-                            <p class="font-body text-brand-beige/80 text-lg leading-relaxed italic">
-                                "[Contact Disclaimer Text]"
+                        <!-- Jack's note -->
+                        <div class="relative z-10 mt-12 pt-8 border-t border-white/10">
+                            <p class="font-body text-base leading-relaxed italic" style="color:rgba(242,247,255,0.75);">
+                                "I am often out on site during the day. If I can't pick up, please leave a message or send an email and I will get back to you as soon as I can."
                             </p>
+                            <span class="font-bold block mt-3" style="color:#F2F7FF;">Jack Banfield</span>
                         </div>
                     </div>
 
@@ -353,372 +385,285 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-32 bg-[#164a2a] border-t border-white/5 overflow-hidden">
-            <div class="w-full max-w-[98rem] mx-auto relative z-20">
+        <!-- ═══════════════════════════════════════════════════
+             SERVICE AREA MAP
+        ═══════════════════════════════════════════════════ -->
+        <section class="py-16 md:py-24 lg:py-32 border-t overflow-hidden" style="background:#FFFFFF; border-color:rgba(20,18,41,0.05);">
+            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-20">
 
-                <div class="text-center mb-16 px-4 reveal reveal-up flex flex-col items-center">
-
-                    <span
-                        class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default shadow-sm">
-                        [Marquee Tagline]
+                <div class="flex flex-col items-center text-center mb-12 reveal reveal-up">
+                    <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
+                        style="background:#1C60AC; color:#F2F7FF;">
+                        Service Coverage
                     </span>
-
-                    <h2
-                        class="group font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight relative pb-6 flex flex-col items-center cursor-default">
-                        [Marquee Title]
-                        <span
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-48"></span>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold text-[#141229] leading-tight relative pb-6 flex flex-col items-center group">
+                        Where We Work
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-[3px] rounded-full transition-all duration-400 group-hover:w-32 md:group-hover:w-40"
+                            style="background:#D5A53E;"></span>
                     </h2>
-                    <p class="font-body text-lg lg:text-xl text-white/80 mt-6 max-w-2xl mx-auto leading-relaxed">
-                        [Marquee Description Text]
+                    <p class="font-body text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-5" style="color:rgba(20,18,41,0.60);">
+                        Based in Wincanton, we serve all towns and villages within a 10-mile radius across Somerset. Not sure if we cover you? Just give Jack a call.
                     </p>
                 </div>
 
-                <div class="relative w-full overflow-hidden py-4 mask-edges">
-                    <div id="location-scroller" class="flex w-max gap-4 px-4">
+                <!-- Location pill ticker -->
+                <div class="relative mb-12 reveal reveal-up overflow-hidden" style="transition-delay:60ms;">
+                    <div class="absolute inset-y-0 left-0 w-16 sm:w-24 z-10 pointer-events-none"
+                        style="background:linear-gradient(to right,white,transparent);"></div>
+                    <div class="absolute inset-y-0 right-0 w-16 sm:w-24 z-10 pointer-events-none"
+                        style="background:linear-gradient(to left,white,transparent);"></div>
 
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                1]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                2]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                3]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                4]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                5]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                6]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                7]</span>
-                        </div>
-
-                        <div
-                            class="group flex items-center gap-3 px-8 py-3.5 bg-[#1A2E24] rounded-full shrink-0 transition-colors duration-300 hover:bg-[#D4AF37]">
-                            <svg class="w-5 h-5 text-[#0fdb62] transition-colors duration-300 group-hover:text-white"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span
-                                class="font-body font-semibold text-white transition-colors duration-300 text-[17px]">[Location
-                                8]</span>
-                        </div>
-
+                    <div class="somerset-ticker-wrap" style="overflow:hidden;">
+                        <div id="somerset-ticker" class="somerset-ticker flex gap-3 py-2" style="width:max-content;"></div>
                     </div>
                 </div>
+
+                <div class="flex flex-col gap-5 xl:gap-8 reveal reveal-up w-full" style="transition-delay:100ms;">
+                    <div class="w-full rounded-2xl sm:rounded-[1.5rem] overflow-hidden border h-[400px] md:h-[500px] lg:h-[600px]"
+                        style="border-color:rgba(20,18,41,0.10);">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://maps.google.com/maps?q=Wincanton,+Somerset,+UK&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            class="w-full h-full"
+                            title="JB Outdoor Services Ltd Service Coverage around Wincanton, Somerset">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-center reveal reveal-up">
+                    <a href="tel:+447445064666"
+                        class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-base rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 border-none"
+                        style="background:#D5A53E; color:#141229;">
+                        <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                            style="background:#141229;"></span>
+                        <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Call Jack: +44 7445 064666</span>
+                        <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                            <svg style="width:18px;height:18px;" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"
+                                class="-rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
             </div>
         </section>
 
         <style>
-            /* Fades out the left and right edges for a premium slider look */
-            .mask-edges {
-                mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-                -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+            .somerset-ticker { will-change: transform; display: flex; gap: 0.75rem; width: max-content; }
+            .somerset-pill {
+                display: inline-flex; align-items: center; gap: 8px;
+                padding: 11px 22px; border-radius: 999px; border: none;
+                background: #141229; white-space: nowrap;
+                font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+                color: white; cursor: default;
+                transition: background 0.35s cubic-bezier(0.4,0,0.2,1), transform 0.2s;
+                user-select: none;
             }
+            .somerset-pill:hover { background: #D5A53E; color: #141229; transform: scale(1.04); }
+            .somerset-pill svg { flex-shrink: 0; }
         </style>
 
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const scroller = document.getElementById('location-scroller');
-                if (scroller) {
-                    // Duplicate the content to allow infinite scrolling without gaps
-                    const content = scroller.innerHTML;
-                    scroller.innerHTML = content + content;
+        (function() {
+            var towns = [
+                'Wincanton','Bruton','Castle Cary','Shepton Mallet','Templecombe',
+                'Gillingham','Shaftesbury','Mere','Zeals','Bourton','Milborne Port',
+                'Sherborne','Stalbridge','Sturminster Newton','Marnhull','Henstridge',
+                'South Petherton','Ilminster','Crewkerne','Chard','Yeovil',
+                'Somerton','Langport','Curry Rivel','Martock','Stoke sub Hamdon',
+                'Ansford','Cucklington','Abbas Combe','Charlton Horethorne',
+                'Maperton','Stowell','North Cadbury','South Cadbury','Sparkford'
+            ];
 
-                    // Web Animations API for smooth continuous movement
-                    const anim = scroller.animate([
-                        { transform: 'translateX(0)' },
-                        { transform: 'translateX(-50%)' }
-                    ], {
-                        duration: 35000, // Speed of the marquee
-                        iterations: Infinity,
-                        easing: 'linear'
-                    });
+            var pinPath = 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z';
 
-                    // Slow down the animation when hovered (0.4 for smoothness)
-                    scroller.parentElement.addEventListener('mouseenter', () => {
-                        anim.playbackRate = 0.4;
-                    });
+            function makePill(town) {
+                var pill = document.createElement('span');
+                pill.className = 'somerset-pill';
+                var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+                svg.setAttribute('width','11'); svg.setAttribute('height','11');
+                svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('fill','currentColor');
+                var path = document.createElementNS('http://www.w3.org/2000/svg','path');
+                path.setAttribute('d', pinPath);
+                svg.appendChild(path);
+                pill.appendChild(svg);
+                pill.appendChild(document.createTextNode(town));
+                return pill;
+            }
 
-                    // Return to normal speed when mouse leaves
-                    scroller.parentElement.addEventListener('mouseleave', () => {
-                        anim.playbackRate = 1;
-                    });
-                }
-            });
+            var strip = document.getElementById('somerset-ticker');
+            if (!strip) return;
+
+            towns.concat(towns).forEach(function(town) { strip.appendChild(makePill(town)); });
+
+            var pos = 0, lastTime = null, speedMult = 1.0, targetMult = 1.0, LERP = 0.036;
+            var wrap = strip.closest('.somerset-ticker-wrap') || strip.parentElement;
+            wrap.addEventListener('mouseenter', function() { targetMult = 0.5; });
+            wrap.addEventListener('mouseleave', function() { targetMult = 1.0; });
+
+            function tick(ts) {
+                if (lastTime === null) lastTime = ts;
+                var dt = ts - lastTime; lastTime = ts;
+                speedMult += (targetMult - speedMult) * LERP;
+                var halfWidth = strip.scrollWidth / 2;
+                var baseSpeed = halfWidth / 55000;
+                pos += baseSpeed * speedMult * dt;
+                if (pos >= halfWidth) pos -= halfWidth;
+                strip.style.transform = 'translateX(-' + pos + 'px)';
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        })();
         </script>
 
-        <section id="faq" class="relative min-h-[100svh] py-20 flex items-center justify-center bg-[#FFFFFF]">
+        <!-- ═══════════════════════════════════════════════════
+             FAQ
+        ═══════════════════════════════════════════════════ -->
+        <section id="faq" class="relative min-h-[100svh] py-20 pt-28 md:pt-36 flex items-center justify-center" style="background:#F2F7FF;">
             <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
 
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 relative w-full">
 
                     <div class="w-full lg:w-1/3 relative">
+                        <div class="lg:sticky lg:top-40 flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up mt-8 lg:mt-0">
 
-                        <div
-                            class="lg:sticky lg:top-48 flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up mt-8 lg:mt-0">
-
-                            <span
-                                class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm font-bold tracking-widest uppercase mb-6 cursor-default">
-                                [FAQ Tagline]
+                            <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
+                                style="background:#D5A53E; color:#141229;">
+                                Questions &amp; Answers
                             </span>
 
-                            <h2
-                                class="group font-heading text-4xl sm:text-5xl md:text-6xl font-normal text-brand-dark leading-tight relative flex flex-col items-center lg:items-start pb-6 mb-8 cursor-default">
-                                [FAQ Title]
-                                <span
-                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-44"></span>
+                            <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-[#141229] leading-tight relative flex flex-col items-center lg:items-start pb-6 mb-8 group">
+                                Got Questions?
+                                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full transition-all duration-400 group-hover:w-32 md:group-hover:w-40"
+                                    style="background:#1C60AC;"></span>
                             </h2>
 
-                            <p
-                                class="font-body text-base sm:text-lg md:text-xl text-brand-dark/70 mb-10 max-w-sm leading-relaxed">
-                                [FAQ Description/Subtitle]
+                            <p class="font-body text-base sm:text-lg md:text-xl mb-10 max-w-sm leading-relaxed" style="color:rgba(20,18,41,0.70);">
+                                Can't find the answer you're looking for? Get in touch and Jack will be happy to help.
                             </p>
 
-                            <a href="contact.html"
-                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#E3E4DD] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105">
-
-                                <span
-                                    class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                                <span
-                                    class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
-                                    [FAQ CTA Button Text]
-                                </span>
-
+                            <a href="tel:+447445064666"
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 border-none"
+                                style="background:#141229; color:#F2F7FF;">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                                    style="background:#D5A53E;"></span>
+                                <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Call Jack Now</span>
                                 <span class="relative z-10 w-10 h-10 flex items-center justify-center">
                                     <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
                                     </svg>
                                 </span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="w-full lg:w-2/3 reveal reveal-up" style="transition-delay: 150ms;" itemscope
-                        itemtype="https://schema.org/FAQPage">
+                    <div class="w-full lg:w-2/3 reveal reveal-up" style="transition-delay:150ms;"
+                        itemscope itemtype="https://schema.org/FAQPage">
+                        <div class="space-y-0 font-body border-t" style="border-color:rgba(20,18,41,0.10);">
 
-                        <div class="space-y-0 font-body border-t border-brand-dark/10">
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 1]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What areas around Wincanton do you cover?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 1]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">We cover all towns and villages within a 10-mile radius of Wincanton, Somerset. This includes Bruton, Castle Cary, Shepton Mallet, Templecombe, Gillingham, Milborne Port, Sparkford, North and South Cadbury, and the surrounding rural areas. If you are unsure whether we reach you, just give Jack a call and he will confirm straight away.</span>
                                 </div>
                             </details>
 
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 2]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">How does the process work from first contact to finished project?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 2]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">Simply get in touch by phone or email and Jack will arrange a free site visit to assess your project and discuss exactly what you want to achieve. You will receive a clear, honest quote with no hidden costs. Once you are happy to proceed, we will schedule the work to suit you and keep you informed throughout.</span>
                                 </div>
                             </details>
 
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 3]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Do you offer free quotes?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 3]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">Yes, all quotes from JB Outdoor Services Ltd are completely free and come with absolutely no obligation. Jack will visit your site, assess the scope of work in person, and provide a clear, detailed quote so you know exactly what is involved before any work begins.</span>
                                 </div>
                             </details>
 
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 4]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What size diggers do you have and what can they be used for?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 4]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">We operate a 1-tonne micro digger and a 2.6-tonne digger, both provided with a skilled operator. The micro digger is ideal for tight access gardens, precise planting areas, and confined spaces. The 2.6-tonne machine handles heavier work such as foundation trenches, drainage installation, ground levelling, and concrete pad preparation.</span>
                                 </div>
                             </details>
 
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 5]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Can you handle both small domestic jobs and larger commercial projects?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 5]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">Yes. We work with homeowners on everything from a single patio to a full garden transformation, and with businesses on larger groundworks, drainage, and site clearance contracts. Whatever the scale, we bring the same level of skill and care to every job.</span>
                                 </div>
                             </details>
 
-                            <details class="group border-b border-brand-dark/10" itemscope itemprop="mainEntity"
-                                itemtype="https://schema.org/Question">
-                                <summary
-                                    class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2"
-                                    itemprop="name">
-                                    <span
-                                        class="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-dark pr-6">[FAQ
-                                        Question 6]</span>
-                                    <span
-                                        class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-beige flex items-center justify-center text-brand-dark shadow-sm transition-transform duration-300 group-open:rotate-180"><svg
-                                            class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg></span>
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Do you supply and deliver firewood?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
                                 </summary>
-                                <div class="text-brand-dark/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12 animate-fade-in"
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <span itemprop="text">[FAQ Answer 6]</span>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">Yes. We supply both seasoned and unseasoned logs for domestic and wholesale use, with delivery available throughout our service area. Contact Jack to discuss your requirements and arrange delivery.</span>
                                 </div>
                             </details>
+
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Are you fully insured?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
+                                </summary>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">Yes, JB Outdoor Services Ltd is fully insured for all the landscaping, groundworks, and outdoor services we carry out. You can book with complete confidence that your property and our team are properly protected on every project.</span>
+                                </div>
+                            </details>
+
+                            <details class="group border-b" style="border-color:rgba(20,18,41,0.10);" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
+                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What are your working hours?</span>
+                                    <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </span>
+                                </summary>
+                                <div class="pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" style="color:rgba(20,18,41,0.70);" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <span itemprop="text">We work Monday to Friday from 8:00 AM to 6:00 PM and on Saturdays from 8:00 AM to 1:00 PM. We are closed on Sundays. You are welcome to call or email outside these hours and Jack will get back to you at the earliest opportunity.</span>
+                                </div>
+                            </details>
+
                         </div>
                     </div>
 
@@ -726,170 +671,137 @@
             </div>
         </section>
 
-        <style>
-            details>div {
-                animation-name: slideDown;
-                animation-duration: 350ms;
-                animation-timing-function: ease-out;
-            }
-
-            @keyframes slideDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            /* Hides the default browser triangle arrow */
-            details>summary::-webkit-details-marker {
-                display: none;
-            }
-        </style>
-
-        <section class="py-16 md:py-24 bg-brand-beige border-t border-brand-dark/5 overflow-hidden">
+        <!-- ═══════════════════════════════════════════════════
+             BOTTOM CTA
+        ═══════════════════════════════════════════════════ -->
+        <section class="py-16 md:py-24 border-t overflow-hidden" style="background:#FFFFFF; border-color:rgba(20,18,41,0.05);">
             <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
 
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal reveal-up">
 
+                    <div class="w-full lg:w-1/2">
+                        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl group" style="border: 2px solid #F2F7FF;">
+                            <img src="assets/imgs/general_landscaping_1.jpg"
+                                alt="JB Outdoor Services team working on a project in Somerset"
+                                loading="lazy"
+                                class="w-full h-80 md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
                     <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
 
-                        <span
-                            class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-brand-gold hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default">
-                            [Section Tagline]
+                        <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
+                            style="background:#D5A53E; color:#141229;">
+                            Still Have Questions?
                         </span>
 
-                        <h2
-                            class="group font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-brand-dark leading-tight relative pb-6 flex flex-col items-center lg:items-start cursor-default">
-                            [Section Title]
-                            <span
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-44"></span>
+                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] leading-tight relative pb-6 group flex flex-col items-center lg:items-start">
+                            Just Give Jack a Call
+                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full transition-all duration-400 group-hover:w-32 md:group-hover:w-40"
+                                style="background:#1C60AC;"></span>
                         </h2>
 
-                        <p
-                            class="font-body text-lg lg:text-xl text-brand-text/70 mt-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            [Section Description]
+                        <p class="font-body text-lg lg:text-xl mt-6 max-w-xl mx-auto lg:mx-0 leading-relaxed" style="color:rgba(20,18,41,0.70);">
+                            If you have more questions or just want to talk through your project, Jack is always happy to help. Give us a call and we will take it from there.
                         </p>
 
-                        <div class="mt-10 flex justify-center lg:justify-start w-full">
-                            <a href="tel:[Phone Number]"
-                                class="group relative inline-flex items-center justify-between gap-3 sm:gap-4 pl-4 sm:pl-6 pr-1.5 sm:pr-2 py-1.5 sm:py-2 bg-[#E3E4DD] font-body font-bold text-base sm:text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 sm:w-auto">
-
-                                <span
-                                    class="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
-
-                                <span
-                                    class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">
-                                    [Section Call CTA]
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full">
+                            <a href="tel:+447445064666"
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 shadow-lg"
+                                style="background:#141229; color:#F2F7FF;">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                                    style="background:#D5A53E;"></span>
+                                <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Call: +44 7445 064666</span>
+                                <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
                                 </span>
+                            </a>
 
-                                <span class="relative z-10 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
+                            <a href="mailto:jboutdoorservicesltd@gmail.com"
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105"
+                                style="background:#1C60AC; color:#F2F7FF;">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                                    style="background:#D5A53E;"></span>
+                                <span class="relative z-10 transition-colors duration-500 group-hover:text-white">Send an Email</span>
+                                <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
                                     </svg>
                                 </span>
                             </a>
                         </div>
 
                     </div>
-
-                    <div class="w-full lg:w-1/2">
-                        <div class="relative rounded-[1.5rem] overflow-hidden group">
-                            <img src="assets/imgs/haq.jpg" alt="[Image Alt Text]" loading="lazy"
-                                class="w-full h-80 md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105">
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-[#164a2a] text-white overflow-hidden relative border-t border-white/5">
-            <div class="container mx-auto px-6 max-w-[90rem]">
+        <!-- ═══════════════════════════════════════════════════
+             EXPLORE CTA (dark)
+        ═══════════════════════════════════════════════════ -->
+        <section class="py-24 md:py-32 text-white overflow-hidden relative border-t border-white/5" style="background:#141229;">
+            <div class="container mx-auto px-6 max-w-[90rem] relative z-20">
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
 
-                    <div class="lg:col-span-3 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
-                        <div
-                            class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden group">
-                            <img src="assets/imgs/footer1.png" alt="[Image 1 Alt]" loading="lazy"
+                    <div class="w-full lg:w-3/12 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
+                        <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                            <img src="assets/imgs/c8.jpeg"
+                                alt="Patio and decking installation by JB Outdoor Services in Somerset"
+                                loading="lazy"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         </div>
                     </div>
 
-                    <div
-                        class="lg:col-span-6 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
+                    <div class="w-full lg:w-5/12 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
 
-                        <span
-                            class="inline-block px-5 py-1.5 bg-[#0fdb62] text-[#1A2E24] hover:bg-brand-gold hover:text-white transition-colors duration-300 border border-transparent rounded-full text-sm tracking-widest uppercase mb-6 font-semibold cursor-default shadow-sm">
-                            [Explore Tagline]
-                        </span>
-
-                        <h2
-                            class="group font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight relative pb-6 flex flex-col items-center mb-6 cursor-default">
-                            [Explore Title]
-                            <span
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-0.5 md:h-[2px] bg-[#0fdb62] rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-48"></span>
+                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight relative pb-6 flex flex-col items-center mb-6">
+                            Explore Our Full Range of Services
                         </h2>
 
-                        <p class="font-body text-lg lg:text-xl text-white/85 mb-10 max-w-md mx-auto leading-relaxed">
-                            [Explore Description]
+                        <p class="font-body text-lg lg:text-xl mb-10 max-w-md mx-auto leading-relaxed" style="color:rgba(255,255,255,0.80);">
+                            From garden transformations and patios to groundworks and digger hire, browse everything JB Outdoor Services offers.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
-
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a href="gallery.html"
-                                class="group relative inline-flex items-center justify-between gap-3 sm:gap-4 pl-4 sm:pl-6 pr-1.5 sm:pr-2 py-1.5 sm:py-2 bg-transparent border border-white/30 font-body font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 sm:w-auto">
-
-                                <span
-                                    class="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                                <span
-                                    class="relative z-10 text-white transition-colors duration-500 group-hover:text-white">[CTA
-                                    Button 1]</span>
-
-                                <span class="relative z-10 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-[#1A2E24] group-hover:text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-transparent border font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105"
+                                style="border-color:rgba(255,255,255,0.30); color:#F2F7FF;"
+                                onmouseenter="this.style.borderColor='#D5A53E';" onmouseleave="this.style.borderColor='rgba(255,255,255,0.30)';">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"
+                                    style="background:#D5A53E;"></span>
+                                <span class="relative z-10 text-white transition-colors duration-500 group-hover:text-white">View Gallery</span>
+                                <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                    <svg style="width:18px;height:18px;" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"
+                                        class="-rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6"/>
                                     </svg>
                                 </span>
                             </a>
 
                             <a href="services.html"
-                                class="group relative inline-flex items-center justify-between gap-3 sm:gap-4 pl-4 sm:pl-6 pr-1.5 sm:pr-2 py-1.5 sm:py-2 bg-[#0fdb62] font-body font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 sm:w-auto">
-
-                                <span
-                                    class="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#1A2E24] group-hover:bg-[#D4AF37] rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                                <span
-                                    class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">[CTA
-                                    Button 2]</span>
-
-                                <span class="relative z-10 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 border-none"
+                                style="background:#D5A53E; color:#141229;">
+                                <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+                                <span class="relative z-10 transition-colors duration-500 group-hover:text-[#141229]">Our Services</span>
+                                <span class="relative z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center transition-colors duration-700 group-hover:bg-[#141229]">
+                                    <svg style="width:18px;height:18px;" fill="none" stroke="#141229" stroke-width="2.5" viewBox="0 0 24 24"
+                                        class="-rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6l6 6-6 6"/>
                                     </svg>
                                 </span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="lg:col-span-3 reveal reveal-up order-3 flex justify-center lg:justify-end"
-                        style="transition-delay: 200ms;">
-                        <div
-                            class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[1.5rem] overflow-hidden group">
-                            <img src="assets/imgs/footer2.png" alt="[Image 2 Alt]" loading="lazy"
+                    <div class="w-full lg:w-3/12 reveal reveal-up order-3 flex justify-center lg:justify-end mt-0 lg:mt-16" style="transition-delay:200ms;">
+                        <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                            <img src="assets/imgs/c2.jpeg"
+                                alt="Groundworks and excavation project in Wincanton by JB Outdoor Services"
+                                loading="lazy"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         </div>
                     </div>
@@ -897,109 +809,105 @@
                 </div>
             </div>
         </section>
-        <style>
-            details>div {
-                animation-name: slideDown;
-                animation-duration: 350ms;
-                animation-timing-function: ease-out;
-            }
-
-            @keyframes slideDown {
-                from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            /* Hides the default browser triangle arrow */
-            details>summary::-webkit-details-marker {
-                display: none;
-            }
-        </style>
 
     </main>
 
     <div id="footer-placeholder"></div>
+    <script src="global.js"></script>
 
     <script>
-        // Google Sheets form submission
+        /* ── Scroll Reveal ──────────────────────────────────────
+           Mirrors the exact IntersectionObserver used on index.html
+           so all .reveal / .reveal-up elements animate smoothly.
+        ───────────────────────────────────────────────────────── */
         (function () {
-            const WEBHOOK = '[YOUR_WEBHOOK_URL_HERE]';
+            var revealEls = document.querySelectorAll('.reveal');
+            if (!revealEls.length) return;
 
-            // Rate limiting: max 3 submissions per session
-            let submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.10 });
 
-            function handleFormSubmit(form, successCallback) {
-                form.addEventListener('submit', function (e) {
+            revealEls.forEach(function(el) { observer.observe(el); });
+        })();
+
+        /* ── Heading underline smooth width transition ───────────
+           Applies the same cubic-bezier easing to every underline
+           <span> inside headings on this page.
+        ───────────────────────────────────────────────────────── */
+        (function () {
+            document.querySelectorAll('h1 > span, h2 > span').forEach(function(span) {
+                if (span.style && span.style.background) {
+                    span.style.transition = 'width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease';
+                }
+            });
+        })();
+
+        /* ── FAQ accordion smooth open/close ────────────────────
+           Uses the Web Animations API to animate height so the
+           accordion feels as fluid as the rest of the page.
+        ───────────────────────────────────────────────────────── */
+        (function () {
+            document.querySelectorAll('details').forEach(function(details) {
+                var summary = details.querySelector('summary');
+                var content = details.querySelector('div');
+                if (!summary || !content) return;
+
+                content.style.overflow = 'hidden';
+
+                summary.addEventListener('click', function(e) {
                     e.preventDefault();
 
-                    // Honeypot check
-                    const honey = form.querySelector('[name="website_url"], [name="botcheck"]');
-                    if (honey && honey.value) return;
-
-                    // Rate limit check
-                    submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
-                    if (submissionCount >= 3) {
-                        alert('[Too Many Submissions Alert Text]');
-                        return;
+                    if (details.open) {
+                        var anim = content.animate(
+                            [{ height: content.scrollHeight + 'px', opacity: 1 },
+                             { height: '0px', opacity: 0 }],
+                            { duration: 320, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)', fill: 'forwards' }
+                        );
+                        anim.onfinish = function() {
+                            details.removeAttribute('open');
+                            content.style.removeProperty('height');
+                            content.style.removeProperty('opacity');
+                        };
+                    } else {
+                        details.setAttribute('open', '');
+                        var h = content.scrollHeight;
+                        content.animate(
+                            [{ height: '0px', opacity: 0 },
+                             { height: h + 'px', opacity: 1 }],
+                            { duration: 380, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)', fill: 'forwards' }
+                        );
                     }
-
-                    // GDPR check
-                    const gdpr = form.querySelector('[name="gdpr"]');
-                    if (gdpr && !gdpr.checked) {
-                        alert('[GDPR Required Alert Text]');
-                        return;
-                    }
-
-                    const btn = form.querySelector('button[type="submit"]');
-                    const originalText = btn ? btn.innerHTML : '';
-                    if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
-
-                    const data = {
-                        name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value : '',
-                        email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
-                        phone: form.querySelector('[name="phone"]') ? form.querySelector('[name="phone"]').value : '',
-                        message: form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : '',
-                        source: window.location.pathname
-                    };
-
-                    fetch(WEBHOOK, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
-                    })
-                        .then(() => {
-                            submissionCount++;
-                            sessionStorage.setItem('formSubmitCount', submissionCount);
-                            if (successCallback) successCallback();
-                            else { form.reset(); alert('[Success Message]'); }
-                        })
-                        .catch(() => {
-                            alert('[Error Message]');
-                        })
-                        .finally(() => {
-                            if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
-                        });
                 });
-            }
+            });
+        })();
 
-            document.addEventListener('DOMContentLoaded', function () {
-                // Handle all forms on the page
-                document.querySelectorAll('form').forEach(function (form) {
-                    handleFormSubmit(form, function () {
-                        window.location.href = 'thank-you.html';
-                    });
+        /* ── Contact tile icon colour on hover ──────────────────
+           When the Bronze tile activates, the SVG icon transitions
+           to dark so it reads clearly against the gold background.
+        ───────────────────────────────────────────────────────── */
+        (function () {
+            document.querySelectorAll('.flex.items-start.gap-4.group').forEach(function(row) {
+                var tile = row.querySelector('div[onmouseenter]');
+                var svg  = tile ? tile.querySelector('svg') : null;
+                if (!tile || !svg) return;
+
+                svg.style.transition = 'color 0.3s ease';
+
+                row.addEventListener('mouseenter', function() {
+                    svg.style.color = '#141229';
+                });
+                row.addEventListener('mouseleave', function() {
+                    svg.style.color = '#D5A53E';
                 });
             });
         })();
     </script>
-    <script src="global.js"></script>
 </body>
 
 </html>

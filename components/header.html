@@ -1,0 +1,166 @@
+<header id="site-header"
+    class="fixed w-full top-0 left-0 z-50 transition-all duration-150 bg-transparent text-white border-b border-transparent">
+    <div id="header-container"
+        class="container mx-auto px-4 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-150">
+
+        <!-- Logo: logo-white shown by default; logo-dark shown on gallery pages via JS class swap -->
+        <a href="index.html" class="relative flex items-center logo-link transition-transform duration-200 hover:scale-110 group/logo">
+            <div class="logo-white relative w-[109px] md:w-[136px] lg:w-[110px]">
+                <img src="assets/imgs/logo.png" alt="JB Outdoor Services Ltd Logo"
+                    class="w-full h-auto object-contain absolute inset-0 transition-opacity duration-300 ease-in-out opacity-100 group-hover/logo:opacity-0">
+                <img src="assets/imgs/logo-hovered.png" alt="JB Outdoor Services Ltd Logo Hover"
+                    class="w-full h-auto object-contain absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover/logo:opacity-100">
+                <!-- Invisible placeholder to keep natural width/height of the container -->
+                <img src="assets/imgs/logo.png" alt="" class="w-full h-auto object-contain opacity-0 pointer-events-none">
+            </div>
+
+            <div class="logo-dark relative w-[109px] md:w-[136px] lg:w-[110px]" style="display:none;">
+                <img src="assets/imgs/logo.png" alt="JB Outdoor Services Ltd Logo"
+                    class="w-full h-auto object-contain absolute inset-0 transition-opacity duration-300 ease-in-out opacity-100 group-hover/logo:opacity-0">
+                <img src="assets/imgs/logo-hovered.png" alt="JB Outdoor Services Ltd Logo Hover"
+                    class="w-full h-auto object-contain absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover/logo:opacity-100">
+                <img src="assets/imgs/logo.png" alt="" class="w-full h-auto object-contain opacity-0 pointer-events-none">
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-semibold tracking-wide">
+            <a href="about.html" class="whitespace-nowrap">About Us</a>
+            <a href="services.html" class="whitespace-nowrap">Services</a>
+            <a href="gallery.html" class="whitespace-nowrap">Gallery</a>
+            <a href="index.html#faq" class="whitespace-nowrap">FAQs</a>
+
+            <div class="flex items-center gap-8">
+                <a href="contact.html" class="whitespace-nowrap">Contact</a>
+
+                <a href="javascript:void(0);" style="cursor: default;"
+                    class="group inline-flex items-center gap-1.5 whitespace-nowrap">
+                    Wincanton, Somerset
+                    <svg class="w-4 h-4 shrink-0 group-hover:-translate-y-1 transition-transform duration-150"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button id="menuBtn" aria-expanded="false" aria-controls="mobileNav"
+            class="xl:hidden text-white focus:outline-none p-2 -mr-2 transition-colors duration-150"
+            aria-label="Toggle Mobile Menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileNav"
+        class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-200 ease-out opacity-0 invisible -translate-y-4 pointer-events-none">
+        <div class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl overflow-hidden">
+            <div class="flex flex-col px-6 py-6 space-y-4 text-center font-body text-white">
+                <a href="about.html"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">About Us</a>
+                <a href="services.html"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">Services</a>
+                <a href="gallery.html"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">Gallery</a>
+                <a href="index.html#faq"
+                    class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors duration-150">FAQs</a>
+                <div class="pt-6 mt-2 border-t border-white/10">
+                    <a href="contact.html"
+                        class="inline-block w-full px-8 py-3.5 font-bold rounded-xl transition-colors duration-150"
+                        style="background:#D5A53E; color:#141229;">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    // ── Logo swap logic (for gallery pages with dark nav) ────
+    // The global.js may add .gallery-dark-nav to #site-header;
+    // this handles the display toggle to match the original template behaviour.
+    (function () {
+        const header = document.getElementById('site-header');
+        const logoWhite = header.querySelector('.logo-white');
+        const logoDark  = header.querySelector('.logo-dark');
+
+        const syncLogos = () => {
+            if (header.classList.contains('gallery-dark-nav')) {
+                logoWhite.style.display = 'none';
+                logoDark.style.display  = 'block';
+            } else {
+                logoWhite.style.display = 'block';
+                logoDark.style.display  = 'none';
+            }
+        };
+
+        // Watch for class changes driven by global.js
+        new MutationObserver(syncLogos).observe(header, { attributes: true, attributeFilter: ['class'] });
+        syncLogos();
+    })();
+
+    // ── Navbar scroll behaviour ──────────────────────────────
+    (function () {
+        const header    = document.getElementById('site-header');
+        const container = document.getElementById('header-container');
+
+        const onScroll = () => {
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+                header.style.background      = 'rgba(20,18,41,0.97)';
+                header.style.backdropFilter  = 'blur(14px)';
+                header.style.borderBottomColor = 'rgba(213,165,62,0.18)';
+                header.style.boxShadow       = '0 4px 32px rgba(20,18,41,0.28)';
+                container.classList.remove('py-5', 'md:py-6');
+                container.classList.add('py-3', 'md:py-4');
+            } else {
+                header.classList.remove('scrolled');
+                header.style.background      = 'transparent';
+                header.style.backdropFilter  = '';
+                header.style.borderBottomColor = 'transparent';
+                header.style.boxShadow       = '';
+                container.classList.remove('py-3', 'md:py-4');
+                container.classList.add('py-5', 'md:py-6');
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    })();
+
+    // ── Mobile nav toggle ────────────────────────────────────
+    (function () {
+        const btn = document.getElementById('menuBtn');
+        const nav = document.getElementById('mobileNav');
+        if (!btn || !nav) return;
+
+        const openIcon  = `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>`;
+        const closeIcon = `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>`;
+
+        const closeNav = () => {
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = openIcon;
+            nav.classList.add('opacity-0', 'invisible', '-translate-y-4', 'pointer-events-none');
+            nav.classList.remove('opacity-100', 'visible', 'translate-y-0', 'pointer-events-auto');
+        };
+
+        btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            if (isOpen) {
+                closeNav();
+            } else {
+                btn.setAttribute('aria-expanded', 'true');
+                btn.innerHTML = closeIcon;
+                nav.classList.remove('opacity-0', 'invisible', '-translate-y-4', 'pointer-events-none');
+                nav.classList.add('opacity-100', 'visible', 'translate-y-0', 'pointer-events-auto');
+            }
+        });
+
+        // Close when any mobile link is tapped
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+    })();
+</script>
