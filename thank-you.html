@@ -44,7 +44,7 @@
         @theme {
             --color-brand-dark: #1A2E24;
             --color-brand-green: #2C4C3B;
-            --color-brand-beige: #F4F1EA;
+            --color-brand-beige: #F5F3EE;
             --color-brand-text: #111827;
             --color-brand-accent: #0fdb62;   
             --color-brand-gold: #edc237;   
@@ -69,7 +69,7 @@
         .custom-tick {
             -webkit-appearance: none;
             appearance: none;
-            background-color: #f3f4f6;
+            background-color: #F5F3EE;
             border: 1px solid #d1d5db;
             border-radius: 0.25rem;
             cursor: pointer;
@@ -228,23 +228,16 @@
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                 <a href="index.html"
-                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#0fdb62] font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 w-full sm:w-auto">
-
-                    <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0dae4d] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[35] z-0"></span>
-
-                    <span
-                        class="relative z-10 text-[#1A2E24] transition-colors duration-500 group-hover:text-white">Return
+                      class="btn-bubble btn-primary font-body">
+    <span class="btn-bubble-fill"></span>
+    <span class="btn-bubble-text">Return
                         to Homepage</span>
-
-                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M5 12h14m-6-6l6 6-6 6"></path>
-                        </svg>
-                    </span>
-                </a>
+    <span class="btn-bubble-icon-container">
+        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+        </svg>
+    </span>
+</a>
             </div>
 
         </div>
@@ -261,21 +254,15 @@
                     class="w-36 md:w-42 h-auto object-contain mb-8 mx-auto">
 
                 <a href="contact.html"
-                    class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-white text-[#1A2E24] font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 w-fit sm:w-auto shadow-lg">
-                    
-                    <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0fdb62] group-hover:bg-[#D4AF37] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
-
-                    <span class="relative z-10 transition-colors duration-500 group-hover:text-[#1A2E24]">Fix your garden</span>
-
-                    <span class="relative z-10 w-10 h-10 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white group-hover:text-[#1A2E24] -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M5 12h14m-6-6l6 6-6 6"></path>
-                        </svg>
-                    </span>
-                </a>
+                      class="btn-bubble btn-primary font-body">
+    <span class="btn-bubble-fill"></span>
+    <span class="btn-bubble-text">Fix your garden</span>
+    <span class="btn-bubble-icon-container">
+        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+        </svg>
+    </span>
+</a>
             </div>
 
             <div class="flex flex-col items-center text-center w-full">
