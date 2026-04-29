@@ -357,3 +357,174 @@ div[onmouseenter][style*="background:#141229"] {
 .btn-outline .btn-bubble-icon {
     color: var(--alice);
 }
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL MOBILE OVERRIDES (max-width: 768px)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    /* 1. Component Scaling: Logos */
+    /* Target the logo container in the header specifically */
+    #site-header a.group\/logo > div {
+        transform: scale(0.85) !important;
+        transform-origin: left center !important;
+    }
+
+    /* 2. Component Scaling: Buttons */
+    /* Disable full-width behavior, scale padding and font size for the capsule aesthetic */
+    .btn-bubble {
+        width: auto !important;
+        max-width: 80vw !important;
+        padding: 0.35rem 0.35rem 0.35rem 1.25rem !important;
+        font-size: 1rem !important; /* text-base instead of text-lg */
+        justify-content: center !important;
+    }
+    
+    .btn-bubble-icon-container,
+    .btn-bubble-fill {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+    }
+
+    /* 3. Alignment & Layout: Centralization */
+    /* Force-center text, headlines, and paragraphs within main content sections */
+    main section h1,
+    main section h2,
+    main section h3,
+    main section h4,
+    main section p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Center the decorative underlines on headings */
+    main section h1 > span[style*="background"],
+    main section h2 > span[style*="background"],
+    main section h3 > span[style*="background"],
+    main section h1 > span.absolute,
+    main section h2 > span.absolute,
+    main section h3 > span.absolute {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Center tagline pills */
+    main section span.rounded-full[style*="background"] {
+        display: inline-block !important;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Force vertical flex containers to center items (e.g., text blocks, lists) */
+    main section .flex-col {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Force buttons to be centered */
+    main section a.btn-bubble,
+    main section button.btn-bubble {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: inline-flex !important;
+    }
+
+    /* 3. Alignment & Layout: Spacing */
+    /* Implement consistent horizontal section padding to ensure text never hits the edge */
+    main section > div[class*="max-w-"],
+    main section > div.container {
+        padding-left: 1.5rem !important; /* px-6 equivalent */
+        padding-right: 1.5rem !important;
+    }
+
+    /* ── FAQ Section: Restore left-aligned question text ──────────
+       The global .flex-col rule above centres everything, but FAQ
+       <summary> rows are flex-row items that must stay left-aligned.
+       We surgically undo centering only inside <details> rows.
+    ─────────────────────────────────────────────────────────────── */
+    #faq details summary {
+        align-items: center !important;
+        text-align: left !important;
+    }
+    #faq details summary span:first-child {
+        text-align: left !important;
+        flex: 1 1 auto !important;
+    }
+    /* Keep the chevron icon anchored to the right */
+    #faq details summary span.flex-shrink-0 {
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+    }
+    /* FAQ answer body — left-align for readability */
+    #faq details > div {
+        text-align: left !important;
+    }
+    /* FAQ left column (title, description, button) — keep centred */
+    #faq .lg\\:sticky {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* ── "JB Standard" Bullet Points: Fix icon + text alignment ──
+       Each bullet row is a flex row. On mobile the global .flex-col
+       rule would collapse it. We preserve the horizontal flex layout
+       and add top-alignment so text wraps neatly from the start of
+       the sentence, never bleeding under the icon.
+    ─────────────────────────────────────────────────────────────── */
+    .jb-bullet-row,
+    /* target by structure: flex rows inside the checklist block */
+    main section div.space-y-4 > div.flex {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;  /* top-align icon + text */
+        text-align: left !important;
+        gap: 0.75rem !important;
+    }
+    /* The golden circle icon — keep it fixed size and top-aligned */
+    main section div.space-y-4 > div.flex > div.rounded-full {
+        flex-shrink: 0 !important;
+        margin-top: 0.15rem !important;      /* optical alignment with first text line */
+    }
+    /* The text node — allow it to fill the remaining width */
+    main section div.space-y-4 > div.flex > div.rounded-full ~ *,
+    main section div.space-y-4 > div.flex:not(:has(> p)) {
+        flex: 1 1 auto !important;
+    }
+
+    /* ── Decorative Gold Underlines: Perfect mobile centring ──────
+       Headings that already have left-1/2 + -translate-x-1/2 for
+       the centred state are correct. The issue occurs on headings
+       that use lg:left-0 / lg:translate-x-0 — on mobile these
+       Tailwind classes do NOT fire, so the underline is already
+       positioned for centre via the base classes.
+       The global media query above sets left:50% + translateX(-50%)
+       which is correct. This rule adds the transition so it doesn't
+       snap jarringly on resize.
+    ─────────────────────────────────────────────────────────────── */
+    main section h1 > span.absolute,
+    main section h2 > span.absolute,
+    main section h3 > span.absolute {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                    left 0.3s ease,
+                    transform 0.3s ease !important;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   DESKTOP SAFEGUARD (min-width: 1024px)
+═══════════════════════════════════════════════════════ */
+@media (min-width: 1024px) {
+    /* Explicitly preserve desktop behavior */
+    #site-header a.group\/logo > div {
+        transform: scale(1) !important;
+    }
+    .btn-bubble {
+        max-width: none !important;
+    }
+}
