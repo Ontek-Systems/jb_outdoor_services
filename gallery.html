@@ -125,7 +125,26 @@
             .category-grid { gap: 2rem; }
         }
 
-        /* ── hide-scrollbar ── */
+        /* ── Category heading accent bar (section-title-accent) ── */
+        .section-title-accent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section-title-accent::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 3rem;
+            border-radius: 9999px;
+            background-color: #EAB308;
+            margin: 0.75rem auto 0;
+            transition: width 0.3s ease-in-out;
+        }
+        .section-title-accent:hover::after {
+            width: 5rem;
+        }
+        /* hide-scrollbar */
         .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
     </style>
@@ -169,9 +188,9 @@
                         Project Gallery
                     </span>
 
-                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] leading-tight relative pb-6 group flex flex-col items-center">
+                    <h1 class="group font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] leading-tight flex flex-col items-center cursor-default w-full">
                         Our Completed Projects
-                        <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                        <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#EAB308] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#EAB308]/80"></span>
                     </h1>
 
                     <p class="font-body text-lg lg:text-xl mt-8 max-w-3xl mx-auto leading-relaxed" style="color:rgba(20,18,41,0.68);">
@@ -333,9 +352,9 @@
                          CATEGORY: LANDSCAPING
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="landscaping" id="landscaping">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Landscaping
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -466,9 +485,9 @@
                          CATEGORY: TURFING
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="turfing" id="turfing">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Turfing
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -522,9 +541,9 @@
                          CATEGORY: HEDGE REMOVALS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="hedge-removal" id="hedge-removal">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Hedge Removals
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -578,9 +597,9 @@
                          CATEGORY: PATIOS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="patios" id="patios">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Patios
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -634,9 +653,9 @@
                          CATEGORY: DECKING
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="decking" id="decking">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Decking
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -690,9 +709,9 @@
                          CATEGORY: FENCING
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="fencing" id="fencing">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Fencing
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -757,9 +776,9 @@
                          CATEGORY: GRAVEL DRIVEWAYS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="gravel-driveways" id="gravel-driveways">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Gravel Driveways
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -813,9 +832,9 @@
                          CATEGORY: RETAINING WALLS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="retaining-walls" id="retaining-walls">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Retaining Walls
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -869,9 +888,9 @@
                          CATEGORY: GROUNDWORKS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="groundworks" id="groundworks">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Groundworks
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -1002,9 +1021,9 @@
                          CATEGORY: DIGGER HIRE WITH OPERATOR
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="digger-hire" id="digger-hire">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Digger Hire with Operator
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -1058,9 +1077,9 @@
                          CATEGORY: DRAINAGE SOLUTIONS
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="drainage" id="drainage">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Drainage Solutions
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -1114,9 +1133,9 @@
                          CATEGORY: WASTE & SITE CLEARANCE
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="clearance" id="clearance">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Waste & Site Clearance
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -1214,9 +1233,9 @@
                          CATEGORY: FIREWOOD SUPPLY
                     ══════════════════════════════════════════ -->
                     <div class="category-section reveal reveal-up mb-24" data-category="firewood" id="firewood">
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-[#141229] mb-8 text-center relative max-w-max mx-auto pb-4 group/h2 section-title-accent">
                             Firewood Supply
-                            <span class="section-underline absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+                            
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
@@ -1728,3 +1747,4 @@
 
 </body>
 </html>
+

@@ -131,22 +131,7 @@ details > summary::-webkit-details-marker { display: none; }
     background-repeat: no-repeat;
 }
 
-/* ── Heading Underline Smooth Expansion ───────────────────── */
-/*
-   Targets the decorative underline <span> inside h1 or h2.
-   Covers both Tailwind group-hover:w-* and inline-style spans.
-   Applies to h1 too (hero headings) not just h2.
-*/
-h1 > span[style*="background"],
-h2 > span[style*="background"],
-h1.group > span,
-h2.group > span,
-h1 span[class*="absolute"],
-h2 span[class*="absolute"] {
-    transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-                height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-                background-color 0.3s ease;
-}
+
 
 /* ── Tagline / Section Label Pills ───────────────────────── */
 /*
@@ -400,14 +385,20 @@ div[onmouseenter][style*="background:#141229"] {
     }
     
     /* Center the decorative underlines on headings */
-    main section h1 > span[style*="background"],
-    main section h2 > span[style*="background"],
-    main section h3 > span[style*="background"],
-    main section h1 > span.absolute,
-    main section h2 > span.absolute,
-    main section h3 > span.absolute {
+    main section h1 > .section-underline,
+    main section h2 > .section-underline,
+    main section h3 > .section-underline {
         left: 50% !important;
         transform: translateX(-50%) !important;
+    }
+
+    /* ── Critical: ensure headings stretch full width so left:50%
+       resolves to page centre, not the heading's shrunk content width.
+       h2 can shrink to max-content when its parent uses flex items-center. */
+    main section h1:has(> .section-underline),
+    main section h2:has(> .section-underline),
+    main section h3:has(> .section-underline) {
+        width: 100% !important;
     }
 
     /* Center tagline pills */
@@ -494,25 +485,7 @@ div[onmouseenter][style*="background:#141229"] {
         flex: 1 1 auto !important;
     }
 
-    /* ── Decorative Gold Underlines: Perfect mobile centring ──────
-       Headings that already have left-1/2 + -translate-x-1/2 for
-       the centred state are correct. The issue occurs on headings
-       that use lg:left-0 / lg:translate-x-0 — on mobile these
-       Tailwind classes do NOT fire, so the underline is already
-       positioned for centre via the base classes.
-       The global media query above sets left:50% + translateX(-50%)
-       which is correct. This rule adds the transition so it doesn't
-       snap jarringly on resize.
-    ─────────────────────────────────────────────────────────────── */
-    main section h1 > span.absolute,
-    main section h2 > span.absolute,
-    main section h3 > span.absolute {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-                    left 0.3s ease,
-                    transform 0.3s ease !important;
-    }
+    /* Underline centring is handled by the rules above (lines 414-430). */
 }
 
 
