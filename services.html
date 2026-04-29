@@ -133,396 +133,739 @@
         }
         </script>
 
+        
         <!-- ══════════════════════════════════════════════
-             HERO
+             CATALOG HEADER & FILTER BAR
         ══════════════════════════════════════════════ -->
-        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden" style="background:#141229;">
-            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 text-center text-white reveal reveal-up flex flex-col items-center">
+        <section class="relative pt-44 pb-16 md:pt-52 md:pb-24 flex flex-col items-center overflow-hidden" style="background:#F5F3EE;">
 
-                <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default pill-dark-bg"
-                    style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
-                    Our Services
-                </span>
+            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 flex-grow flex flex-col">
 
-                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative pb-6 group flex flex-col items-center" style="color:rgba(242,247,255,0.92);">
-                    Everything Your Outdoor Space Needs
-                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-[3px] rounded-full group-hover:w-40 md:group-hover:w-56"
-                        style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
-                </h1>
+                <!-- Hero heading -->
+                <div class="text-center mb-12 md:mb-16 reveal reveal-up flex flex-col items-center">
 
-                <p class="font-body text-lg lg:text-xl leading-relaxed max-w-2xl mt-8" style="color:rgba(255,255,255,0.78);">
-                    From full garden transformations and hard landscaping to groundworks, digger hire, and firewood supply — all delivered by our own skilled team across Wincanton and a 10-mile radius.
-                </p>
-            </div>
-        </section>
+                    <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
+                        style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                        Our Services
+                    </span>
 
-        <!-- ══════════════════════════════════════════════════════
-             SERVICE HELPER MACRO
-             Odd sections: image LEFT, text RIGHT  → flex-row
-             Even sections: image RIGHT, text LEFT → flex-row-reverse
-             Alternating backgrounds: #F5F3EE / #FFFFFF
-        ══════════════════════════════════════════════════════ -->
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] leading-tight relative pb-6 group flex flex-col items-center">
+                        Explore Our Catalog
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 h-[3px] rounded-full group-hover:w-32 md:group-hover:w-40"
+                            style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
+                    </h1>
 
-        <!-- ── 1. Landscaping & Garden Transformation ── -->
-        <section id="landscaping" class="relative min-h-[100svh] py-16 flex items-center justify-center overflow-hidden" style="background:#F5F3EE;">
-            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
-                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 reveal reveal-up">
+                    <p class="font-body text-lg lg:text-xl mt-8 max-w-3xl mx-auto leading-relaxed" style="color:rgba(20,18,41,0.68);">
+                        Everything your outdoor space needs — from garden transformations and hard landscaping to groundworks and firewood supply across Somerset.
+                    </p>
+                </div>
 
-                    <div class="lg:w-1/2 w-full">
-                        <div class="svc-slideshow rounded-[2.5rem] shadow-2xl border-2 border-white/60 w-full h-80 md:h-[600px]">
-                            <div class="svc-slide active"><img src="assets/imgs/service_imgs/Full Garden Transformation/full_garden_transformation_1.jpg" alt="Full garden transformation by JB Outdoor Services in Wincanton" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Professional Turfing/professional_turfing_1.jpg" alt="Professional turfing and lawn installation in Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Hedge Removals/hedge_removals_1.webp" alt="Hedge removal and clearance in Wincanton" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/General Landscaping/general_landscaping_1.jpg" alt="General landscaping in Somerset by JB Outdoor Services" class="w-full h-full object-cover"></div>
-                        </div>
-                        <div class="svc-dots">
-                            <button class="svc-dot active"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
-
-                        <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
-                            Service 1
-                        </span>
-
-                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] mb-8 leading-tight relative pb-6 group flex flex-col items-center lg:items-start">
-                            Landscaping &amp; Garden Services
-                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full group-hover:w-32 md:group-hover:w-44"
-                                style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
-                        </h2>
-
-                        <p class="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl" style="color:rgba(20,18,41,0.78);">
-                            From complete start-to-finish garden transformations to versatile soft landscaping and professional turfing, we redesign and revitalise outdoor spaces of all sizes. We also carry out safe hedge removals to clear unwanted boundaries and create space for new planting.
-                        </p>
-
-                        <div class="border border-black/8 p-8 rounded-3xl mb-10 shadow-sm w-full max-w-xl" style="background:rgba(255,255,255,0.60);">
-                            <ul class="space-y-4 font-body text-lg" style="color:rgba(20,18,41,0.78);">
-                                <li>
-                                    <a href="services/full-garden-transformation.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Full Garden Transformation
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/general-landscaping.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            General Landscaping (Soft &amp; Hard)
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/professional-turfing.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Professional Turfing
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/hedge-removals.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Hedge Removals
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                <!-- ── Filter nav bar ── -->
+                <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-30 mb-16 md:mb-20 reveal reveal-up flex justify-center" style="transition-delay:150ms;">
+                    <div class="bg-white rounded-full shadow-md border p-2 overflow-x-auto hide-scrollbar scroll-smooth max-w-full"
+                        style="border-color:rgba(20,18,41,0.06); -webkit-overflow-scrolling: touch;">
+                        <ul class="flex items-center gap-2 w-max px-2 justify-center mx-auto">
+                            <li>
+                                <a href="#all"
+                                    class="filter-btn block px-4 py-2 rounded-full font-body text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap active-filter"
+                                    style="background:#EAB308; color:#141229; box-shadow:0 4px 14px rgba(234, 179, 8,0.35);"
+                                    data-filter="all">
+                                    All Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#landscaping"
+                                    class="filter-btn block px-4 py-2 rounded-full font-body text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                                    style="color:rgba(20,18,41,0.80);"
+                                    data-filter="landscaping">
+                                    Landscaping
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#hard-landscaping"
+                                    class="filter-btn block px-4 py-2 rounded-full font-body text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                                    style="color:rgba(20,18,41,0.80);"
+                                    data-filter="hard-landscaping">
+                                    Hard Landscaping
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#groundworks"
+                                    class="filter-btn block px-4 py-2 rounded-full font-body text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                                    style="color:rgba(20,18,41,0.80);"
+                                    data-filter="groundworks">
+                                    Groundworks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#clearance"
+                                    class="filter-btn block px-4 py-2 rounded-full font-body text-sm md:text-base font-semibold transition-all duration-300 whitespace-nowrap"
+                                    style="color:rgba(20,18,41,0.80);"
+                                    data-filter="clearance">
+                                    Clearance & Firewood
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- ── Services Catalog Grid ── -->
+                <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full pb-20">
+
+    <!-- Service Card -->
+    <div class="service-card landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Full%20Garden%20Transformation/full_garden_transformation_1.jpg" alt="Full Garden Transformation in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Full Garden Transformation</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional full garden transformation services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/full-garden-transformation.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
             </div>
-        </section>
-
-        <!-- ── 2. Hard Landscaping ── -->
-        <section id="hard-landscaping" class="relative min-h-[100svh] py-16 flex items-center justify-center border-y overflow-hidden" style="background:#FFFFFF; border-color:rgba(20,18,41,0.06);">
-            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 reveal reveal-up">
-
-                    <div class="lg:w-1/2 w-full">
-                        <div class="svc-slideshow rounded-[2.5rem] shadow-2xl border-2 border-[#F5F3EE]/60 w-full h-80 md:h-[600px]">
-                            <div class="svc-slide active"><img src="assets/imgs/service_imgs/Patios/patios_1.jpeg" alt="Expert patio installation in Somerset by JB Outdoor Services" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Decking/decking_1.jpg" alt="Quality decking construction in Wincanton" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Gravel Driveways/gravel_driveways_1.jpeg" alt="Gravel driveway installation in Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Retaining Walls/retaining_walls_1.jpeg" alt="Retaining wall construction by JB Outdoor Services" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Fencing/fencing_1.jpeg" alt="Fencing supply and installation in Somerset" class="w-full h-full object-cover"></div>
-                        </div>
-                        <div class="svc-dots">
-                            <button class="svc-dot active"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
-
-                        <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
-                            Service 2
-                        </span>
-
-                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] mb-8 leading-tight relative pb-6 group flex flex-col items-center lg:items-start">
-                            Hard Landscaping &amp; Construction
-                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full group-hover:w-32 md:group-hover:w-44"
-                                style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
-                        </h2>
-
-                        <p class="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl" style="color:rgba(20,18,41,0.78);">
-                            We design and build lasting outdoor structures that enhance your property's function and kerb appeal. From custom patios and composite decking to gravel driveways, fencing, and structural retaining walls, every job is built on proper preparation and finished to a high standard.
-                        </p>
-
-                        <div class="border border-black/8 p-8 rounded-3xl mb-10 shadow-sm w-full max-w-xl" style="background:rgba(242,247,255,0.50);">
-                            <ul class="space-y-4 font-body text-lg" style="color:rgba(20,18,41,0.78);">
-                                <li>
-                                    <a href="services/patios.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Patios (Natural Stone, Porcelain, Block)
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/decking.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Decking (Timber &amp; Composite)
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/fencing.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Fencing (Supply &amp; Installation)
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/gravel-driveways.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Gravel Driveways
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/retaining-walls.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Retaining Walls
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/General%20Landscaping/general_landscaping_1.jpg" alt="General Landscaping in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">General Landscaping</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional general landscaping services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/general-landscaping.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
             </div>
-        </section>
-
-        <!-- ── 3. Groundworks, Excavation & Site Prep ── -->
-        <section id="groundworks" class="relative min-h-[100svh] py-16 flex items-center justify-center overflow-hidden" style="background:#F5F3EE;">
-            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
-                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 reveal reveal-up">
-
-                    <div class="lg:w-1/2 w-full">
-                        <div class="svc-slideshow rounded-[2.5rem] shadow-2xl border-2 border-white/60 w-full h-80 md:h-[600px]">
-                            <div class="svc-slide active"><img src="assets/imgs/service_imgs/Groundworks %26 Footings/groundworks_footings_1.jpeg" alt="Groundworks and excavation in Wincanton by JB Outdoor Services" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Digger Hire with Operator/digger_hire_1.jpeg" alt="Digger hire with operator in Wincanton, Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Drainage Solutions/drainage_solution_1.jpeg" alt="Drainage solutions installed by JB Outdoor Services in Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Concrete Pads/concrete_pads_1.jpeg" alt="Concrete pad poured by JB Outdoor Services in Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Reduce Digging %26 Ground Levelling/reduce_digging_ground_levelling_1.jpeg" alt="Ground levelling by JB Outdoor Services in Wincanton" class="w-full h-full object-cover"></div>
-                        </div>
-                        <div class="svc-dots">
-                            <button class="svc-dot active"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
-
-                        <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
-                            Service 3
-                        </span>
-
-                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] mb-8 leading-tight relative pb-6 group flex flex-col items-center lg:items-start">
-                            Groundworks, Excavation &amp; Site Prep
-                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full group-hover:w-32 md:group-hover:w-44"
-                                style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
-                        </h2>
-
-                        <p class="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl" style="color:rgba(20,18,41,0.78);">
-                            Using our own 1-tonne micro and 2.6-tonne diggers with skilled operators, we handle all subsurface preparation work. Whether it is foundation trenches for an extension, ground levelling, drainage installation, or a concrete pad for a shed or garage, we get the groundwork right so everything built on top performs as it should.
-                        </p>
-
-                        <div class="border border-black/8 p-8 rounded-3xl mb-10 shadow-sm w-full max-w-xl" style="background:rgba(255,255,255,0.60);">
-                            <ul class="space-y-4 font-body text-lg" style="color:rgba(20,18,41,0.78);">
-                                <li>
-                                    <a href="services/digger-hire.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Digger Hire with Operator (1t Micro &amp; 2.6t)
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/groundworks-footings.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Groundworks &amp; Footings
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/reduce-digging-levelling.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Reduce Digging &amp; Ground Levelling
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/drainage-solutions.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Drainage Solutions
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/concrete-pads.html" class="group flex items-center justify-between gap-3 hover:text-[#EAB308] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#EAB308;"></div>
-                                            Concrete Pads
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Professional%20Turfing/professional_turfing_1.jpg" alt="Professional Turfing in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Professional Turfing</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional professional turfing services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/professional-turfing.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
             </div>
-        </section>
-
-        <!-- ── 4. Clearance & Firewood Supply ── -->
-        <section id="clearance" class="relative min-h-[100svh] py-16 flex items-center justify-center border-y overflow-hidden" style="background:#FFFFFF; border-color:rgba(20,18,41,0.06);">
-            <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16 reveal reveal-up">
-
-                    <div class="lg:w-1/2 w-full">
-                        <div class="svc-slideshow rounded-[2.5rem] shadow-2xl border-2 border-[#F5F3EE]/60 w-full h-80 md:h-[600px]">
-                            <div class="svc-slide active"><img src="assets/imgs/service_imgs/Waste %26 Site Clearances/waste_site_clearance_1.jpg" alt="Site clearance and waste removal by JB Outdoor Services in Wincanton" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Seasoned Hardwood Logs/seasoned_hardwood_logs_1.jpeg" alt="Seasoned firewood logs supplied by JB Outdoor Services in Somerset" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Green Waste Removal/green_waste_removal_1.webp" alt="Green waste removal in Wincanton by JB Outdoor Services" class="w-full h-full object-cover"></div>
-                            <div class="svc-slide"><img src="assets/imgs/service_imgs/Wholesale Firewood Supply/wholesale_firewood_supply_3.jpg" alt="Wholesale firewood supply in Somerset" class="w-full h-full object-cover"></div>
-                        </div>
-                        <div class="svc-dots">
-                            <button class="svc-dot active"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                            <button class="svc-dot"></button>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
-
-                        <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#EAB308; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
-                            Service 4
-                        </span>
-
-                        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] mb-8 leading-tight relative pb-6 group flex flex-col items-center lg:items-start">
-                            Clearance &amp; Firewood Supply
-                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16 md:w-20 h-[3px] rounded-full group-hover:w-32 md:group-hover:w-44"
-                                style="background:#EAB308; transition: width 0.4s cubic-bezier(0.2,0.8,0.2,1);"></span>
-                        </h2>
-
-                        <p class="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl" style="color:rgba(20,18,41,0.78);">
-                            We provide comprehensive waste and site clearances — removing rubbish, green waste, and debris to leave your property clean and ready for whatever comes next. We also supply seasoned and unseasoned firewood logs for both domestic households and wholesale buyers, delivered within our service area.
-                        </p>
-
-                        <div class="border border-black/8 p-8 rounded-3xl mb-10 shadow-sm w-full max-w-xl" style="background:rgba(242,247,255,0.50);">
-                            <ul class="space-y-4 font-body text-lg" style="color:rgba(20,18,41,0.78);">
-                                <li>
-                                    <a href="services/site-clearances.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Waste &amp; Site Clearances
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/green-waste-removal.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Green Waste Removal
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/seasoned-firewood.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Seasoned Hardwood Logs
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/unseasoned-logs.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Unseasoned Logs
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="services/wholesale-firewood.html" class="group flex items-center justify-between gap-3 hover:text-[#141229] transition-colors duration-300">
-                                        <span class="flex items-center gap-3">
-                                            <div class="w-2 h-2 rounded-full shrink-0" style="background:#141229;"></div>
-                                            Wholesale &amp; Domestic Log Supply
-                                        </span>
-                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Hedge%20Removals/hedge_removals_1.webp" alt="Hedge Removals in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Hedge Removals</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional hedge removals services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/hedge-removals.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card hard-landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Patios/patios_1.jpeg" alt="Patios in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Patios</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional patios services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/patios.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card hard-landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Decking/decking_1.jpg" alt="Decking in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Decking</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional decking services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/decking.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card hard-landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Fencing/fencing_1.jpeg" alt="Fencing in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Fencing</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional fencing services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/fencing.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card hard-landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Gravel%20Driveways/gravel_driveways_1.jpeg" alt="Gravel Driveways in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Gravel Driveways</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional gravel driveways services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/gravel-driveways.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card hard-landscaping relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Retaining%20Walls/retaining_walls_1.jpeg" alt="Retaining Walls in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Retaining Walls</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional retaining walls services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/retaining-walls.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card groundworks relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Digger%20Hire%20with%20Operator/digger_hire_1.jpeg" alt="Digger Hire in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Digger Hire</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional digger hire services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/digger-hire.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card groundworks relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Groundworks%20%26%20Footings/groundworks_footings_1.jpeg" alt="Groundworks & Footings in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Groundworks & Footings</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional groundworks & footings services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/groundworks-footings.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card groundworks relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Reduce%20Digging%20%26%20Ground%20Levelling/reduce_digging_ground_levelling_1.jpeg" alt="Ground Levelling in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Ground Levelling</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional ground levelling services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/reduce-digging-levelling.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card groundworks relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Drainage%20Solutions/drainage_solution_1.jpeg" alt="Drainage Solutions in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Drainage Solutions</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional drainage solutions services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/drainage-solutions.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card groundworks relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Concrete%20Pads/concrete_pads_1.jpeg" alt="Concrete Pads in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Concrete Pads</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional concrete pads services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/concrete-pads.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card clearance relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Waste%20%26%20Site%20Clearances/waste_site_clearance_1.jpg" alt="Waste & Site Clearances in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Waste & Site Clearances</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional waste & site clearances services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/site-clearances.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card clearance relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Green%20Waste%20Removal/green_waste_removal_1.webp" alt="Green Waste Removal in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Green Waste Removal</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional green waste removal services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/green-waste-removal.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card clearance relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Seasoned%20Hardwood%20Logs/seasoned_hardwood_logs_1.jpeg" alt="Seasoned Hardwood Logs in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Seasoned Hardwood Logs</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional seasoned hardwood logs services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/seasoned-firewood.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card clearance relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Seasoned%20Hardwood%20Logs/seasoned_hardwood_logs_1.jpeg" alt="Unseasoned Logs in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Unseasoned Logs</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional unseasoned logs services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/unseasoned-logs.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Card -->
+    <div class="service-card clearance relative bg-white rounded-[2rem] shadow-xl border border-black/5 overflow-hidden group flex flex-col h-full transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 scale-95" style="display: flex;">
+        <div class="relative w-full h-64 md:h-72 overflow-hidden">
+            <img src="assets/imgs/service_imgs/Wholesale%20Firewood%20Supply/wholesale_firewood_supply_3.jpg" alt="Wholesale Firewood in Somerset" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#141229]/90 via-[#141229]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+            <h3 class="absolute bottom-6 left-6 right-6 font-heading text-2xl md:text-3xl font-bold text-white z-10 leading-tight drop-shadow-md">Wholesale Firewood</h3>
+        </div>
+        
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-white relative z-20">
+            <p class="font-body text-[#141229]/70 text-base md:text-lg mb-8 line-clamp-3 flex-grow">Professional wholesale firewood services across Wincanton and a 10-mile radius in Somerset. Delivered to the highest standards.</p>
+            
+            <div class="mt-auto flex flex-col gap-3">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Book Now</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="services/wholesale-firewood.html" class="btn-bubble btn-outline font-body w-full">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">View Details</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
                 </div>
             </div>
         </section>
 
         <!-- ══════════════════════════════════════════════
+             GOOGLE REVIEW SECTION
+        ══════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════
              GOOGLE REVIEW SECTION
         ══════════════════════════════════════════════ -->
         <section class="relative py-16 md:py-24 flex items-center justify-center border-t overflow-hidden" style="background:#F5F3EE; border-color:rgba(20,18,41,0.10);">
@@ -698,5 +1041,66 @@
         })();
     </script>
 
+
+    <script>
+        // ── Catalog Filtering Logic ──────────────────────────────
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.service-card');
+
+            // Stagger initial load animation
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.remove('opacity-0', 'scale-95');
+                    card.classList.add('opacity-100', 'scale-100');
+                }, index * 50);
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Reset all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active-filter');
+                        b.style.background = 'transparent';
+                        b.style.color = 'rgba(20,18,41,0.80)';
+                        b.style.boxShadow = 'none';
+                    });
+
+                    // Activate clicked button
+                    btn.classList.add('active-filter');
+                    btn.style.background = '#EAB308';
+                    btn.style.color = '#141229';
+                    btn.style.boxShadow = '0 4px 14px rgba(234, 179, 8,0.35)';
+                    
+                    // Keep active item centered on mobile scroll
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Filter cards
+                    cards.forEach((card) => {
+                        // animate out
+                        card.classList.remove('opacity-100', 'scale-100');
+                        card.classList.add('opacity-0', 'scale-95');
+                        
+                        setTimeout(() => {
+                            if (filterValue === 'all' || card.classList.contains(filterValue)) {
+                                card.style.display = 'flex';
+                                // slight delay to ensure display:flex renders before opacity changes
+                                requestAnimationFrame(() => {
+                                    card.classList.remove('opacity-0', 'scale-95');
+                                    card.classList.add('opacity-100', 'scale-100');
+                                });
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }, 300); // Wait for transition duration
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

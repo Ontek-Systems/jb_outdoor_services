@@ -200,29 +200,7 @@ div[onmouseenter][style*="background:#141229"] {
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* ── Light-background navbar (service pages & gallery) ─────── */
-/* When the header is at the top on a light page, all inherited  */
-/* link text becomes dark. Once .scrolled is added (via JS) the  */
-/* dark background makes white text correct again.               */
-body.light-nav-page #site-header:not(.scrolled) {
-    color: #141229;
-}
-body.light-nav-page #site-header:not(.scrolled) #menuBtn {
-    color: #141229 !important;
-}
-body.light-nav-page #site-header:not(.scrolled) .logo-white {
-    display: none !important;
-}
-body.light-nav-page #site-header:not(.scrolled) .logo-dark {
-    display: block !important;
-}
-/* Restore white logo once scrolled (dark background is active) */
-body.light-nav-page #site-header.scrolled .logo-white {
-    display: block !important;
-}
-body.light-nav-page #site-header.scrolled .logo-dark {
-    display: none !important;
-}
+
 
 /* ── Global Button Component: Bubble Fill ───────────────────── */
 .btn-bubble {
@@ -359,4 +337,23 @@ body.light-nav-page #site-header.scrolled .logo-dark {
 }
 .btn-dark-bg .btn-bubble-icon {
     color: var(--midnight);
+}
+
+/* Outline Button (Transparent background, Black hover fill) */
+.btn-outline {
+    background-color: transparent;
+    color: var(--midnight);
+    border: 1.5px solid rgba(20, 18, 41, 0.15);
+}
+.btn-outline .btn-bubble-fill {
+    background-color: var(--midnight);
+}
+.btn-outline .btn-bubble-text {
+    color: var(--midnight);
+}
+.btn-outline:hover .btn-bubble-text {
+    color: var(--alice);
+}
+.btn-outline .btn-bubble-icon {
+    color: var(--alice);
 }

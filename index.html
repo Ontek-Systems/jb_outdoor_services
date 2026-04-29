@@ -71,7 +71,29 @@
         #site-header.scrolled nav a:hover {
             color: #EAB308;
         }
-    </style>
+    
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        </style>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -108,91 +130,273 @@
         </script>
 
         <!-- ═══════════════════════════════════════════════════════
-             HERO
+             3D CAROUSEL HERO
         ═══════════════════════════════════════════════════════ -->
-        <section
-            class="relative min-h-[100svh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-brand-dark">
+        <section class="relative bg-[#F5F3EE] min-h-[100svh] flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
+            
+<!-- Tier 1: Top-Aligned Text Header -->
+<div class="w-full max-w-4xl mx-auto px-4 text-center z-20 mb-8 sm:mb-12 flex flex-col items-center reveal reveal-up mt-8 lg:mt-12">
+    <div class="flex flex-col items-center gap-2 mb-6">
+<span class="flex gap-0.5 text-xl leading-none cursor-default"
+        style="color:#EAB308;"
+        onmouseover="this.style.color='#141229'"
+        onmouseout="this.style.color='#EAB308'">
+    &#9733;&#9733;&#9733;&#9733;&#9733;
+</span>
+        <span class="px-4 py-2 font-body font-semibold text-xs tracking-widest uppercase rounded-full cursor-default"
+                style="background:#EAB308; color:#141229; box-shadow:0 4px 14px rgba(234, 179, 8,0.35);">
+            5-Star Rated on Google
+        </span>
+    </div>
+    <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-[1.05] text-[#141229] drop-shadow-sm w-full break-words">
+        Expert Landscaping & Groundworks in Wincanton
+    </h1>
+    <p class="font-body text-base md:text-lg text-[#141229]/70 font-medium leading-relaxed max-w-2xl px-2">
+        From full garden transformations and patios to digger hire and drainage solutions, Jack and the JB Outdoor Services team deliver quality results across Wincanton and a 10-mile radius.
+    </p>
+</div>
 
-            <div id="hero-slideshow" class="absolute inset-0 w-full h-full z-0">
-                <img src="assets/imgs/c1.png" alt="Landscaping and groundworks project in Wincanton"
-                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-100">
-                <img src="assets/imgs/s3.jpg" alt="Garden transformation by JB Outdoor Services"
-                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
-                <img src="assets/imgs/s4.jpg" alt="Patio and hard landscaping installation Somerset"
-                    class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0">
-            </div>
-
-            <div class="absolute inset-0 bg-black/30 z-[1]"></div>
-
-            <!-- Top Vignette for Navbar -->
-            <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none"></div>
-
-            <!-- Bottom Vignette -->
-            <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
-
-            <div class="w-full max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 relative z-20 flex flex-col items-center justify-center text-center mt-12 lg:mt-0">
-
-                <div class="w-full flex flex-col items-center text-center reveal reveal-up py-16 px-4 sm:px-12 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/75 via-black/50 to-transparent">
-
-                    <!-- Stars -->
-                    <div class="flex items-center justify-center gap-1 mb-3">
-                        <svg class="w-6 h-6 text-[#EAB308]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="w-6 h-6 text-[#EAB308]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="w-6 h-6 text-[#EAB308]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="w-6 h-6 text-[#EAB308]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg class="w-6 h-6 text-[#EAB308]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <!-- Tier 2: Centralized 3D Carousel -->
+            <div class="relative w-full max-w-7xl mx-auto h-[320px] sm:h-[400px] lg:h-[450px] mb-12 perspective-container z-10 overflow-visible px-4">
+                <div class="relative w-full h-full flex items-center justify-center preserve-3d" id="hero-3d-carousel">
+                    <!-- Carousel Slides -->
+                    <div class="carousel-slide absolute w-[240px] sm:w-[320px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer" data-index="0">
+                        <img src="assets/imgs/hero_slider/slide1.jpg" alt="Project 1" class="w-full h-full object-cover">
                     </div>
-                    <span class="font-body text-white/80 text-sm font-medium mb-6">5-Star Rated on Google</span>
-
-                    <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] text-white drop-shadow-2xl max-w-4xl mx-auto">
-                        Expert Landscaping &amp; Groundworks in Wincanton
-                    </h1>
-
-                    <p class="font-body text-base md:text-lg mb-8 text-white/90 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-                        From full garden transformations and patios to digger hire and drainage solutions, Jack and the JB Outdoor Services team deliver quality results across Wincanton and a 10-mile radius.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 w-full sm:w-auto">
-
-                        <a href="contact.html"
-                             
-                             class="btn-bubble btn-primary font-body">
-    <span class="btn-bubble-fill"></span>
-    <span class="btn-bubble-text">Get Your Free Quote</span>
-    <span class="btn-bubble-icon-container">
-        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
-        </svg>
-    </span>
-</a>
-
-                        <div class="hidden sm:block w-[2px] h-8 bg-white/20 rounded-full mx-2"></div>
-
-                        <div class="flex items-center justify-center gap-3 text-white font-body font-bold text-lg">
-                            <a href="tel:+447445064666"
-                                class="tracking-wide underline underline-offset-[6px] decoration-2 decoration-white hover:decoration-[#EAB308] transition-all duration-300"
-                                style="">
-                                or call Jack
-                            </a>
-                        </div>
+                    <div class="carousel-slide absolute w-[240px] sm:w-[320px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer" data-index="1">
+                        <img src="assets/imgs/hero_slider/slide2.jpg" alt="Project 2" class="w-full h-full object-cover">
                     </div>
-
+                    <div class="carousel-slide absolute w-[240px] sm:w-[320px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer" data-index="2">
+                        <img src="assets/imgs/hero_slider/slide3.jpg" alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="carousel-slide absolute w-[240px] sm:w-[320px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer" data-index="3">
+                        <img src="assets/imgs/hero_slider/slide4.jpg" alt="Project 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="carousel-slide absolute w-[240px] sm:w-[320px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer" data-index="4">
+                        <img src="assets/imgs/hero_slider/slide5.jpg" alt="Project 5" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
 
+            <!-- Tier 3: Bottom-Aligned CTA Group -->
+            <div class="w-full flex flex-col items-center justify-center z-20 reveal reveal-up relative mt-4">
+                <a href="contact.html" class="btn-bubble btn-primary font-body w-full max-w-[280px] sm:max-w-none sm:w-auto text-center mb-6">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-lg px-4">Get Your Free Quote</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="tel:+447445064666" class="font-body font-bold text-lg text-[#141229] tracking-wide underline underline-offset-[6px] decoration-2 decoration-[#141229]/20 hover:decoration-[#EAB308] hover:text-[#EAB308] transition-all duration-300">
+                    or call Jack
+                </a>
+            </div>
+
+            <style>
+                .perspective-container { perspective: 1200px; }
+                .preserve-3d { transform-style: preserve-3d; }
+                .carousel-slide { 
+                    left: 50%; top: 50%;
+                    transform-origin: center center;
+                }
+            </style>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const heroSlides = document.querySelectorAll('#hero-slideshow .slide');
-                    if (heroSlides.length > 0) {
-                        let currentSlide = 0;
-                        setInterval(() => {
-                            heroSlides[currentSlide].classList.remove('opacity-100');
-                            heroSlides[currentSlide].classList.add('opacity-0');
-                            currentSlide = (currentSlide + 1) % heroSlides.length;
-                            heroSlides[currentSlide].classList.remove('opacity-0');
-                            heroSlides[currentSlide].classList.add('opacity-100');
+                    const carouselContainer = document.querySelector('.perspective-container');
+                    const carousel = document.getElementById('hero-3d-carousel');
+                    if (!carousel || !carouselContainer) return;
+                    
+                    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+                    let activeIndex = Math.floor(slides.length / 2);
+                    
+                    // Visual indicator for interactivity
+                    carouselContainer.style.cursor = 'grab';
+
+                    const updateCarousel = () => {
+                        const isMobile = window.innerWidth < 768;
+                        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+                        
+                        slides.forEach((slide, index) => {
+                            let offset = index - activeIndex;
+                            // wrap around
+                            if (offset < -Math.floor(slides.length/2)) offset += slides.length;
+                            if (offset > Math.floor(slides.length/2)) offset -= slides.length;
+
+                            const dir = Math.sign(offset);
+                            const absOffset = Math.abs(offset);
+
+                            // Center alignment margins based on current w/h
+                            if (isMobile) {
+                                slide.style.marginLeft = '-120px';
+                                slide.style.marginTop = '-150px';
+                            } else if (isTablet) {
+                                slide.style.marginLeft = '-160px';
+                                slide.style.marginTop = '-190px';
+                            } else {
+                                slide.style.marginLeft = '-200px';
+                                slide.style.marginTop = '-225px';
+                            }
+
+                            // 3D Transforms logic
+                            let translateZ = 0;
+                            let translateX = 0;
+                            let rotateY = 0;
+                            let scale = 1;
+                            let opacity = 1;
+                            let zIndex = 100 - absOffset;
+                            let blur = 0;
+
+                            if (absOffset === 0) {
+                                translateX = 0;
+                                translateZ = isMobile ? 50 : 150;
+                                rotateY = 0;
+                                scale = 1;
+                                opacity = 1;
+                                blur = 0;
+                            } else if (absOffset === 1) {
+                                translateX = dir * (isMobile ? 100 : (isTablet ? 180 : 300));
+                                translateZ = isMobile ? -50 : -100;
+                                rotateY = dir * (isMobile ? -25 : -35); // Negative for coverflow curve
+                                scale = 0.85;
+                                opacity = 0.85;
+                                blur = 1;
+                            } else if (absOffset === 2) {
+                                translateX = dir * (isMobile ? 180 : (isTablet ? 320 : 550));
+                                translateZ = isMobile ? -150 : -350;
+                                rotateY = dir * (isMobile ? -45 : -55);
+                                scale = 0.7;
+                                opacity = 0.4;
+                                blur = 3;
+                            } else {
+                                translateX = dir * (isMobile ? 220 : 700);
+                                translateZ = -600;
+                                scale = 0.5;
+                                opacity = 0;
+                                blur = 5;
+                            }
+
+                            slide.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+                            slide.style.opacity = opacity;
+                            slide.style.zIndex = zIndex;
+                            slide.style.filter = `brightness(${absOffset === 0 ? 1 : 0.7}) blur(${blur}px)`;
+                        });
+                    };
+
+                    updateCarousel();
+                    window.addEventListener('resize', updateCarousel);
+
+                    // Auto-play
+                    let autoplay = setInterval(() => {
+                        activeIndex = (activeIndex + 1) % slides.length;
+                        updateCarousel();
+                    }, 4000);
+
+                    const resetAutoplay = () => {
+                        clearInterval(autoplay);
+                        autoplay = setInterval(() => {
+                            activeIndex = (activeIndex + 1) % slides.length;
+                            updateCarousel();
                         }, 4000);
-                    }
+                    };
+
+                    const goNext = () => {
+                        activeIndex = (activeIndex + 1) % slides.length;
+                        updateCarousel();
+                        resetAutoplay();
+                    };
+
+                    const goPrev = () => {
+                        activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+                        updateCarousel();
+                        resetAutoplay();
+                    };
+
+                    // Desktop Click Logic
+                    let isDragging = false;
+                    let hasDragged = false;
+                    let startX = 0;
+
+                    carouselContainer.addEventListener('mousedown', (e) => {
+                        isDragging = true;
+                        hasDragged = false;
+                        startX = e.clientX;
+                        carouselContainer.style.cursor = 'grabbing';
+                        clearInterval(autoplay); // Pause auto-play
+                    });
+
+                    carouselContainer.addEventListener('mousemove', (e) => {
+                        if (!isDragging) return;
+                        if (Math.abs(e.clientX - startX) > 10) {
+                            hasDragged = true;
+                        }
+                    });
+
+                    window.addEventListener('mouseup', (e) => {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        carouselContainer.style.cursor = 'grab';
+                        
+                        if (hasDragged) {
+                            const diff = startX - e.clientX;
+                            if (Math.abs(diff) > 40) { // Threshold for drag
+                                if (diff > 0) goNext();
+                                else goPrev();
+                            } else {
+                                resetAutoplay();
+                            }
+                        }
+                    });
+
+                    carouselContainer.addEventListener('click', (e) => {
+                        if (hasDragged) {
+                            e.preventDefault();
+                            return;
+                        }
+                        
+                        // Check if a specific slide was clicked
+                        const slide = e.target.closest('.carousel-slide');
+                        if (slide) {
+                            const clickedIndex = parseInt(slide.getAttribute('data-index'));
+                            if (clickedIndex !== activeIndex) {
+                                activeIndex = clickedIndex;
+                                updateCarousel();
+                                resetAutoplay();
+                                return;
+                            }
+                        }
+
+                        // Otherwise, click left/right half of container to advance
+                        const rect = carouselContainer.getBoundingClientRect();
+                        const clickX = e.clientX - rect.left;
+                        if (clickX > rect.width / 2) {
+                            goNext();
+                        } else {
+                            goPrev();
+                        }
+                    });
+
+                    // Mobile Touch / Swipe Logic
+                    let touchStartX = 0;
+                    
+                    carouselContainer.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                        clearInterval(autoplay); // Pause auto-play
+                    }, { passive: true });
+
+                    carouselContainer.addEventListener('touchend', (e) => {
+                        const touchEndX = e.changedTouches[0].screenX;
+                        const diff = touchStartX - touchEndX;
+                        
+                        if (Math.abs(diff) > 40) { // Threshold for swipe
+                            if (diff > 0) goNext();
+                            else goPrev();
+                        } else {
+                            resetAutoplay();
+                        }
+                    }, { passive: true });
                 });
             </script>
         </section>
@@ -208,6 +412,28 @@
             .hover-item { transition: opacity 0.3s ease; }
             .scrolling-wrapper:hover .hover-item { opacity: 0.5; }
             .scrolling-wrapper .hover-item:hover { opacity: 1; }
+        
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
         </style>
 
         <div style="background:#141229;" class="text-[#F5F3EE] py-5 border-y border-white/10 shadow-inner">
@@ -309,128 +535,107 @@
         <!-- ═══════════════════════════════════════════════════════
              ABOUT / TRUST SECTION
         ═══════════════════════════════════════════════════════ -->
-        <section class="relative py-20 lg:py-32 flex items-center justify-center overflow-hidden" style="background:#F5F3EE;">
-            <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
+        <section class="relative py-20 lg:py-32 flex flex-col items-center justify-center overflow-hidden" style="background:#F5F3EE;">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-8 relative z-20 flex flex-col items-center text-center reveal reveal-up">
 
-                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default transition-colors duration-300" style="background:#EAB308; color:#141229;">
+                    Our Approach
+                </span>
 
-                    <!-- Left: Text Content -->
-                    <div class="w-full lg:w-1/2 flex flex-col items-start text-left reveal reveal-up">
+                <h2 class="group font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-[#141229] mb-6 leading-tight flex flex-col items-center cursor-default">
+                    Outdoor Spaces Built to Last
+                    <span class="block w-16 md:w-20 h-0.5 md:h-[3px] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40" style="background:#EAB308;"></span>
+                </h2>
 
-                        <span
-                            class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default transition-colors duration-300"
-                            style="background:#EAB308; color:#141229;">
-                            Our Approach
-                        </span>
+                <div class="font-body text-base sm:text-lg text-[#141229]/70 leading-relaxed space-y-5 mb-10 w-full">
+                    <p>
+                        At JB Outdoor Services Ltd, Jack Banfield leads every project with a hands-on commitment to quality and craftsmanship. Based in Wincanton and serving the wider Somerset area, we handle everything from soft landscaping and lawn turfing to complex groundworks and drainage solutions, all delivered by a skilled, reliable team.
+                    </p>
+                    <p>
+                        We believe every outdoor space has potential. Whether you need a tired garden completely redesigned, a solid concrete pad poured, a new gravel driveway installed, or a site fully cleared and ready for the next phase, we bring the same care, expertise, and attention to detail to every job, large or small.
+                    </p>
+                </div>
 
-                        <h2
-                            class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-[#141229] mb-6 leading-tight flex flex-col items-start cursor-default">
-                            Outdoor Spaces Built to Last
-                            <span
-                                class="block w-16 md:w-20 h-0.5 md:h-[3px] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40"
-                                style="background:#EAB308;"></span>
-                        </h2>
-
-                        <div class="font-body text-base sm:text-lg text-[#141229]/70 leading-relaxed space-y-5 mb-10 w-full">
-                            <p>
-                                At JB Outdoor Services Ltd, Jack Banfield leads every project with a hands-on commitment to quality and craftsmanship. Based in Wincanton and serving the wider Somerset area, we handle everything from soft landscaping and lawn turfing to complex groundworks and drainage solutions, all delivered by a skilled, reliable team.
-                            </p>
-                            <p>
-                                We believe every outdoor space has potential. Whether you need a tired garden completely redesigned, a solid concrete pad poured, a new gravel driveway installed, or a site fully cleared and ready for the next phase, we bring the same care, expertise, and attention to detail to every job, large or small.
-                            </p>
-                        </div>
-
-                        <div
-                            class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-[#141229]/20 pt-8 mt-2 mb-12 w-full max-w-lg">
-                            <div class="group flex flex-col items-start cursor-default">
-                                <p
-                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap"
-                                    style="transition: color 0.5s; "
-                                    onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
-                                    <span class="auto-counter" data-target="10">0</span>+
-                                </p>
-                                <p
-                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">
-                                    Years of Experience
-                                </p>
-                            </div>
-
-                            <div class="group flex flex-col items-start cursor-default">
-                                <p
-                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap"
-                                    style="transition: color 0.5s;"
-                                    onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
-                                    <span class="auto-counter" data-target="5">0</span>★
-                                </p>
-                                <p
-                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">
-                                    Google Rating
-                                </p>
-                            </div>
-
-                            <div class="group flex flex-col items-start cursor-default">
-                                <p
-                                    class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap"
-                                    style="transition: color 0.5s;"
-                                    onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
-                                    <span class="auto-counter" data-target="100">0</span>%
-                                </p>
-                                <p
-                                    class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">
-                                    Satisfaction Focus
-                                </p>
-                            </div>
-                        </div>
-
-                        <a href="about.html"
-                             
-                             class="btn-bubble btn-primary font-body">
-    <span class="btn-bubble-fill"></span>
-    <span class="btn-bubble-text">Learn More About Us</span>
-    <span class="btn-bubble-icon-container">
-        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
-        </svg>
-    </span>
-</a>
-
+                <div class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-[#141229]/20 pt-8 mt-2 mb-12 w-full max-w-lg mx-auto">
+                    <div class="group flex flex-col items-center cursor-default text-center">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap" style="transition: color 0.5s;" onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
+                            <span class="auto-counter" data-target="10">0</span>+
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">Years of Experience</p>
                     </div>
-
-                    <!-- Right: Slideshow Image -->
-                    <div class="w-full lg:w-1/2 relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-[1.5rem] overflow-hidden reveal reveal-up"
-                        style="transition-delay: 200ms;" id="trust-slideshow">
-
-                        <img src="assets/imgs/c2.jpeg" alt="Garden landscaping and turfing in Wincanton" loading="lazy" decoding="async"
-                            class="slide absolute inset-0 w-full h-full object-cover opacity-100">
-
-                        <img src="assets/imgs/c5.jpg" alt="Patio installation by JB Outdoor Services" loading="lazy" decoding="async"
-                            class="slide absolute inset-0 w-full h-full object-cover opacity-0">
-
-                        <img src="assets/imgs/c6.jpg" alt="Digger hire and groundworks in Somerset" loading="lazy" decoding="async"
-                            class="slide absolute inset-0 w-full h-full object-cover opacity-0">
-
-                        <style>
-                            #trust-slideshow .slide { transition: opacity 1000ms ease-in-out, transform 700ms ease-in-out; transform: scale(1); }
-                            #trust-slideshow:hover .slide { transform: scale(1.07); }
-                        </style>
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const slides = document.querySelectorAll('#trust-slideshow .slide');
-                                if (slides.length > 0) {
-                                    let currentSlide = 0;
-                                    setInterval(() => {
-                                        slides[currentSlide].classList.remove('opacity-100');
-                                        slides[currentSlide].classList.add('opacity-0');
-                                        currentSlide = (currentSlide + 1) % slides.length;
-                                        slides[currentSlide].classList.remove('opacity-0');
-                                        slides[currentSlide].classList.add('opacity-100');
-                                    }, 3500);
-                                }
-                            });
-                        </script>
+                    <div class="group flex flex-col items-center cursor-default text-center">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap" style="transition: color 0.5s;" onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
+                            <span class="auto-counter" data-target="5">0</span>★
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">Google Rating</p>
                     </div>
+                    <div class="group flex flex-col items-center cursor-default text-center">
+                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#141229] transition-all duration-500 group-hover:-translate-y-2 whitespace-nowrap" style="transition: color 0.5s;" onmouseenter="this.style.color='#EAB308'" onmouseleave="this.style.color='#141229'">
+                            <span class="auto-counter" data-target="100">0</span>%
+                        </p>
+                        <p class="font-body text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mt-2 font-bold text-[#141229]/60">Satisfaction Focus</p>
+                    </div>
+                </div>
 
+                <a href="about.html" class="btn-bubble btn-primary font-body">
+                    <span class="btn-bubble-fill"></span>
+                    <span class="btn-bubble-text text-base">Learn More About Us</span>
+                    <span class="btn-bubble-icon-container">
+                        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path></svg>
+                    </span>
+                </a>
+
+            </div>
+
+            <!-- Slideshow underneath -->
+            <div class="w-full max-w-6xl mx-auto mt-16 px-4 sm:px-8 relative z-20">
+                <div class="relative h-[300px] sm:h-[450px] lg:h-[600px] rounded-[2rem] overflow-hidden reveal reveal-up shadow-2xl" id="trust-slideshow">
+                    <img src="assets/imgs/service_imgs/General%20Landscaping/general_landscaping_1.jpg" alt="Garden landscaping and turfing in Wincanton" loading="lazy" decoding="async" class="slide absolute inset-0 w-full h-full object-cover opacity-100">
+                    <img src="assets/imgs/service_imgs/Decking/decking_1.jpg" alt="Patio installation by JB Outdoor Services" loading="lazy" decoding="async" class="slide absolute inset-0 w-full h-full object-cover opacity-0">
+                    <img src="assets/imgs/service_imgs/Groundworks%20%26%20Footings/groundworks_footings_1.jpeg" alt="Digger hire and groundworks in Somerset" loading="lazy" decoding="async" class="slide absolute inset-0 w-full h-full object-cover opacity-0">
+                    
+                    <style>
+                        #trust-slideshow .slide { transition: opacity 1000ms ease-in-out, transform 700ms ease-in-out; transform: scale(1); }
+                        #trust-slideshow:hover .slide { transform: scale(1.05); }
+                    
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        </style>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const slides = document.querySelectorAll('#trust-slideshow .slide');
+                            if (slides.length > 0) {
+                                let currentSlide = 0;
+                                setInterval(() => {
+                                    slides[currentSlide].classList.remove('opacity-100');
+                                    slides[currentSlide].classList.add('opacity-0');
+                                    currentSlide = (currentSlide + 1) % slides.length;
+                                    slides[currentSlide].classList.remove('opacity-0');
+                                    slides[currentSlide].classList.add('opacity-100');
+                                }, 3500);
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </section>
@@ -492,25 +697,25 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full">
 
                     <!-- Service 1: Landscaping & Garden -->
                     <a href="services.html#landscaping"
                         class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2"
                         style="background:#E8E6DE;">
 
-                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                        <div class="w-full h-48 sm:h-56 lg:h-48 relative overflow-hidden bg-gray-200 shrink-0">
                             <img src="assets/imgs/c8.jpeg" alt="Full garden transformation and turfing in Wincanton, Somerset" loading="lazy" decoding="async"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
 
-                        <div class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 transition-colors duration-500 text-left"
+                        <div class="w-full flex flex-col flex-grow justify-between p-6 lg:p-8 transition-colors duration-500 text-left"
                             style="" onmouseenter="this.style.background='#141229'" onmouseleave="this.style.background=''">
                             <div>
-                                <h3 class="font-heading text-2xl lg:text-3xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
-                                    Landscaping &amp; Garden Services
+                                <h3 class="font-heading text-xl lg:text-2xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
+                                    Garden Landscaping
                                 </h3>
-                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-sm lg:text-base leading-relaxed mb-6 transition-colors duration-500">
                                     Complete garden makeovers, turfing, hedge removals, and versatile soft and hard landscaping solutions tailored to transform your outdoor space into something you will love.
                                 </p>
                             </div>
@@ -528,18 +733,18 @@
                         class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2"
                         style="background:#E8E6DE; transition-delay: 100ms;">
 
-                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                        <div class="w-full h-48 sm:h-56 lg:h-48 relative overflow-hidden bg-gray-200 shrink-0">
                             <img src="assets/imgs/c10.jpeg" alt="Patio, decking and fencing installation in Somerset" loading="lazy" decoding="async"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
 
-                        <div class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 transition-colors duration-500 text-left"
+                        <div class="w-full flex flex-col flex-grow justify-between p-6 lg:p-8 transition-colors duration-500 text-left"
                             onmouseenter="this.style.background='#141229'" onmouseleave="this.style.background=''">
                             <div>
-                                <h3 class="font-heading text-2xl lg:text-3xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
+                                <h3 class="font-heading text-xl lg:text-2xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
                                     Hard Landscaping &amp; Construction
                                 </h3>
-                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-sm lg:text-base leading-relaxed mb-6 transition-colors duration-500">
                                     Expertly laid patios, bespoke decking, sturdy fencing, gravel driveways, and retaining walls built to enhance your property and stand the test of time.
                                 </p>
                             </div>
@@ -557,18 +762,18 @@
                         class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2"
                         style="background:#E8E6DE; transition-delay: 200ms;">
 
-                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                        <div class="w-full h-48 sm:h-56 lg:h-48 relative overflow-hidden bg-gray-200 shrink-0">
                             <img src="assets/imgs/c11.jpeg" alt="Groundworks, excavation and digger hire in Wincanton" loading="lazy" decoding="async"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
 
-                        <div class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 transition-colors duration-500 text-left"
+                        <div class="w-full flex flex-col flex-grow justify-between p-6 lg:p-8 transition-colors duration-500 text-left"
                             onmouseenter="this.style.background='#141229'" onmouseleave="this.style.background=''">
                             <div>
-                                <h3 class="font-heading text-2xl lg:text-3xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
+                                <h3 class="font-heading text-xl lg:text-2xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
                                     Groundworks, Excavation &amp; Site Prep
                                 </h3>
-                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-sm lg:text-base leading-relaxed mb-6 transition-colors duration-500">
                                     Digger hire with skilled operators, foundation trenches, ground levelling, drainage solutions, and concrete pads. We prepare sites correctly so every build starts on solid ground.
                                 </p>
                             </div>
@@ -586,18 +791,18 @@
                         class="group flex flex-col rounded-3xl overflow-hidden reveal reveal-up transition-all duration-500 hover:-translate-y-2"
                         style="background:#E8E6DE; transition-delay: 300ms;">
 
-                        <div class="w-full h-64 sm:h-72 lg:h-80 relative overflow-hidden bg-gray-200 shrink-0">
+                        <div class="w-full h-48 sm:h-56 lg:h-48 relative overflow-hidden bg-gray-200 shrink-0">
                             <img src="assets/imgs/c12.jpeg" alt="Site clearance and firewood supply in Somerset" loading="lazy" decoding="async"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
 
-                        <div class="w-full flex flex-col flex-grow justify-between p-8 lg:p-10 transition-colors duration-500 text-left"
+                        <div class="w-full flex flex-col flex-grow justify-between p-6 lg:p-8 transition-colors duration-500 text-left"
                             onmouseenter="this.style.background='#141229'" onmouseleave="this.style.background=''">
                             <div>
-                                <h3 class="font-heading text-2xl lg:text-3xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
+                                <h3 class="font-heading text-xl lg:text-2xl font-bold mb-4 transition-colors duration-500 text-[#141229] group-hover:text-white">
                                     Clearance &amp; Firewood Supply
                                 </h3>
-                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-base lg:text-lg leading-relaxed mb-6 transition-colors duration-500">
+                                <p class="font-body text-[#141229]/80 group-hover:text-white/90 text-sm lg:text-base leading-relaxed mb-6 transition-colors duration-500">
                                     Comprehensive waste and site clearances to give you a clean slate, plus seasoned and unseasoned firewood logs available for both domestic and wholesale supply.
                                 </p>
                             </div>
@@ -837,7 +1042,29 @@
                 .rv-scroll-track { display: flex; width: max-content; animation: scrollReviews 28s linear infinite; gap: 1.5rem; padding: 0 1.5rem; }
                 .rv-scroll-outer:hover .rv-scroll-track { animation-play-state: running !important; }
                 @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-            </style>
+            
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        </style>
 
             <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
                 <div class="flex flex-col items-center text-center mb-12 lg:mb-16 reveal reveal-up w-full">
@@ -866,12 +1093,12 @@
                         <div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max">
 
                             <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
-                                <div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
                                     style="background:#141229;"
                                     onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
                                     <div>
                                         <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
                                             "Jack and his team did a fantastic job on our patio and new lawn. The whole area looks incredible. They were professional, tidy, and finished ahead of schedule. Highly recommend."
                                         </p>
                                     </div>
@@ -885,12 +1112,12 @@
                             </div>
 
                             <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
-                                <div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
                                     style="background:#141229;"
                                     onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
                                     <div>
                                         <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
                                             "Used JB for groundworks and footings on our garage extension. Brilliant service, solid workmanship, and a very fair price. Jack communicated every step of the way."
                                         </p>
                                     </div>
@@ -904,12 +1131,12 @@
                             </div>
 
                             <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
-                                <div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
                                     style="background:#141229;"
                                     onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
                                     <div>
                                         <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
                                             "Had a complete garden transformation including new decking and fencing. The result is beyond what I imagined. Jack's team were polite, hardworking, and left the site spotless."
                                         </p>
                                     </div>
@@ -923,12 +1150,12 @@
                             </div>
 
                             <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
-                                <div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
                                     style="background:#141229;"
                                     onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
                                     <div>
                                         <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
                                             "Hired JB for digger work and ground levelling on our rural property. Excellent operator, great care taken around existing structures. Will use again without question."
                                         </p>
                                     </div>
@@ -942,12 +1169,12 @@
                             </div>
 
                             <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
-                                <div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
                                     style="background:#141229;"
                                     onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
                                     <div>
                                         <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
                                             "Gravel driveway installed to a superb standard. Very competitive quote, efficient team, and the final result looks absolutely brilliant. Could not be happier."
                                         </p>
                                     </div>
@@ -959,25 +1186,116 @@
                                     </div>
                                 </div>
                             </div>
+<div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                    style="background:#141229;"
+                                    onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
+                                    <div>
+                                        <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
+                                            "Jack and his team did a fantastic job on our patio and new lawn. The whole area looks incredible. They were professional, tidy, and finished ahead of schedule. Highly recommend."
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p class="font-body font-bold text-white text-sm lg:text-base transition-colors duration-500">Sarah M., Wincanton</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                    style="background:#141229;"
+                                    onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
+                                    <div>
+                                        <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
+                                            "Used JB for groundworks and footings on our garage extension. Brilliant service, solid workmanship, and a very fair price. Jack communicated every step of the way."
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p class="font-body font-bold text-white text-sm lg:text-base transition-colors duration-500">David R., Shepton Mallet</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                    style="background:#141229;"
+                                    onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
+                                    <div>
+                                        <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
+                                            "Had a complete garden transformation including new decking and fencing. The result is beyond what I imagined. Jack's team were polite, hardworking, and left the site spotless."
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p class="font-body font-bold text-white text-sm lg:text-base transition-colors duration-500">Claire T., Bruton</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                    style="background:#141229;"
+                                    onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
+                                    <div>
+                                        <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
+                                            "Hired JB for digger work and ground levelling on our rural property. Excellent operator, great care taken around existing structures. Will use again without question."
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p class="font-body font-bold text-white text-sm lg:text-base transition-colors duration-500">Tom H., Castle Cary</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0">
+                                <div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                                    style="background:#141229;"
+                                    onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'">
+                                    <div>
+                                        <div class="flex text-yellow-400 group-hover:text-white transition-colors duration-500 mb-5 text-xl tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                                        <p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">
+                                            "Gravel driveway installed to a superb standard. Very competitive quote, efficient team, and the final result looks absolutely brilliant. Could not be happier."
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto">
+                                        <p class="font-body font-bold text-white text-sm lg:text-base transition-colors duration-500">Linda F., Templecombe</p>
+                                        <svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Duplicate for seamless loop -->
-                        <div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max" aria-hidden="true">
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Jack and his team did a fantastic job on our patio and new lawn. The whole area looks incredible. They were professional, tidy, and finished ahead of schedule. Highly recommend."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Sarah M., Wincanton</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Used JB for groundworks and footings on our garage extension. Brilliant service, solid workmanship, and a very fair price. Jack communicated every step of the way."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">David R., Shepton Mallet</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Had a complete garden transformation including new decking and fencing. The result is beyond what I imagined. Jack's team were polite, hardworking, and left the site spotless."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Claire T., Bruton</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Hired JB for digger work and ground levelling on our rural property. Excellent operator, great care taken around existing structures. Will use again without question."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Tom H., Castle Cary</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Gravel driveway installed to a superb standard. Very competitive quote, efficient team, and the final result looks absolutely brilliant. Could not be happier."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Linda F., Templecombe</p></div></div></div>
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max" aria-hidden="true">
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Jack and his team did a fantastic job on our patio and new lawn. The whole area looks incredible. They were professional, tidy, and finished ahead of schedule. Highly recommend."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Sarah M., Wincanton</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Used JB for groundworks and footings on our garage extension. Brilliant service, solid workmanship, and a very fair price. Jack communicated every step of the way."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">David R., Shepton Mallet</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Had a complete garden transformation including new decking and fencing. The result is beyond what I imagined. Jack's team were polite, hardworking, and left the site spotless."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Claire T., Bruton</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Hired JB for digger work and ground levelling on our rural property. Excellent operator, great care taken around existing structures. Will use again without question."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Tom H., Castle Cary</p></div></div></div>
-                            <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-8 lg:p-10 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-base lg:text-lg leading-relaxed transition-colors duration-500">"Gravel driveway installed to a superb standard. Very competitive quote, efficient team, and the final result looks absolutely brilliant. Could not be happier."</p></div><div class="flex items-center justify-between border-t border-white/10 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Linda F., Templecombe</p></div></div></div>
-                        </div>
+<!-- Duplicate for seamless loop -->
+<div class="flex gap-4 sm:gap-6 md:gap-8 pr-4 sm:pr-6 md:pr-8 w-max" aria-hidden="true">
+    <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">"Jack and his team did a fantastic job on our patio and new lawn. The whole area looks incredible. They were professional, tidy, and finished ahead of schedule. Highly recommend."</p></div><div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Sarah M., Wincanton</p><svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div></div></div>
+
+    <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">"Used JB for groundworks and footings on our garage extension. Brilliant service, solid workmanship, and a very fair price. Jack communicated every step of the way."</p></div><div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">David R., Shepton Mallet</p><svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div></div></div>
+
+    <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">"Had a complete garden transformation including new decking and fencing. The result is beyond what I imagined. Jack's team were polite, hardworking, and left the site spotless."</p></div><div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Claire T., Bruton</p><svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div></div></div>
+
+    <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">"Hired JB for digger work and ground levelling on our rural property. Excellent operator, great care taken around existing structures. Will use again without question."</p></div><div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Tom H., Castle Cary</p><svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div></div></div>
+
+    <div class="w-[85vw] sm:w-[350px] lg:w-[380px] flex-shrink-0"><div class="group p-6 sm:p-6 lg:p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg" style="background:#141229;" onmouseenter="this.style.background='#EAB308'" onmouseleave="this.style.background='#141229'"><div><div class="flex text-yellow-400 mb-5 text-xl tracking-widest">★★★★★</div><p class="font-body text-white/80 group-hover:text-white italic mb-8 text-sm sm:text-sm lg:text-base leading-relaxed transition-colors duration-500">"Gravel driveway installed to a superb standard. Very competitive quote, efficient team, and the final result looks absolutely brilliant. Could not be happier."</p></div><div class="flex items-center justify-between border-t border-white/10 group-hover:border-white/30 transition-colors duration-500 pt-4 mt-auto"><p class="font-body font-bold text-white text-sm lg:text-base">Linda F., Templecombe</p><svg class="w-4 h-4 text-white/40 group-hover:text-white/90 transition-colors duration-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div></div></div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -1097,7 +1415,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What areas do you cover?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">What areas do you cover?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1107,7 +1425,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Do you offer free quotes?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">Do you offer free quotes?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1117,7 +1435,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Are you fully insured?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">Are you fully insured?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1127,7 +1445,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What size diggers do you have available for hire?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">What size diggers do you have available for hire?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1137,7 +1455,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Do you supply firewood for delivery?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">Do you supply firewood for delivery?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1147,7 +1465,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">What are your working hours?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">What are your working hours?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1157,7 +1475,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">Can you handle both domestic and commercial projects?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">Can you handle both domestic and commercial projects?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1167,7 +1485,7 @@
 
                             <details class="group border-b border-[#141229]/10" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                                 <summary class="flex justify-between items-center cursor-pointer list-none py-8 md:py-10 pr-2" itemprop="name">
-                                    <span class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-[#141229] pr-6">How do I get started?</span>
+                                    <span class="font-heading text-xl sm:text-xl lg:text-2xl font-bold text-[#141229] pr-6">How do I get started?</span>
                                     <span class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-[#141229] shadow-sm transition-transform duration-300 group-open:rotate-180"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg></span>
                                 </summary>
                                 <div class="text-[#141229]/70 pb-8 md:pb-10 text-base sm:text-lg lg:text-xl leading-relaxed pr-8 md:pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -1186,6 +1504,28 @@
             details > div { animation-name: slideDown; animation-duration: 350ms; animation-timing-function: ease-out; }
             @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
             details > summary::-webkit-details-marker { display: none; }
+        
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
         </style>
 
         <!-- ═══════════════════════════════════════════════════════
@@ -1250,7 +1590,29 @@
         details > summary::-webkit-details-marker { display: none; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
+    
+        .font-signature { font-family: var(--font-signature); }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .char-reveal {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes textReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
