@@ -1,29 +1,29 @@
 /* ============================================================
-   JB Outdoor Services Ltd — Global Stylesheet
+   JB Outdoor Services Ltd â€” Global Stylesheet
    Brand Palette:
      --midnight:  #141229  (Midnight Violet)
      --ocean:     #141229  (Ocean Deep)
-     --bronze:    #EAB308  (Golden Bronze)
+     --bronze:    #ffd700  (Golden Bronze)
      --alice:     #F5F3EE  (Alice Blue)
 
    PURPOSE: This file only defines custom classes and CSS
    variables. It does NOT touch body, h1-h6, p, or any
-   base elements — those are handled entirely by Tailwind.
+   base elements â€” those are handled entirely by Tailwind.
    ============================================================ */
 
-/* ── CSS Custom Properties (available globally) ───────────── */
+/* â”€â”€ CSS Custom Properties (available globally) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   --midnight:     #141229;
   --ocean:        #141229;
   --ocean-light:  #2a75cc;
   --ocean-dark:   #154d8a;
-  --bronze:       #EAB308;
+  --bronze:       #ffd700;
   --bronze-light: #e8bc5c;
   --bronze-dark:  #b88a2e;
   --alice:        #F5F3EE;
 }
 
-/* ── Scroll Reveal Animations ─────────────────────────────── */
+/* â”€â”€ Scroll Reveal Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .reveal {
     opacity: 0;
     transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -46,7 +46,7 @@
 .delay-500 { transition-delay: 500ms; }
 .delay-600 { transition-delay: 600ms; }
 
-/* ── Scrolling Banner ─────────────────────────────────────── */
+/* â”€â”€ Scrolling Banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .scrolling-wrapper {
     overflow: hidden;
     white-space: nowrap;
@@ -71,7 +71,7 @@
 .scrolling-wrapper:hover .hover-item { opacity: 0.5; }
 .scrolling-wrapper .hover-item:hover  { opacity: 1; }
 
-/* ── Review Marquee ───────────────────────────────────────── */
+/* â”€â”€ Review Marquee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .rv-scroll-outer {
     overflow: hidden;
     display: flex;
@@ -92,7 +92,7 @@
     100% { transform: translateX(-50%); }
 }
 
-/* ── Before / After Slider ────────────────────────────────── */
+/* â”€â”€ Before / After Slider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .ba-slider {
     position: relative;
     overflow: hidden;
@@ -100,7 +100,7 @@
     user-select: none;
 }
 
-/* ── FAQ Accordion Animation ──────────────────────────────── */
+/* â”€â”€ FAQ Accordion Animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 details > div {
     animation-name: slideDown;
     animation-duration: 350ms;
@@ -112,7 +112,7 @@ details > div {
 }
 details > summary::-webkit-details-marker { display: none; }
 
-/* ── Custom Checkbox (form tick) ──────────────────────────── */
+/* â”€â”€ Custom Checkbox (form tick) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .custom-tick {
     -webkit-appearance: none;
     appearance: none;
@@ -123,8 +123,8 @@ details > summary::-webkit-details-marker { display: none; }
     transition: all 0.2s ease-in-out;
 }
 .custom-tick:checked {
-    background-color: #EAB308 !important;
-    border-color: #EAB308 !important;
+    background-color: #ffd700 !important;
+    border-color: #ffd700 !important;
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
     background-size: 100% 100%;
     background-position: center;
@@ -133,19 +133,19 @@ details > summary::-webkit-details-marker { display: none; }
 
 
 
-/* ── Tagline / Section Label Pills ───────────────────────── */
+/* â”€â”€ Tagline / Section Label Pills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /*
-   Scoped to <span> elements ONLY — not <div> or <a> —
+   Scoped to <span> elements ONLY â€” not <div> or <a> â€”
    so carousel cards and buttons are never affected.
 
-   Bronze pill  →  hover to Ocean Deep
-   Ocean pill   →  hover to Golden Bronze
+   Bronze pill  â†’  hover to Ocean Deep
+   Ocean pill   â†’  hover to Golden Bronze
 */
-span[style*="background:#EAB308"] {
+span[style*="background:#ffd700"] {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
-span[style*="background:#EAB308"]:hover {
+span[style*="background:#ffd700"]:hover {
     background: #141229 !important;
     color: #F5F3EE !important;
     box-shadow: 0 4px 16px rgba(20, 18, 41, 0.30);
@@ -156,12 +156,12 @@ span[style*="background:#141229"] {
     cursor: default;
 }
 span[style*="background:#141229"]:hover {
-    background: #EAB308 !important;
+    background: #ffd700 !important;
     color: #141229 !important;
-    box-shadow: 0 4px 16px rgba(234, 179, 8, 0.30);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.30);
 }
 
-/* ── Dark Background Pills ───────────────────────────────── */
+/* â”€â”€ Dark Background Pills â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 span.pill-dark-bg {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
@@ -172,7 +172,7 @@ span.pill-dark-bg:hover {
     box-shadow: 0 4px 16px rgba(245, 243, 238, 0.30);
 }
 
-/* ── Carousel card background transition ─────────────────── */
+/* â”€â”€ Carousel card background transition â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /*
    Smooths the onmouseenter background swap on commitment
    cards (about.html). Scoped to div only, never affects pills.
@@ -181,13 +181,13 @@ div[onmouseenter][style*="background:#141229"] {
     transition: background 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* ── Hide scrollbar utility ───────────────────────────────── */
+/* â”€â”€ Hide scrollbar utility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 
 
-/* ── Global Button Component: Bubble Fill ───────────────────── */
+/* â”€â”€ Global Button Component: Bubble Fill â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn-bubble {
     position: relative;
     display: inline-flex;
@@ -343,9 +343,9 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--alice);
 }
 
-/* ═══════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    GLOBAL MOBILE OVERRIDES (max-width: 768px)
-═══════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
     /* 1. Component Scaling: Logos */
     /* Target the logo container in the header specifically */
@@ -392,7 +392,7 @@ div[onmouseenter][style*="background:#141229"] {
         transform: translateX(-50%) !important;
     }
 
-    /* ── Critical: ensure headings stretch full width so left:50%
+    /* â”€â”€ Critical: ensure headings stretch full width so left:50%
        resolves to page centre, not the heading's shrunk content width.
        h2 can shrink to max-content when its parent uses flex items-center. */
     main section h1:has(> .section-underline),
@@ -431,11 +431,11 @@ div[onmouseenter][style*="background:#141229"] {
         padding-right: 1.5rem !important;
     }
 
-    /* ── FAQ Section: Restore left-aligned question text ──────────
+    /* â”€â”€ FAQ Section: Restore left-aligned question text â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
        The global .flex-col rule above centres everything, but FAQ
        <summary> rows are flex-row items that must stay left-aligned.
        We surgically undo centering only inside <details> rows.
-    ─────────────────────────────────────────────────────────────── */
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     #faq details summary {
         align-items: center !important;
         text-align: left !important;
@@ -449,22 +449,22 @@ div[onmouseenter][style*="background:#141229"] {
         margin-left: auto !important;
         flex-shrink: 0 !important;
     }
-    /* FAQ answer body — left-align for readability */
+    /* FAQ answer body â€” left-align for readability */
     #faq details > div {
         text-align: left !important;
     }
-    /* FAQ left column (title, description, button) — keep centred */
+    /* FAQ left column (title, description, button) â€” keep centred */
     #faq .lg\\:sticky {
         align-items: center !important;
         text-align: center !important;
     }
 
-    /* ── "JB Standard" Bullet Points: Fix icon + text alignment ──
+    /* â”€â”€ "JB Standard" Bullet Points: Fix icon + text alignment â”€â”€
        Each bullet row is a flex row. On mobile the global .flex-col
        rule would collapse it. We preserve the horizontal flex layout
        and add top-alignment so text wraps neatly from the start of
        the sentence, never bleeding under the icon.
-    ─────────────────────────────────────────────────────────────── */
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .jb-bullet-row,
     /* target by structure: flex rows inside the checklist block */
     main section div.space-y-4 > div.flex {
@@ -474,12 +474,12 @@ div[onmouseenter][style*="background:#141229"] {
         text-align: left !important;
         gap: 0.75rem !important;
     }
-    /* The golden circle icon — keep it fixed size and top-aligned */
+    /* The golden circle icon â€” keep it fixed size and top-aligned */
     main section div.space-y-4 > div.flex > div.rounded-full {
         flex-shrink: 0 !important;
         margin-top: 0.15rem !important;      /* optical alignment with first text line */
     }
-    /* The text node — allow it to fill the remaining width */
+    /* The text node â€” allow it to fill the remaining width */
     main section div.space-y-4 > div.flex > div.rounded-full ~ *,
     main section div.space-y-4 > div.flex:not(:has(> p)) {
         flex: 1 1 auto !important;
@@ -489,9 +489,9 @@ div[onmouseenter][style*="background:#141229"] {
 }
 
 
-/* ═══════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DESKTOP SAFEGUARD (min-width: 1024px)
-═══════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (min-width: 1024px) {
     /* Explicitly preserve desktop behavior */
     #site-header a.group\/logo > div {

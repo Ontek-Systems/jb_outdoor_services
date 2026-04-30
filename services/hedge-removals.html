@@ -17,7 +17,7 @@
         @theme {
             --color-brand-dark:   #141229;
             --color-brand-ocean:  #141229;
-            --color-brand-bronze: #EAB308;
+            --color-brand-bronze: #ffd700;
             --color-brand-alice:  #F5F3EE;
         }
         body { font-family: 'DM Sans', sans-serif; background-color: #F5F3EE; color: #141229; }
@@ -35,7 +35,7 @@
             
             <div class="text-center max-w-3xl mb-16 reveal reveal-up">
                 <span class="inline-block px-5 py-1.5 font-bold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                    style="background:#EAB308; color:#141229;">
+                    style="background:#ffd700; color:#141229;">
                     Landscaping & Garden Services
                 </span>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#141229] mb-8 leading-tight relative pb-6 group flex flex-col items-center">
@@ -63,26 +63,114 @@
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="w-full max-w-4xl bg-white rounded-3xl shadow-xl border border-black/5 p-10 md:p-14 text-center reveal reveal-up" style="transition-delay: 250ms;">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#141229]">Ready to start your project?</h2>
-                <p class="text-lg text-[#141229]/70 mb-10">Contact us today to schedule your free, no-obligation site visit and quote.</p>
+                        <!-- E-commerce Action Bar -->
+            <div class="w-full bg-white rounded-3xl shadow-2xl border border-black/5 p-8 md:p-10 reveal reveal-up mt-12 mb-20 relative overflow-hidden" style="transition-delay: 250ms;">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-[#ffd700] rounded-full opacity-[0.10] blur-2xl pointer-events-none"></div>
                 
-                <a href="../contact.html"
-                     
-                     class="btn-bubble btn-secondary font-body">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+                    <!-- Left: Value Proposition / Trust -->
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <span class="inline-block px-4 py-1.5 font-bold text-xs tracking-widest uppercase rounded-full mb-4 shadow-sm cursor-default" style="background:#ffd700; color:#141229;">
+                            Request a Quote
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#141229] mb-4">Ready to start your project?</h2>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-5 text-sm font-bold tracking-wide" style="color:rgba(20,18,41,0.75);">
+                            <span class="flex items-center gap-2"><svg class="w-5 h-5 text-[#ffd700]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Free Estimates</span>
+                            <span class="flex items-center gap-2"><svg class="w-5 h-5 text-[#ffd700]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Fully Insured</span>
+                            <span class="flex items-center gap-2"><svg class="w-5 h-5 text-[#ffd700]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Expert Team</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Action Buttons -->
+                    <div class="flex flex-col sm:flex-row w-full lg:w-auto gap-4 justify-center items-center">
+                        <a href="tel:+447445064666" class="btn-bubble btn-primary font-body w-full sm:w-auto flex justify-center text-center">
+                            <span class="btn-bubble-fill"></span>
+                            <span class="btn-bubble-text text-base md:text-lg font-bold">Call Us Now</span>
+                            <span class="btn-bubble-icon-container">
+                                <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </span>
+                        </a>
+                        <a href="#contact-form" class="btn-bubble btn-secondary font-body w-full sm:w-auto flex justify-center text-center">
+                            <span class="btn-bubble-fill"></span>
+                            <span class="btn-bubble-text text-base md:text-lg">Book a Site Visit</span>
+                            <span class="btn-bubble-icon-container">
+                                <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+</main>
+
+        <section class="py-24 md:py-32 text-white overflow-hidden relative border-t border-white/5" style="background:#141229;">
+            <div class="container mx-auto px-6 max-w-[90rem] relative z-20">
+
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+
+                    <div class="w-full lg:w-3/12 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
+                        <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                            <img src="../assets/imgs/c8.jpeg"
+                                alt="Patio and decking installation by JB Outdoor Services in Somerset"
+                                loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-5/12 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
+
+                        <h2 class="group font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight flex flex-col items-center mb-6 cursor-default">
+                            Explore Our Full Range of Services
+                            <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#ffd700]/80"></span>
+                        </h2>
+
+                        <p class="font-body text-lg lg:text-xl mb-10 max-w-md mx-auto leading-relaxed" style="color:rgba(255,255,255,0.80);">
+                            From garden transformations and patios to groundworks and digger hire, browse everything JB Outdoor Services offers.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="../gallery.html"
+                                 
+                                style="border-color:rgba(255,255,255,0.30); color:#F5F3EE;"
+                                onmouseenter="this.style.borderColor='#ffd700';" onmouseleave="this.style.borderColor='rgba(255,255,255,0.30)';" class="btn-bubble btn-light font-body">
     <span class="btn-bubble-fill"></span>
-    <span class="btn-bubble-text">Get a Free Quote</span>
+    <span class="btn-bubble-text">View Gallery</span>
     <span class="btn-bubble-icon-container">
         <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
         </svg>
     </span>
 </a>
-            </div>
 
+                            <a href="../services.html"
+                                 
+                                 class="btn-bubble btn-dark-bg font-body">
+    <span class="btn-bubble-fill"></span>
+    <span class="btn-bubble-text">Our Services</span>
+    <span class="btn-bubble-icon-container">
+        <svg class="btn-bubble-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+        </svg>
+    </span>
+</a>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-3/12 reveal reveal-up order-3 flex justify-center lg:justify-end mt-0 lg:mt-16" style="transition-delay:200ms;">
+                        <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                            <img src="../assets/imgs/a5.jpeg"
+                                alt="Groundworks and excavation project in Wincanton by JB Outdoor Services"
+                                loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
-    </main>
+
 
     <div id="footer-placeholder"></div>
 
