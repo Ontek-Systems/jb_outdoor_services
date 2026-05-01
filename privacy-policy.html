@@ -40,76 +40,19 @@
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <link rel="stylesheet" href="style.css">
     <style type="text/tailwindcss">
         @theme {
-            --color-brand-dark: #1A2E24;
-            --color-brand-green: #2C4C3B;
-            --color-brand-beige: #F5F3EE;
-            --color-brand-text: #111827;
-            --color-brand-accent: #0fdb62;   
-            --color-brand-gold: #ffd700;   
-            
+            --color-brand-dark:   #141229;
+            --color-brand-ocean:  #141229;
+            --color-brand-bronze: #e8b01e;
+            --color-brand-alice:  #F5F3EE;
+            --color-brand-beige:  #F5F3EE;
+            --color-brand-text:   #141229;
             --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            --font-body:    'DM Sans', sans-serif;
         }
-        
-        body { 
-            font-family: var(--font-body); 
-            background-color: var(--color-brand-beige); 
-            color: var(--color-brand-text); 
-        }
-        h1, h2, h3, h4, h5, h6 { 
-            font-family: var(--font-heading); 
-        }
-
-        img {
-            filter: saturate(1.15);
-        }
-
-        .custom-tick {
-            -webkit-appearance: none;
-            appearance: none;
-            background-color: #F5F3EE;
-            border: 1px solid #d1d5db;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-        .custom-tick:checked {
-            background-color: #ffd700 !important;
-            border-color: #ffd700 !important;
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        #site-header nav a {
-            @apply transition-all duration-150 inline-flex items-center;
-        }
-        #site-header nav a:hover {
-            @apply text-brand-accent;
-            transform: scale(1.10);
-        }
-
-        #site-header.scrolled nav a:hover {
-            @apply text-brand-gold;
-            transform: scale(1.10);
-        }
-
-        #site-header.scrolled #menuBtn {
-            @apply hover:text-brand-gold;
-        }
-
-        /* --- LOGO SWAP LOGIC --- */
-        .logo-white { display: block; }
-        .logo-dark { display: none; }
-
-        #site-header.gallery-dark-nav .logo-white { display: none; }
-        #site-header.gallery-dark-nav .logo-dark { display: block; }
     </style>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
@@ -214,7 +157,7 @@
 
             <h1 class="group font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 flex flex-col items-center cursor-default w-full">
                 Privacy Policy
-                <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#ffd700]/80"></span>
+                <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#e8b01e] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#e8b01e]/80"></span>
             </h1>
 
             <p class="font-body text-white/70 text-base md:text-lg">
@@ -277,13 +220,13 @@
                             <span class="text-[#0dae4d] bg-[#0dae4d]/10 p-2 rounded-full">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </span>
-                            <a href="tel:+447480209512" class="text-brand-dark hover:text-[#ffd700] transition-colors">+44 7480 209512</a>
+                            <a href="tel:+447480209512" class="text-brand-dark hover:text-[#e8b01e] transition-colors">+44 7480 209512</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <span class="text-[#0dae4d] bg-[#0dae4d]/10 p-2 rounded-full">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </span>
-                            <a href="mailto:mattsyardservices35@gmail.com" class="text-brand-dark hover:text-[#ffd700] transition-colors outline-none break-all">mattsyardservices35@gmail.com</a>
+                            <a href="mailto:mattsyardservices35@gmail.com" class="text-brand-dark hover:text-[#e8b01e] transition-colors outline-none break-all">mattsyardservices35@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -323,7 +266,7 @@
                     <div class="flex flex-col items-center">
                         <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">Email us</span>
                         <a href="mailto:mattsyardservices35@gmail.com"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#ffd700] transition-colors font-medium">
+                            class="font-body text-base lg:text-lg text-white hover:text-[#e8b01e] transition-colors font-medium">
                             mattsyardservices35@gmail.com
                         </a>
                     </div>
@@ -331,7 +274,7 @@
                     <div class="flex flex-col items-center">
                         <span class="text-[#0fdb62] text-xs uppercase tracking-[0.2em] font-bold mb-1">Call us</span>
                         <a href="tel:+447480209512"
-                            class="font-body text-base lg:text-lg text-white hover:text-[#ffd700] transition-colors font-medium">
+                            class="font-body text-base lg:text-lg text-white hover:text-[#e8b01e] transition-colors font-medium">
                             +44 7480 209512
                         </a>
                     </div>
@@ -347,33 +290,33 @@
                     <div
                         class="grid grid-cols-2 gap-x-12 gap-y-4 font-body text-base lg:text-lg text-white/90 font-medium w-full text-center">
                         <a href="index.html"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             Home
                         </a>
                         <a href="index.html#faq"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             FAQs
                         </a>
                         <a href="about.html"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             About Us
                         </a>
                         <a href="index.html#reviews"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             Reviews
                         </a>
                         <a href="gallery.html"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             Our work
                         </a>
                         <a href="contact.html"
-                            class="hover:text-[#ffd700] transition-colors inline-flex items-center justify-center gap-2 group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#ffd700] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                            class="hover:text-[#e8b01e] transition-colors inline-flex items-center justify-center gap-2 group">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#e8b01e] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             Contact
                         </a>
                     </div>
@@ -388,10 +331,10 @@
             class="flex flex-col md:flex-row justify-center items-center text-center font-body text-sm font-semibold text-white/60 gap-3 md:gap-4 flex-wrap">
             <span>&copy; 2026 Matt Vinci All rights reserved</span>
             <span class="hidden md:inline text-white/20">|</span>
-            <a href="privacy-policy.html" class="text-white hover:text-[#ffd700] transition-colors">Privacy Policy</a>
+            <a href="privacy-policy.html" class="text-white hover:text-[#e8b01e] transition-colors">Privacy Policy</a>
             <span class="hidden md:inline text-white/20">|</span>
             <span>Website design by <a href="https://onteksystems.com/" target="_blank" rel="noopener noreferrer"
-                    class="text-white hover:text-[#ffd700] underline underline-offset-4 transition-colors">Ontek Systems
+                    class="text-white hover:text-[#e8b01e] underline underline-offset-4 transition-colors">Ontek Systems
                     Limited</a></span>
         </div>
 

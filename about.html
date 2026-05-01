@@ -32,34 +32,19 @@
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <link rel="stylesheet" href="style.css">
     <style type="text/tailwindcss">
         @theme {
             --color-brand-dark:   #141229;
             --color-brand-ocean:  #141229;
-            --color-brand-bronze: #ffd700;
+            --color-brand-bronze: #e8b01e;
             --color-brand-alice:  #F5F3EE;
             --color-brand-beige:  #F5F3EE;
             --color-brand-text:   #141229;
             --font-heading: 'Playfair Display', serif;
             --font-body:    'DM Sans', sans-serif;
         }
-        body  { font-family: var(--font-body); background-color: #F5F3EE; color: #141229; }
-        h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
-        img   { filter: saturate(1.1); }
-
-        /* Carousel infinite scroll */
-        .animate-infinite-scroll {
-            animation: infinite-scroll 22s linear infinite;
-            width: max-content;
-        }
-        @keyframes infinite-scroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
     </style>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="flex flex-col min-h-screen antialiased">
@@ -82,9 +67,9 @@
         }
         </script>
 
-        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        <!-- 
              HERO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+         -->
         <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden" style="background:#141229;">
             <img src="assets/imgs/jb-team-working-somerset.jpg"
                 alt="JB Outdoor Services team on a landscaping project in Somerset"
@@ -95,21 +80,21 @@
 
                 <!-- Pill: transition set inline so style.css hover works without conflict -->
                 <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default pill-dark-bg"
-                    style="background:#ffd700; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                    style="background:#e8b01e; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
                     About Us
                 </span>
 
                 <h1 class="group font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight flex flex-col items-center cursor-default"
                     style="color:rgba(242,247,255,0.92);">
                     Built on Hard Work &amp; Honest Craft
-                    <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#ffd700]/80"></span>
+                    <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#e8b01e] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#e8b01e]/80"></span>
                 </h1>
             </div>
         </section>
 
-        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        <!-- 
              STORY SECTION
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+         -->
         <section class="relative min-h-[100svh] py-20 flex items-center justify-center overflow-hidden" style="background:#F5F3EE;">
             <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full reveal reveal-up">
@@ -118,13 +103,13 @@
                     <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left order-2 lg:order-1 mt-4 lg:mt-0">
 
                         <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#ffd700; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                            style="background:#e8b01e; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
                             The Story
                         </span>
 
                         <h2 class="group font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-[#141229] leading-tight mb-8 flex flex-col items-center lg:items-start cursor-default">
                             Who We Are
-                            <span class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#ffd700]/80"></span>
+                            <span class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#e8b01e] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#e8b01e]/80"></span>
                         </h2>
 
                         <div class="space-y-6 font-body text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0" style="color:rgba(20,18,41,0.80);">
@@ -144,7 +129,7 @@
                         </div>
                         <!-- Floating stat badge -->
                         <div class="absolute -bottom-8 -left-6 lg:-left-12 bg-white p-6 lg:p-8 rounded-[1.5rem] shadow-2xl border border-black/5 hidden md:flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-2 z-10 cursor-default">
-                            <p class="font-heading font-bold text-4xl lg:text-5xl mb-1" style="color:#ffd700;">10+</p>
+                            <p class="font-heading font-bold text-4xl lg:text-5xl mb-1" style="color:#e8b01e;">10+</p>
                             <p class="font-body text-xs lg:text-sm font-bold uppercase tracking-widest" style="color:#141229;">Years Experience</p>
                         </div>
                     </div>
@@ -153,9 +138,9 @@
             </div>
         </section>
 
-        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        <!-- 
              COMMITMENT CAROUSEL
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+         -->
         <section class="min-h-[100vh] py-16 md:py-20 border-t flex flex-col justify-center w-full relative overflow-hidden"
             style="background:#FFFFFF; border-color:rgba(20,18,41,0.10);">
 
@@ -164,13 +149,13 @@
                 <div class="text-center mb-12 md:mb-16 px-4 md:px-8 w-full reveal reveal-up flex flex-col items-center">
 
                     <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                        style="background:#ffd700; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                        style="background:#e8b01e; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
                         The JB Difference
                     </span>
 
                     <h2 class="group font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-[#141229] mb-8 leading-tight flex flex-col items-center text-center cursor-default w-full">
                         Our Commitment to You
-                        <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#ffd700]/80"></span>
+                        <span class="block w-12 md:w-16 h-0.5 md:h-[2px] bg-[#e8b01e] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-24 md:group-hover:w-32 group-hover:bg-[#e8b01e]/80"></span>
                     </h2>
                 </div>
 
@@ -182,139 +167,139 @@
                         style="background:linear-gradient(to left,white,transparent);"></div>
 
                     <!--
-                        CAROUSEL CARDS â€” key animation notes:
+                        CAROUSEL CARDS — key animation notes:
                         1. `transition` is in the inline style alongside background so the JS
                            onmouseenter colour swap is always smooth regardless of CSS cascade.
-                        2. The duplicate set 2 below is identical â€” required for seamless loop.
+                        2. The duplicate set 2 below is identical — required for seamless loop.
                     -->
                     <div class="flex animate-infinite-scroll" id="commitment-carousel">
 
-                        <!-- â”€â”€ SET 1 â”€â”€ -->
+                        <!-- --SET 1 ---->
                         <div class="flex gap-6 pr-6">
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Fully Insured</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Complete peace of mind on every project, domestic or commercial.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Fully Insured</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Complete peace of mind on every project, domestic or commercial.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">10+ Years Experience</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Hands-on knowledge built through years of real projects across Somerset.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">10+ Years Experience</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Hands-on knowledge built through years of real projects across Somerset.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Owner-Led Projects</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Jack manages every job personally. You always know who is on site.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Owner-Led Projects</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Jack manages every job personally. You always know who is on site.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Own Machinery</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">1-tonne micro and 2.6-tonne diggers operated by our own skilled team.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Own Machinery</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">1-tonne micro and 2.6-tonne diggers operated by our own skilled team.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Free Quotes</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Transparent pricing with no hidden costs before any work begins.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Free Quotes</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Transparent pricing with no hidden costs before any work begins.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">5-Star Rated</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Trusted by homeowners and businesses throughout Somerset.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">5-Star Rated</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Trusted by homeowners and businesses throughout Somerset.</p>
                             </div>
 
                         </div>
 
-                        <!-- â”€â”€ SET 2 (seamless loop duplicate) â”€â”€ -->
+                        <!-- --SET 2 (seamless loop duplicate) ---->
                         <div class="flex gap-6 pr-6" aria-hidden="true">
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Fully Insured</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Complete peace of mind on every project, domestic or commercial.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Fully Insured</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Complete peace of mind on every project, domestic or commercial.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">10+ Years Experience</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Hands-on knowledge built through years of real projects across Somerset.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">10+ Years Experience</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Hands-on knowledge built through years of real projects across Somerset.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Owner-Led Projects</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Jack manages every job personally. You always know who is on site.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Owner-Led Projects</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Jack manages every job personally. You always know who is on site.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Own Machinery</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">1-tonne micro and 2.6-tonne diggers operated by our own skilled team.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Own Machinery</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">1-tonne micro and 2.6-tonne diggers operated by our own skilled team.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Free Quotes</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Transparent pricing with no hidden costs before any work begins.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">Free Quotes</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Transparent pricing with no hidden costs before any work begins.</p>
                             </div>
 
                             <div class="group flex flex-col items-center text-center p-8 md:p-12 rounded-3xl hover:-translate-y-2 cursor-default border border-transparent w-[280px] md:w-[320px] shrink-0"
                                 style="background:#141229; transition: background 0.4s cubic-bezier(0.2,0.8,0.2,1), transform 0.5s cubic-bezier(0.2,0.8,0.2,1);"
-                                onmouseenter="this.style.background='#141229';" onmouseleave="this.style.background='#141229';">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500" style="color:#ffd700;">
-                                    <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                                onmouseenter="this.style.background='#e8b01e';" onmouseleave="this.style.background='#141229';">
+                                <div class="flex items-center justify-center mb-6 md:mb-8 group-hover:-translate-y-2 transition-all duration-400 text-[#e8b01e] group-hover:text-[#141229]">
+                                    <svg class="w-14 h-14 md:w-16 md:h-16 transition-transform duration-400 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
                                 </div>
-                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">5-Star Rated</h3>
-                                <p class="font-body text-white/90 leading-relaxed text-base md:text-lg">Trusted by homeowners and businesses throughout Somerset.</p>
+                                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white group-hover:text-[#141229] transition-colors duration-400 mb-4">5-Star Rated</h3>
+                                <p class="font-body text-white/90 group-hover:text-[#141229]/90 transition-colors duration-400 leading-relaxed text-base md:text-lg">Trusted by homeowners and businesses throughout Somerset.</p>
                             </div>
 
                         </div>
@@ -352,9 +337,9 @@
             </div>
         </section>
 
-        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        <!-- 
              WHY CHOOSE JB
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+         -->
         <section class="relative min-h-[100svh] py-16 flex items-center justify-center overflow-hidden" style="background:#F5F3EE;">
             <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20">
                 <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 reveal reveal-up">
@@ -367,7 +352,7 @@
                                 loading="lazy" decoding="async"
                                 class="w-full h-80 md:h-[600px] lg:h-[750px] object-cover transition-transform duration-700 hover:scale-105">
                         </div>
-                        <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-10 blur-3xl" style="background:#ffd700;"></div>
+                        <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-10 blur-3xl" style="background:#e8b01e;"></div>
                         <div class="absolute -bottom-10 -left-10 w-48 h-48 rounded-full opacity-10 blur-3xl" style="background:#141229;"></div>
                     </div>
 
@@ -375,13 +360,13 @@
                     <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
 
                         <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default"
-                            style="background:#ffd700; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                            style="background:#e8b01e; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
                             Why Choose JB
                         </span>
 
                         <h2 class="group font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#141229] mb-8 leading-tight flex flex-col items-center lg:items-start cursor-default">
                             The JB Standard
-                            <span class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#ffd700] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#ffd700]/80"></span>
+                            <span class="block w-16 md:w-20 h-0.5 md:h-[2px] bg-[#e8b01e] mt-4 lg:mt-6 rounded-full transition-all duration-300 ease-in-out group-hover:w-32 md:group-hover:w-40 group-hover:bg-[#e8b01e]/80"></span>
                         </h2>
 
                         <div class="font-body text-lg lg:text-xl leading-relaxed space-y-6 max-w-2xl" style="color:rgba(20,18,41,0.80);">
@@ -391,25 +376,25 @@
 
                         <div class="mt-8 space-y-4 w-full flex flex-col items-center lg:items-start">
                             <div class="flex items-center gap-4 font-body font-medium text-lg" style="color:#141229;">
-                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#ffd700;">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#e8b01e;">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                                 </div>
                                 Direct communication with Jack throughout your project
                             </div>
                             <div class="flex items-center gap-4 font-body font-medium text-lg" style="color:#141229;">
-                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#ffd700;">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#e8b01e;">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                                No subcontractors â€” our own skilled team on every job
+                                No subcontractors — our own skilled team on every job
                             </div>
                             <div class="flex items-center gap-4 font-body font-medium text-lg" style="color:#141229;">
-                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#ffd700;">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#e8b01e;">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                                 </div>
                                 Site left clean and tidy at the end of every working day
                             </div>
                             <div class="flex items-center gap-4 font-body font-medium text-lg" style="color:#141229;">
-                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#ffd700;">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0" style="background:#e8b01e;">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                                 </div>
                                 Fully insured for all services, domestic and commercial
@@ -421,9 +406,9 @@
             </div>
         </section>
 
-        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        <!-- 
              BOTTOM CTA
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+         -->
         <section class="relative py-20 flex items-center justify-center text-white overflow-hidden border-t border-white/5" style="background:#141229;">
             <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 w-full">
@@ -439,7 +424,7 @@
                     <div class="w-full lg:w-6/12 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
 
                         <span class="inline-block px-5 py-1.5 font-body font-semibold text-sm tracking-widest uppercase rounded-full mb-6 cursor-default pill-dark-bg"
-                            style="background:#ffd700; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
+                            style="background:#e8b01e; color:#141229; transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;">
                             Ready to Get Started?
                         </span>
 
@@ -482,9 +467,8 @@
     <script src="global.js"></script>
 
     <script>
-        /* â”€â”€ Scroll Reveal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-           Same IntersectionObserver pattern as index.html.
-        â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+        /* --Scroll Reveal --------------------------------------------------           Same IntersectionObserver pattern as index.html.
+        --------------------------------------------------*/
         (function () {
             var els = document.querySelectorAll('.reveal');
             if (!els.length) return;
@@ -499,12 +483,11 @@
             els.forEach(function (el) { observer.observe(el); });
         })();
 
-        /* â”€â”€ Carousel: keep scrolling while hovering cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-           The animation never pauses â€” cards respond to hover via
+        /* --Carousel: keep scrolling while hovering cards --------------------------------------------------           The animation never pauses — cards respond to hover via
            CSS group-hover classes while the scroll continues.
            No JS pause needed; removing it prevents the bubbling
            issue where card hover caused the whole strip to stop.
-        â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+        --------------------------------------------------*/
     </script>
 
 </body>

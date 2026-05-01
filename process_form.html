@@ -9,12 +9,24 @@
         h1 { color: #0fdb62; font-family: sans-serif; }
         p  { font-family: sans-serif; color: #F5F3EE/80; }
         pre { background: #111; border: 1px solid #0fdb62/30; border-radius: 0.5rem; padding: 1.5rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; white-space: pre; }
-        .note { background: #ffd700; color: #1A2E24; padding: 0.75rem 1rem; border-radius: 0.5rem; font-family: sans-serif; font-weight: bold; margin-bottom: 1.5rem; }
+        .note { background: #e8b01e; color: #1A2E24; padding: 0.75rem 1rem; border-radius: 0.5rem; font-family: sans-serif; font-weight: bold; margin-bottom: 1.5rem; }
+    </style>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand-dark:   #141229;
+            --color-brand-ocean:  #141229;
+            --color-brand-bronze: #e8b01e;
+            --color-brand-alice:  #F5F3EE;
+            --color-brand-beige:  #F5F3EE;
+            --color-brand-text:   #141229;
+            --font-heading: 'Playfair Display', serif;
+            --font-body:    'DM Sans', sans-serif;
+        }
     </style>
 </head>
 <body>
 
-<h1>process_form â€” PHP Reference</h1>
+<h1>process_form — PHP Reference</h1>
 <p>This file is a static HTML preservation of the original <code>process_form.php</code> server-side handler.
    It is kept here for reference only. On the static site, all form submissions are handled
    client-side via the Google Apps Script webhook in <code>index.html</code> and <code>contact.html</code>.</p>
@@ -97,7 +109,7 @@ if (!empty($email)) {
 $body .= "\n--- PROJECT DETAILS ---\n";
 $body .= "$message\n";
 
-// Build headers â€” sanitized host, sanitized email, no PHP version exposed
+// Build headers — sanitized host, sanitized email, no PHP version exposed
 $headers  = "From: noreply@" . $safe_host . "\r\n";
 if (!empty($email)) {
     $headers .= "Reply-To: $email\r\n";
@@ -127,7 +139,7 @@ curl_exec($ch);
 curl_close($ch);
 // Note: we intentionally don't check the cURL response here.
 // If the Sheet write fails, the visitor still gets their confirmation
-// and Matt still gets the email â€” no submission is ever lost.
+// and Matt still gets the email — no submission is ever lost.
 
 // 12. SEND EMAIL &amp; REDIRECT
 if (mail($to, $subject, $body, $headers)) {
