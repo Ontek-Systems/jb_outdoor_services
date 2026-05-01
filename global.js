@@ -54,18 +54,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadComponents() {
-    const isServiceDir = window.location.pathname.includes('/services/');
-    const basePath = isServiceDir ? '../' : '';
+    const path = window.location.pathname;
+    const isPagesServiceDir = path.includes('/pages/services/');
+    const isPagesDir = !isPagesServiceDir && path.includes('/pages/');
+    let basePath = '';
+    if (isPagesServiceDir) basePath = '../../';
+    else if (isPagesDir)   basePath = '../';
 
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         try {
             const resp = await fetch(basePath + 'components/header.html');
             let html = await resp.text();
-            if (isServiceDir) {
+            if (basePath) {
                 html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
                     if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
-                    return `${p1}="../${p2}"`;
+                    return `${p1}="${basePath + p2}"`;
                 });
             }
             headerPlaceholder.outerHTML = html;
@@ -79,10 +83,10 @@ async function loadComponents() {
         try {
             const resp = await fetch(basePath + 'components/footer.html');
             let html = await resp.text();
-            if (isServiceDir) {
+            if (basePath) {
                 html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
                     if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
-                    return `${p1}="../${p2}"`;
+                    return `${p1}="${basePath + p2}"`;
                 });
             }
             footerPlaceholder.outerHTML = html;
