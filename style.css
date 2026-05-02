@@ -23,7 +23,7 @@
 
 body  { font-family: var(--font-body); background-color: #F5F3EE; color: #141229; }
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
-img   { filter: saturate(1.1); }
+img   { filter: saturate(1.35); }
 
 /* --CSS Custom Properties (available globally) --------------------------------------------------*/
 :root {
@@ -552,12 +552,12 @@ div[onmouseenter][style*="background:#141229"] {
             display: block;
             object-fit: cover;
             transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1), filter 0.4s ease-in-out;
-            filter: saturate(1.1);
+            filter: saturate(1.35);
         }
         @media (hover: hover) {
             .masonry-item:hover img {
                 transform: scale(1.06);
-                filter: saturate(1.3);
+                filter: saturate(1.5);
             }
         }
         .masonry-overlay {
@@ -584,7 +584,7 @@ div[onmouseenter][style*="background:#141229"] {
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
+            height: auto;
             max-width: 100%;
             object-fit: cover;
             object-position: center;
