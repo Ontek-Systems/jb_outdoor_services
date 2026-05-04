@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
-
+async function initApp() {
     await loadComponents();
 
     // ==========================================
@@ -10,19 +9,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (menuBtn && mobileNav) {
         menuBtn.addEventListener('click', () => {
-            // Toggle the smooth animation classes instead of 'hidden'
             mobileNav.classList.toggle('opacity-0');
             mobileNav.classList.toggle('invisible');
             mobileNav.classList.toggle('-translate-y-4');
             mobileNav.classList.toggle('pointer-events-none');
             
-            // Toggle the hamburger icon to an 'X' icon
             const svg = menuBtn.querySelector('svg');
             if (mobileNav.classList.contains('opacity-0')) {
-                // Hamburger icon (Menu Closed)
                 svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
             } else {
-                // X icon (Menu Open)
                 svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
             }
         });
@@ -34,52 +29,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 2. SCROLL REVEAL ANIMATIONS
     // ==========================================
     const revealElements = document.querySelectorAll('.reveal');
-    
-    // Create an observer that triggers when elements are 10% visible
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active'); // Triggers CSS transition
-                observer.unobserve(entry.target);     // Only animate once per load
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             }
         });
     }, {
         root: null,
         threshold: 0.1, 
-        rootMargin: "0px 0px -50px 0px" // Triggers slightly before hitting the bottom of viewport
+        rootMargin: "0px 0px -50px 0px"
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+}
 
-});
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
 async function loadComponents() {
-    // Determine the path prefix based on how many levels deep the current page is.
-    // We look for 'pages/' in the URL to determine depth.
-    const path = window.location.pathname;
-    let prefix = '';
-    
-    if (path.includes('/pages/services/')) {
-        prefix = '../../';
-    } else if (path.includes('/pages/')) {
-        prefix = '../';
-    }
+    // Dynamically determine the root path by finding the global.js script tag
+    // This allows the site to work in subdirectories (like XAMPP) and at different nesting levels.
+    const scriptTag = document.querySelector('script[src*="global.js"]');
+    const rootPath = scriptTag ? scriptTag.src.replace('global.js', '') : '/';
 
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         try {
-            const resp = await fetch(prefix + 'components/header.html');
-            if (!resp.ok) throw new Error('Header not found');
+            const resp = await fetch(rootPath + 'components/header.html');
             let html = await resp.text();
             
-            // Create a temporary element to manipulate the HTML
-            const temp = document.createElement('div');
-            temp.innerHTML = html;
+            // Rewrite links and sources starting with / to use the dynamic rootPath
+            // This fixes navigation when the site is in a subdirectory (XAMPP/GitHub Pages)
+            html = html.replace(/(href|src)="\/([^"]*)"/g, `$1="${rootPath}$2"`);
             
-            // Fix all relative paths in the header
-            fixPaths(temp, prefix);
-            
-            headerPlaceholder.outerHTML = temp.innerHTML;
+            headerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading header:', e);
         }
@@ -88,44 +76,17 @@ async function loadComponents() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         try {
-            const resp = await fetch(prefix + 'components/footer.html');
-            if (!resp.ok) throw new Error('Footer not found');
+            const resp = await fetch(rootPath + 'components/footer.html');
             let html = await resp.text();
             
-            const temp = document.createElement('div');
-            temp.innerHTML = html;
+            // Rewrite links and sources starting with / to use the dynamic rootPath
+            html = html.replace(/(href|src)="\/([^"]*)"/g, `$1="${rootPath}$2"`);
             
-            fixPaths(temp, prefix);
-            
-            footerPlaceholder.outerHTML = temp.innerHTML;
+            footerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading footer:', e);
         }
     }
-}
-
-/**
- * Prepends the prefix to relative paths in the given element.
- */
-function fixPaths(container, prefix) {
-    if (!prefix) return; // No prefix needed for root level
-    
-    // Fix links
-    container.querySelectorAll('a[href]').forEach(el => {
-        const href = el.getAttribute('href');
-        if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-            // Remove leading slash if present, then prepend prefix
-            el.setAttribute('href', prefix + href.replace(/^\//, ''));
-        }
-    });
-    
-    // Fix images
-    container.querySelectorAll('img[src]').forEach(el => {
-        const src = el.getAttribute('src');
-        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-            el.setAttribute('src', prefix + src.replace(/^\//, ''));
-        }
-    });
 }
 
 function initHeaderScroll() {

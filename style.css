@@ -1,41 +1,31 @@
 /* ============================================================
    JB Outdoor Services Ltd — Global Stylesheet
-   Brand Palette:
-     --midnight:  #141229  (Midnight Violet)
-     --ocean:     #141229  (Ocean Deep)
-     --bronze:    #e8b01e  (Golden Bronze)
-     --alice:     #F5F3EE  (Alice Blue)
-
-   PURPOSE: This file defines the global Tailwind v4 theme,
-   as well as custom classes and CSS variables.
    ============================================================ */
 
-@theme {
-    --color-brand-dark:   #141229;
-    --color-brand-ocean:  #141229;
-    --color-brand-bronze: #e8b01e;
-    --color-brand-alice:  #F5F3EE;
-    --color-brand-beige:  #F5F3EE;
-    --color-brand-text:   #141229;
+:root {
+    --brand-dark:   #141229;
+    --brand-ocean:  #141229;
+    --brand-bronze: #e8b01e;
+    --brand-alice:  #F5F3EE;
+    --brand-beige:  #F5F3EE;
+    --brand-text:   #141229;
     --font-heading: 'Playfair Display', serif;
     --font-body:    'DM Sans', sans-serif;
+    
+    /* Legacy variables for compatibility */
+    --midnight:     #141229;
+    --ocean:        #141229;
+    --ocean-light:  #2a75cc;
+    --ocean-dark:   #154d8a;
+    --bronze:       #e8b01e;
+    --bronze-light: #e8bc5c;
+    --bronze-dark:  #b88a2e;
+    --alice:        #F5F3EE;
 }
 
-body  { font-family: var(--font-body); background-color: #F5F3EE; color: #141229; }
+body  { font-family: var(--font-body); background-color: var(--brand-alice); color: var(--brand-text); }
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
 img   { filter: saturate(1.35); }
-
-/* --CSS Custom Properties (available globally) --------------------------------------------------*/
-:root {
-  --midnight:     #141229;
-  --ocean:        #141229;
-  --ocean-light:  #2a75cc;
-  --ocean-dark:   #154d8a;
-  --bronze:       #e8b01e;
-  --bronze-light: #e8bc5c;
-  --bronze-dark:  #b88a2e;
-  --alice:        #F5F3EE;
-}
 
 /* --Scroll Reveal Animations --------------------------------------------------*/
 .reveal {
@@ -145,16 +135,7 @@ details > summary::-webkit-details-marker { display: none; }
     background-repeat: no-repeat;
 }
 
-
-
 /* --Tagline / Section Label Pills --------------------------------------------------*/
-/*
-   Scoped to <span> elements ONLY — not <div> or <a> —
-   so carousel cards and buttons are never affected.
-
-   Bronze pill  →  hover to Ocean Deep
-   Ocean pill   →  hover to Golden Bronze
-*/
 span[style*="background:#e8b01e"] {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
@@ -175,7 +156,6 @@ span[style*="background:#141229"]:hover {
     box-shadow: 0 4px 16px rgba(232, 176, 30, 0.30);
 }
 
-/* --Dark Background Pills --------------------------------------------------*/
 span.pill-dark-bg {
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
@@ -186,20 +166,12 @@ span.pill-dark-bg:hover {
     box-shadow: 0 4px 16px rgba(245, 243, 238, 0.30);
 }
 
-/* --Carousel card background transition --------------------------------------------------*/
-/*
-   Smooths the onmouseenter background swap on commitment
-   cards (about.html). Scoped to div only, never affects pills.
-*/
 div[onmouseenter][style*="background:#141229"] {
     transition: background 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* --Hide scrollbar utility --------------------------------------------------*/
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-
 
 /* --Global Button Component: Bubble Fill --------------------------------------------------*/
 .btn-bubble {
@@ -211,8 +183,8 @@ div[onmouseenter][style*="background:#141229"] {
     padding: 0.5rem 0.5rem 0.5rem 1.5rem;
     font-family: inherit;
     font-weight: 700;
-    font-size: 1.125rem; /* text-lg */
-    border-radius: 9999px; /* rounded-full */
+    font-size: 1.125rem;
+    border-radius: 9999px;
     overflow: hidden;
     transition: transform 0.5s ease;
     cursor: pointer;
@@ -227,8 +199,8 @@ div[onmouseenter][style*="background:#141229"] {
     right: 0.5rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 2.5rem; /* w-10 */
-    height: 2.5rem; /* h-10 */
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 9999px;
     transition: transform 0.7s cubic-bezier(0.19,1,0.22,1);
     z-index: 0;
@@ -265,7 +237,6 @@ div[onmouseenter][style*="background:#141229"] {
     transform: rotate(0deg);
 }
 
-/* Primary Button (Gold background, Black hover fill) */
 .btn-primary {
     background-color: var(--bronze);
     color: var(--midnight);
@@ -283,7 +254,6 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--alice);
 }
 
-/* Secondary Button (Black background, Gold hover fill) */
 .btn-secondary {
     background-color: var(--midnight);
     color: var(--alice);
@@ -301,7 +271,6 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--midnight);
 }
 
-/* Light/Beige Button (Beige background, Black hover fill) */
 .btn-light {
     background-color: var(--alice);
     color: var(--midnight);
@@ -320,7 +289,6 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--alice);
 }
 
-/* Dark Background Button (Gold background, White/Beige hover fill) */
 .btn-dark-bg {
     background-color: var(--bronze);
     color: var(--midnight);
@@ -338,7 +306,6 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--midnight);
 }
 
-/* Outline Button (Transparent background, Black hover fill) */
 .btn-outline {
     background-color: transparent;
     color: var(--midnight);
@@ -357,24 +324,17 @@ div[onmouseenter][style*="background:#141229"] {
     color: var(--alice);
 }
 
-/* 
-   GLOBAL MOBILE OVERRIDES (max-width: 768px)
- */
 @media (max-width: 768px) {
-    /* 1. Component Scaling: Logos */
-    /* Target the logo container in the header specifically */
     #site-header a.group\/logo > div {
         transform: scale(0.85) !important;
         transform-origin: left center !important;
     }
 
-    /* 2. Component Scaling: Buttons */
-    /* Disable full-width behavior, scale padding and font size for the capsule aesthetic */
     .btn-bubble {
         width: auto !important;
         max-width: 80vw !important;
         padding: 0.35rem 0.35rem 0.35rem 1.25rem !important;
-        font-size: 1rem !important; /* text-base instead of text-lg */
+        font-size: 1rem !important;
         justify-content: center !important;
     }
     
@@ -384,8 +344,6 @@ div[onmouseenter][style*="background:#141229"] {
         height: 2.25rem !important;
     }
 
-    /* 3. Alignment & Layout: Centralization */
-    /* Force-center text, headlines, and paragraphs within main content sections */
     main section h1,
     main section h2,
     main section h3,
@@ -398,7 +356,6 @@ div[onmouseenter][style*="background:#141229"] {
         justify-content: center !important;
     }
     
-    /* Center the decorative underlines on headings */
     main section h1 > .section-underline,
     main section h2 > .section-underline,
     main section h3 > .section-underline {
@@ -406,16 +363,12 @@ div[onmouseenter][style*="background:#141229"] {
         transform: translateX(-50%) !important;
     }
 
-    /* --Critical: ensure headings stretch full width so left:50%
-       resolves to page centre, not the heading's shrunk content width.
-       h2 can shrink to max-content when its parent uses flex items-center. */
     main section h1:has(> .section-underline),
     main section h2:has(> .section-underline),
     main section h3:has(> .section-underline) {
         width: 100% !important;
     }
 
-    /* Center tagline pills */
     main section span.rounded-full[style*="background"] {
         display: inline-block !important;
         text-align: center !important;
@@ -423,13 +376,11 @@ div[onmouseenter][style*="background:#141229"] {
         margin-right: auto !important;
     }
 
-    /* Force vertical flex containers to center items (e.g., text blocks, lists) */
     main section .flex-col {
         align-items: center !important;
         text-align: center !important;
     }
 
-    /* Force buttons to be centered */
     main section a.btn-bubble,
     main section button.btn-bubble {
         margin-left: auto !important;
@@ -437,18 +388,12 @@ div[onmouseenter][style*="background:#141229"] {
         display: inline-flex !important;
     }
 
-    /* 3. Alignment & Layout: Spacing */
-    /* Implement consistent horizontal section padding to ensure text never hits the edge */
     main section > div[class*="max-w-"],
     main section > div.container {
-        padding-left: 1.5rem !important; /* px-6 equivalent */
+        padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
     }
 
-    /* --FAQ Section: Restore left-aligned question text --------------------------------------------------       The global .flex-col rule above centres everything, but FAQ
-       <summary> rows are flex-row items that must stay left-aligned.
-       We surgically undo centering only inside <details> rows.
-    --------------------------------------------------*/
     #faq details summary {
         align-items: center !important;
         text-align: left !important;
@@ -457,55 +402,37 @@ div[onmouseenter][style*="background:#141229"] {
         text-align: left !important;
         flex: 1 1 auto !important;
     }
-    /* Keep the chevron icon anchored to the right */
     #faq details summary span.flex-shrink-0 {
         margin-left: auto !important;
         flex-shrink: 0 !important;
     }
-    /* FAQ answer body — left-align for readability */
     #faq details > div {
         text-align: left !important;
     }
-    /* FAQ left column (title, description, button) — keep centred */
     #faq .lg\\:sticky {
         align-items: center !important;
         text-align: center !important;
     }
 
-    /* --"JB Standard" Bullet Points: Fix icon + text alignment --       Each bullet row is a flex row. On mobile the global .flex-col
-       rule would collapse it. We preserve the horizontal flex layout
-       and add top-alignment so text wraps neatly from the start of
-       the sentence, never bleeding under the icon.
-    --------------------------------------------------*/
     .jb-bullet-row,
-    /* target by structure: flex rows inside the checklist block */
     main section div.space-y-4 > div.flex {
         display: flex !important;
         flex-direction: row !important;
-        align-items: flex-start !important;  /* top-align icon + text */
+        align-items: flex-start !important;
         text-align: left !important;
         gap: 0.75rem !important;
     }
-    /* The golden circle icon — keep it fixed size and top-aligned */
     main section div.space-y-4 > div.flex > div.rounded-full {
         flex-shrink: 0 !important;
-        margin-top: 0.15rem !important;      /* optical alignment with first text line */
+        margin-top: 0.15rem !important;
     }
-    /* The text node — allow it to fill the remaining width */
     main section div.space-y-4 > div.flex > div.rounded-full ~ *,
     main section div.space-y-4 > div.flex:not(:has(> p)) {
         flex: 1 1 auto !important;
     }
-
-    /* Underline centring is handled by the rules above (lines 414-430). */
 }
 
-
-/* 
-   DESKTOP SAFEGUARD (min-width: 1024px)
- */
 @media (min-width: 1024px) {
-    /* Explicitly preserve desktop behavior */
     #site-header a.group\/logo > div {
         transform: scale(1) !important;
     }
@@ -514,248 +441,190 @@ div[onmouseenter][style*="background:#141229"] {
     }
 }
 
-/* --- Extracted from about.html --- */
-/* Carousel infinite scroll */
-        .animate-infinite-scroll {
-            animation: infinite-scroll 22s linear infinite;
-            width: max-content;
-        }
-        @keyframes infinite-scroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+.animate-infinite-scroll {
+    animation: infinite-scroll 22s linear infinite;
+    width: max-content;
+}
+@keyframes infinite-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
-/* --- Extracted from gallery.html --- */
-/* --Masonry grid (All Projects) --*/
-        #all-projects-grid {
-            column-count: 1;
-            column-gap: 1rem;
-        }
-        @media (min-width: 480px)  { #all-projects-grid { column-count: 2; } }
-        @media (min-width: 1024px) { #all-projects-grid { column-count: 3; } }
-        @media (min-width: 1280px) { #all-projects-grid { column-count: 4; } }
+#all-projects-grid {
+    column-count: 1;
+    column-gap: 1rem;
+}
+@media (min-width: 480px)  { #all-projects-grid { column-count: 2; } }
+@media (min-width: 1024px) { #all-projects-grid { column-count: 3; } }
+@media (min-width: 1280px) { #all-projects-grid { column-count: 4; } }
 
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-            position: relative;
-            border-radius: 1.25rem;
-            overflow: hidden;
-            cursor: zoom-in;
-            box-shadow: 0 8px 32px rgba(20,18,41,0.12);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .masonry-item img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1), filter 0.4s ease-in-out;
-            filter: saturate(1.35);
-        }
-        @media (hover: hover) {
-            .masonry-item:hover img {
-                transform: scale(1.06);
-                filter: saturate(1.5);
-            }
-        }
-        .masonry-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(20,18,41,0.88) 0%, transparent 55%);
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-            display: flex;
-            align-items: flex-end;
-            padding: 1rem;
-        }
-        @media (hover: hover) {
-            .masonry-item:hover .masonry-overlay { opacity: 1; }
-        }
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 8px 32px rgba(20,18,41,0.12);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1), filter 0.4s ease-in-out;
+    filter: saturate(1.35);
+}
+@media (hover: hover) {
+    .masonry-item:hover img {
+        transform: scale(1.06);
+        filter: saturate(1.5);
+    }
+}
+.masonry-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20,18,41,0.88) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+@media (hover: hover) {
+    .masonry-item:hover .masonry-overlay { opacity: 1; }
+}
 
-        /* --Category gallery cards --*/
-        .gallery-item {
-            display: block;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            border-radius: 2rem;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1);
-        }
-        /* Only scale on real hover devices — avoids sticky hover on mobile */
-        @media (hover: hover) {
-            .gallery-item:hover img { transform: scale(1.10); }
-        }
+.gallery-item {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1);
+}
+@media (hover: hover) {
+    .gallery-item:hover img { transform: scale(1.10); }
+}
 
-        /* --Category grid — tighter gap on mobile --*/
-        .category-grid {
-            gap: 1.25rem;
-        }
-        @media (min-width: 768px) {
-            .category-grid { gap: 2rem; }
-        }
+.category-grid {
+    gap: 1.25rem;
+}
+@media (min-width: 768px) {
+    .category-grid { gap: 2rem; }
+}
 
-        /* --Category heading accent bar (section-title-accent) --*/
-        .section-title-accent {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .section-title-accent::after {
-            content: '';
-            display: block;
-            height: 2px;
-            width: 3rem;
-            border-radius: 9999px;
-            background-color: #e8b01e;
-            margin: 0.75rem auto 0;
-            transition: width 0.3s ease-in-out;
-        }
-        .section-title-accent:hover::after {
-            width: 5rem;
-        }
-        /* hide-scrollbar */
-        .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
+.section-title-accent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-title-accent::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 3rem;
+    border-radius: 9999px;
+    background-color: #e8b01e;
+    margin: 0.75rem auto 0;
+    transition: width 0.3s ease-in-out;
+}
+.section-title-accent:hover::after {
+    width: 5rem;
+}
 
-/* --- Extracted from index.html --- */
 #site-header nav a {
-            @apply transition-all duration-150 inline-flex items-center;
-        }
-        #site-header nav a:hover {
-            color: #e8b01e;
-            transform: scale(1.08);
-        }
-        #site-header.scrolled nav a:hover {
-            color: #e8b01e;
-        }
-    
-        .font-signature { font-family: var(--font-signature); }
-        .bg-noise {
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.04;
-            mix-blend-mode: multiply;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        
-        .char-reveal {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-        }
-        @keyframes textReveal {
-            to { opacity: 1; transform: translateY(0); }
-        }
+    transition: all 150ms;
+    display: inline-flex;
+    align-items: center;
+}
+#site-header nav a:hover {
+    color: #e8b01e;
+    transform: scale(1.08);
+}
 
-/* --- Extracted from privacy-policy.html --- */
-.custom-tick {
-            -webkit-appearance: none;
-            appearance: none;
-            background-color: #F5F3EE;
-            border: 1px solid #d1d5db;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-        .custom-tick:checked {
-            background-color: #e8b01e !important;
-            border-color: #e8b01e !important;
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+.bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
 
-        #site-header nav a {
-            @apply transition-all duration-150 inline-flex items-center;
-        }
-        #site-header nav a:hover {
-            @apply text-brand-accent;
-            transform: scale(1.10);
-        }
+.char-reveal {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes textReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        #site-header.scrolled nav a:hover {
-            @apply text-brand-gold;
-            transform: scale(1.10);
-        }
+.logo-white { display: block; }
+.logo-dark { display: none; }
 
-        #site-header.scrolled #menuBtn {
-            @apply hover:text-brand-gold;
-        }
+#site-header.gallery-dark-nav .logo-white { display: none; }
+#site-header.gallery-dark-nav .logo-dark { display: block; }
 
-        /* --- LOGO SWAP LOGIC --- */
-        .logo-white { display: block; }
-        .logo-dark { display: none; }
-
-        #site-header.gallery-dark-nav .logo-white { display: none; }
-        #site-header.gallery-dark-nav .logo-dark { display: block; }
-
-/* --- Extracted from services.html --- */
-/* --Service image slideshow --*/
-        .svc-slideshow {
-            position: relative;
-            overflow: hidden;
-        }
-        /* ALL slides sit absolutely inside the fixed-height container */
-        .svc-slide {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
-            transform: scale(1.04);
-        }
-        .svc-slide.active {
-            opacity: 1;
-            transform: scale(1);
-            position: absolute; /* stays absolute — height comes from the container */
-        }
-        /* Images always fill the slide div completely */
-        .svc-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            transition: transform 600ms ease-in-out;
-        }
-        /* Subtle zoom-in on hover */
-        .svc-slideshow:hover .svc-slide.active img {
-            transform: scale(1.04);
-        }
-        /* Frosted-glass shimmer overlay on hover */
-        .svc-slideshow::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
-            opacity: 0;
-            transition: opacity 500ms ease-in-out;
-            pointer-events: none;
-            z-index: 2;
-        }
-        .svc-slideshow:hover::after {
-            opacity: 1;
-        }
-        /* Dot navigation */
-        .svc-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
-        .svc-dot {
-            width: 8px; height: 8px; border-radius: 9999px;
-            background: rgba(20,18,41,0.20); border: none; cursor: pointer;
-            transition: background 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-        .svc-dot:hover { transform: scale(1.3); }
-        .svc-dot.active { background: #e8b01e; width: 24px; }
+.svc-slideshow {
+    position: relative;
+    overflow: hidden;
+}
+.svc-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
+    transform: scale(1.04);
+}
+.svc-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    position: absolute;
+}
+.svc-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 600ms ease-in-out;
+}
+.svc-slideshow:hover .svc-slide.active img {
+    transform: scale(1.04);
+}
+.svc-slideshow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+.svc-slideshow:hover::after {
+    opacity: 1;
+}
+.svc-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+.svc-dot {
+    width: 8px; height: 8px; border-radius: 9999px;
+    background: rgba(20,18,41,0.20); border: none; cursor: pointer;
+    transition: background 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.svc-dot:hover { transform: scale(1.3); }
+.svc-dot.active { background: #e8b01e; width: 24px; }
