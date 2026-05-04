@@ -54,14 +54,32 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadComponents() {
-    // Always fetch components using absolute paths - works regardless of current URL depth.
-    // Header and footer use absolute paths internally so no rewriting is needed.
+    // Determine the path prefix based on how many levels deep the current page is.
+    // We look for 'pages/' in the URL to determine depth.
+    const path = window.location.pathname;
+    let prefix = '';
+    
+    if (path.includes('/pages/services/')) {
+        prefix = '../../';
+    } else if (path.includes('/pages/')) {
+        prefix = '../';
+    }
+
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         try {
-            const resp = await fetch('/components/header.html');
-            const html = await resp.text();
-            headerPlaceholder.outerHTML = html;
+            const resp = await fetch(prefix + 'components/header.html');
+            if (!resp.ok) throw new Error('Header not found');
+            let html = await resp.text();
+            
+            // Create a temporary element to manipulate the HTML
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            
+            // Fix all relative paths in the header
+            fixPaths(temp, prefix);
+            
+            headerPlaceholder.outerHTML = temp.innerHTML;
         } catch (e) {
             console.error('Error loading header:', e);
         }
@@ -70,13 +88,44 @@ async function loadComponents() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         try {
-            const resp = await fetch('/components/footer.html');
-            const html = await resp.text();
-            footerPlaceholder.outerHTML = html;
+            const resp = await fetch(prefix + 'components/footer.html');
+            if (!resp.ok) throw new Error('Footer not found');
+            let html = await resp.text();
+            
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            
+            fixPaths(temp, prefix);
+            
+            footerPlaceholder.outerHTML = temp.innerHTML;
         } catch (e) {
             console.error('Error loading footer:', e);
         }
     }
+}
+
+/**
+ * Prepends the prefix to relative paths in the given element.
+ */
+function fixPaths(container, prefix) {
+    if (!prefix) return; // No prefix needed for root level
+    
+    // Fix links
+    container.querySelectorAll('a[href]').forEach(el => {
+        const href = el.getAttribute('href');
+        if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            // Remove leading slash if present, then prepend prefix
+            el.setAttribute('href', prefix + href.replace(/^\//, ''));
+        }
+    });
+    
+    // Fix images
+    container.querySelectorAll('img[src]').forEach(el => {
+        const src = el.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+            el.setAttribute('src', prefix + src.replace(/^\//, ''));
+        }
+    });
 }
 
 function initHeaderScroll() {
