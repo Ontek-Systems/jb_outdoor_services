@@ -54,24 +54,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadComponents() {
-    const path = window.location.pathname;
-    const isPagesServiceDir = path.includes('/pages/services/');
-    const isPagesDir = !isPagesServiceDir && path.includes('/pages/');
-    let basePath = '';
-    if (isPagesServiceDir) basePath = '../../';
-    else if (isPagesDir)   basePath = '../';
-
+    // Always fetch components using absolute paths - works regardless of current URL depth.
+    // Header and footer use absolute paths internally so no rewriting is needed.
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         try {
-            const resp = await fetch(basePath + 'components/header.html');
-            let html = await resp.text();
-            if (basePath) {
-                html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
-                    if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
-                    return `${p1}="${basePath + p2}"`;
-                });
-            }
+            const resp = await fetch('/components/header.html');
+            const html = await resp.text();
             headerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading header:', e);
@@ -81,14 +70,8 @@ async function loadComponents() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         try {
-            const resp = await fetch(basePath + 'components/footer.html');
-            let html = await resp.text();
-            if (basePath) {
-                html = html.replace(/(href|src)="([^"]*)"/g, (match, p1, p2) => {
-                    if (p2.startsWith('http') || p2.startsWith('mailto:') || p2.startsWith('tel:') || p2.startsWith('#') || p2.startsWith('/')) return match;
-                    return `${p1}="${basePath + p2}"`;
-                });
-            }
+            const resp = await fetch('/components/footer.html');
+            const html = await resp.text();
             footerPlaceholder.outerHTML = html;
         } catch (e) {
             console.error('Error loading footer:', e);
