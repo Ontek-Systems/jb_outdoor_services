@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -57,7 +57,23 @@
 
             <!-- Service Images Gallery -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-20 reveal reveal-up" style="transition-delay: 150ms;">
-</div>
+                <div class="relative rounded-[2rem] overflow-hidden shadow-xl group cursor-zoom-in aspect-[4/3]"
+                    onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+                    <img src="../../assets/imgs/service_imgs/Wholesale%20Firewood%20Supply/unseasoned_logs_3.jpg"
+                        alt="Wholesale firewood logs supplied by JB Outdoor Services"
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+                </div>
+                <div class="relative rounded-[2rem] overflow-hidden shadow-xl group cursor-zoom-in aspect-[4/3]"
+                    onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+                    <img src="../../assets/imgs/service_imgs/Wholesale%20Firewood%20Supply/unseasoned_logs_2.jpeg"
+                        alt="Unseasoned firewood logs for wholesale supply in Somerset"
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+                </div>
+            </div>
 
                         <!-- E-commerce Action Bar -->
             <div class="w-full bg-white rounded-3xl shadow-2xl border border-black/5 p-8 md:p-10 reveal reveal-up mt-12 mb-20 relative overflow-hidden" style="transition-delay: 250ms;">
