@@ -1,0 +1,6 @@
+# Exclude build scripts and scratch files from deployment
+*.py
+scratch/
+*.textClipping
+.DS_Store
+README.md

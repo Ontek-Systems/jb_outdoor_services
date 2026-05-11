@@ -1,0 +1,2 @@
+# Rewrite clean URL to actual file (200 = serve without changing the URL)
+/pages/services /pages/services.html 200

@@ -60,6 +60,66 @@
             --font-body:    'DM Sans', sans-serif;
         }
     </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JB Outdoor Services Ltd",
+  "url": "https://www.jboutdoorservices.co.uk",
+  "logo": "https://www.jboutdoorservices.co.uk/assets/imgs/logo.png",
+  "image": "https://www.jboutdoorservices.co.uk/assets/imgs/og-image.jpg",
+  "description": "JB Outdoor Services Ltd provides landscaping, groundworks, digger hire, patios, fencing, turfing and site clearances across Wincanton and a 10-mile radius in Somerset.",
+  "telephone": "+447445064666",
+  "email": "jboutdoorservicesltd@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wincanton",
+    "addressRegion": "Somerset",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.0557,
+    "longitude": -2.4041
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.0557,
+      "longitude": -2.4041
+    },
+    "geoRadius": "16000"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "\u00a3\u00a3",
+  "sameAs": [
+    "https://www.facebook.com/jbw1999/"
+  ]
+}
+</script>
 </head>
 
 <body class="flex flex-col min-h-screen antialiased">
@@ -176,15 +236,15 @@
                     <!-- Images -->
                     <div id="hero-slideshow" class="relative w-full h-full bg-[#141229]">
                         <img src="assets/imgs/hero_slider/slide1.jpg" alt="Project 1"
-                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100 z-10">
+                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100 z-10" loading="lazy">
                         <img src="assets/imgs/hero_slider/slide2.jpeg" alt="Project 2"
-                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0" loading="lazy">
                         <img src="assets/imgs/hero_slider/slide3.jpeg" alt="Project 3"
-                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0" loading="lazy">
                         <img src="assets/imgs/hero_slider/slide4.jpg" alt="Project 4"
-                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0" loading="lazy">
                         <img src="assets/imgs/hero_slider/slide5.jpeg" alt="Project 5"
-                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+                            class="slide-img absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0 z-0" loading="lazy">
                     </div>
 
                     <!-- Gradient overlay for dot visibility -->
@@ -1747,7 +1807,7 @@
                                 class="flex-shrink-0 w-[250px] h-[250px] md:w-[307px] md:h-[307px] rounded-2xl overflow-hidden">
                                 <img src="assets/imgs/qrcode.png"
                                     alt="QR code to leave a Google review for JB Outdoor Services Ltd"
-                                    class="w-full h-full object-contain mix-blend-multiply">
+                                    class="w-full h-full object-contain mix-blend-multiply" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2230,33 +2290,64 @@
     <script>
         // Form submission handler
         (function () {
-            const WEBHOOK = '[YOUR_WEBHOOK_URL_HERE]';
-            let submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
+            var GAS_URL      = 'https://script.google.com/macros/s/AKfycbzeEFQomE9Q8wSMoLDopM7kQz1bBzkKW_3wdM5DWN0tr3mUAr6_2ZBGBkhc7DSB-HbHjA/exec';
+            var RATE_KEY     = 'jbos_last_submit';
+            var RATE_MS      = 60 * 60 * 1000; // 1 hour between submissions
+            var PAGE_LOAD    = Date.now();
+
+            function sanitise(str) {
+                return String(str || '').replace(/<[^>]*>/g, '').trim().slice(0, 2000);
+            }
+
             function handleFormSubmit(form, successCallback) {
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
-                    const honey = form.querySelector('[name="website_url"], [name="botcheck"]');
+
+                    // Honeypot
+                    var honey = form.querySelector('[name="website_url"], [name="botcheck"]');
                     if (honey && honey.value) return;
-                    submissionCount = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
-                    if (submissionCount >= 3) { alert('Too many submissions. Please try again later.'); return; }
-                    const gdpr = form.querySelector('[name="gdpr"]');
+
+                    // Time check
+                    if (Date.now() - PAGE_LOAD < 3000) return;
+
+                    // Rate limit
+                    var lastSub = parseInt(localStorage.getItem(RATE_KEY) || '0');
+                    if (lastSub && Date.now() - lastSub < RATE_MS) {
+                        alert('You have already submitted a request. Please call Jack directly on +44 7445 064666.');
+                        return;
+                    }
+
+                    // Submission cap per session
+                    var count = parseInt(sessionStorage.getItem('formSubmitCount') || '0');
+                    if (count >= 2) { alert('Too many submissions. Please call Jack directly on +44 7445 064666.'); return; }
+
+                    var gdpr = form.querySelector('[name="gdpr"]');
                     if (gdpr && !gdpr.checked) { alert('Please agree to be contacted before submitting.'); return; }
-                    const btn = form.querySelector('button[type="submit"]');
-                    const originalText = btn ? btn.innerHTML : '';
+
+                    var btn = form.querySelector('button[type="submit"]');
+                    var originalHTML = btn ? btn.innerHTML : '';
                     if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
-                    const data = {
-                        name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value : '',
-                        email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '',
-                        phone: form.querySelector('[name="phone"]') ? form.querySelector('[name="phone"]').value : '',
-                        message: form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : '',
-                        source: window.location.pathname
+
+                    var data = {
+                        name:    sanitise(form.querySelector('[name="name"]')    ? form.querySelector('[name="name"]').value    : ''),
+                        email:   sanitise(form.querySelector('[name="email"]')   ? form.querySelector('[name="email"]').value   : ''),
+                        phone:   sanitise(form.querySelector('[name="phone"]')   ? form.querySelector('[name="phone"]').value   : ''),
+                        message: sanitise(form.querySelector('[name="message"]') ? form.querySelector('[name="message"]').value : ''),
+                        source:  window.location.pathname
                     };
-                    fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-                        .then(() => { submissionCount++; sessionStorage.setItem('formSubmitCount', submissionCount); if (successCallback) successCallback(); else { form.reset(); alert('Thank you! Jack will be in touch shortly.'); } })
-                        .catch(() => { alert('Something went wrong. Please call Jack on +44 7445 064666.'); })
-                        .finally(() => { if (btn) { btn.disabled = false; btn.innerHTML = originalText; } });
+
+                    fetch(GAS_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+                        .then(function () {
+                            localStorage.setItem(RATE_KEY, Date.now().toString());
+                            sessionStorage.setItem('formSubmitCount', count + 1);
+                            if (successCallback) successCallback();
+                            else { form.reset(); alert('Thank you! Jack will be in touch shortly.'); }
+                        })
+                        .catch(function () { alert('Something went wrong. Please call Jack on +44 7445 064666.'); })
+                        .finally(function () { if (btn) { btn.disabled = false; btn.innerHTML = originalHTML; } });
                 });
             }
+
             document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('form').forEach(function (form) {
                     handleFormSubmit(form, function () { window.location.href = 'thank-you.html'; });
